@@ -145,6 +145,10 @@
         transform: translateY(100%);
         /* Removed transition to avoid sluggishness/input lag on scroll */
       }
+      .embed-mode nav,
+      .embed-mode footer {
+        display: none !important;
+      }
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -319,6 +323,11 @@
     <!-- Initialize Icons -->
     <script>
       lucide.createIcons();
+    </script>
+    <script>
+      if (new URLSearchParams(window.location.search).get('embed') === 'true') {
+        document.documentElement.classList.add('embed-mode');
+      }
     </script>
   </body>
 </html>
