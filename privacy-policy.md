@@ -16,14 +16,14 @@ We have written this policy to be specific and verifiable. Where Google's OAuth 
 
 ## Google API Limited Use Compliance
 
-> **Verascribe Guardian's use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.**
->
-> In particular:
-> - We use your Google Workspace data **only to provide and improve user-facing features** of the Service that are visible and prominent in the user interface.
-> - We do **not** transfer Google Workspace data to others except as necessary to provide the Service, comply with applicable law, or as part of a merger or acquisition where you are notified in advance.
-> - We do **not** use Google Workspace data for **serving advertisements**.
-> - We do **not** allow humans to read your Google Workspace data unless (a) we have obtained your affirmative consent for specific messages, (b) it is necessary for security purposes such as investigating abuse, (c) it is necessary to comply with applicable law, or (d) it is for internal operations and the data has been aggregated and anonymized.
-> - We do **not** use Google Workspace data to develop, improve, or train **generalized AI/ML models** of any kind.
+**Verascribe Guardian's use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.**
+
+In particular:
+- We use your Google Workspace data **only to provide and improve user-facing features** of the Service that are visible and prominent in the user interface.
+- We do **not** transfer Google Workspace data to others except as necessary to provide the Service, comply with applicable law, or as part of a merger or acquisition where you are notified in advance.
+- We do **not** use Google Workspace data for **serving advertisements**.
+- We do **not** allow humans to read your Google Workspace data unless (a) we have obtained your affirmative consent for specific messages, (b) it is necessary for security purposes such as investigating abuse, (c) it is necessary to comply with applicable law, or (d) it is for internal operations and the data has been aggregated and anonymized.
+- We do **not** use Google Workspace data to develop, improve, or train **generalized AI/ML models** of any kind.
 
 ---
 
