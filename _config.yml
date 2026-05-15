@@ -34,15 +34,16 @@ plugins:
 
 # --- Permalinks ---
 # Release notes (existing) keep Jekyll's default permalink so existing URLs are not broken.
-# Blog posts live in `_posts/blog/` and get the /blog/:year/:month/:day/:slug/ permalink
-# plus the `blog-post` layout, applied via a path-scoped default.
+# Blog posts use dateless URLs (/blog/:slug/) — evergreen content, no date in URL.
+# The date: field in frontmatter is still required (post ordering, JSON-LD datePublished,
+# sitemap, RSS feed) but is not displayed to readers and not in the URL.
 defaults:
   - scope:
       path: "_posts/blog"
       type: posts
     values:
       layout: blog-post
-      permalink: /blog/:year/:month/:day/:slug/
+      permalink: /blog/:slug/
       category: blog
 
 # --- Feed ---

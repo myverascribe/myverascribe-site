@@ -8,7 +8,7 @@ layout: default
   from frontmatter (see Pipeline-Blog/Templates/frontmatter-template.md).
 {%- endcomment -%}
 
-{%- assign hero_image = page.image | default: "/assets/images/blog/default-electric-fortress.jpg" -%}
+{%- assign hero_image = page.image -%}
 {%- assign canonical_url = page.canonical | default: page.url | absolute_url -%}
 {%- assign word_count = content | strip_html | number_of_words -%}
 {%- assign read_time = word_count | divided_by: 200 | plus: 1 -%}
@@ -123,7 +123,7 @@ layout: default
 
 <!-- Hero -->
 <div class="w-full bg-charcoal border-b border-slate-800">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 {% if hero_image %}md:pt-12{% else %}md:pt-6{% endif %}">
     <!-- Breadcrumbs -->
     <nav aria-label="Breadcrumb" class="text-sm text-gray-400 mb-6">
       <ol class="flex flex-wrap items-center gap-2">
@@ -131,11 +131,12 @@ layout: default
         <li aria-hidden="true">/</li>
         <li><a href="{{ '/blog/' | relative_url }}" class="hover:text-brand-teal">Blog</a></li>
         <li aria-hidden="true">/</li>
-        <li class="text-off-white/70 truncate max-w-xs" aria-current="page">{{ page.title }}</li>
+        <li class="text-off-white/70" aria-current="page">{{ page.title }}</li>
       </ol>
     </nav>
   </div>
 
+  {% if hero_image %}
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
     <div class="aspect-[16/9] w-full rounded-2xl overflow-hidden border border-white/5 bg-[#0F172A]">
       <img
@@ -146,6 +147,7 @@ layout: default
       />
     </div>
   </div>
+  {% endif %}
 </div>
 
 <!-- Wrapper -->
@@ -164,7 +166,7 @@ layout: default
         {% endif %}
 
         <h1
-          class="text-3xl md:text-5xl font-bold text-[#f9fafb] mb-6 tracking-tight leading-tight"
+          class="text-7xl font-serif-display font-normal text-[#f9fafb] mb-6 tracking-tight leading-tight"
         >
           {{ page.title }}
         </h1>
@@ -178,8 +180,6 @@ layout: default
         <div
           class="flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-400 text-sm"
         >
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-          <span aria-hidden="true">•</span>
           <span class="inline-flex items-center">
             <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5"></i>
             {{ read_time }} min read
@@ -296,7 +296,6 @@ layout: default
               {% unless post.url == page.url %}
               <li>
                 <a href="{{ post.url | relative_url }}" class="group">
-                  <span class="block text-xs text-gray-400 mb-1">{{ post.date | date: "%b %d, %Y" }}</span>
                   <span
                     class="block text-[#f9fafb]/90 font-medium group-hover:text-[#2a9d8f] transition-colors line-clamp-2"
                   >
