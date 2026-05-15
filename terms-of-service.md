@@ -6,9 +6,9 @@ title: Terms of Service
 # Terms of Service
 
 **Effective Date:** 2026-04-27
-**Last Updated:** 2026-04-27
+**Last Updated:** 2026-05-13
 
-These Terms of Service ("Terms") form a binding agreement between you ("you," "User") and **Nemerai, LLC** ("Verascribe," "we," "us") and govern your access to and use of **Verascribe Guardian** (the "Service"), a Google Workspace add-on that runs inside Google Sheets to help users track custody, communications, expenses, and related events.
+These Terms of Service ("Terms") form a binding agreement between you ("you," "User") and **Nemerai, LLC** ("Verascribe," "we," "us") and govern your access to and use of **Verascribe Guardian** (the "Service"), a Google Apps Script web app used alongside a Google Sheet workbook you select, to help users track custody, communications, expenses, and related events.
 
 By installing or using the Service, you confirm that you have read, understood, and agree to these Terms and to our [Privacy Policy](./privacy-policy.md).
 
@@ -28,7 +28,7 @@ You agree that you will not allow a minor to use the Service on your behalf.
 
 Verascribe Guardian is a software tool that helps you organize and document information related to a co-parenting or custody arrangement. The Service:
 
-- Runs as a Google Workspace add-on inside a Google Sheet that you own.
+- Runs as a standalone Google Apps Script web app you access via a URL, using a Google Sheet you own as durable storage.
 - Stores your data in your own Google Sheet, your own Google Drive folders, and locally in your browser (IndexedDB).
 - Does not host a cloud copy of your custody, financial, or evidence data on Verascribe servers (see the Privacy Policy for the limited license-related data we do receive).
 
@@ -73,7 +73,7 @@ We may suspend or terminate your license, with or without notice, if:
 - We are required to do so by law.
 - We discover fraudulent license use, sharing, or abuse.
 
-**Your data is always yours.** Expiration or termination of your license disables write functionality (creating new records and generating reports) but does not affect your ability to read or export your existing data. You retain permanent access to read all records in the Service and to use the export tools (JSON and PDF) for as long as the add-on remains installed and Google Workspace supports it. All data in your Google Sheet and Google Drive remains in your own account regardless of license status — Verascribe cannot delete it and will not attempt to.
+**Your data is always yours.** Expiration or termination of your license disables write functionality (creating new records and generating reports) but does not affect your ability to read or export your existing data. You retain permanent access to read all records in the Service and to use the export tools (JSON and PDF) for as long as you can access the web app and Google Workspace supports it. All data in your Google Sheet and Google Drive remains in your own account regardless of license status — Verascribe cannot delete it and will not attempt to.
 
 We will, on reasonable request, refund the unused portion of a license terminated by us other than for material breach by you.
 
@@ -99,7 +99,7 @@ The data you enter using the Service belongs to you. We do not claim ownership o
 
 You grant Verascribe a limited, non-exclusive license to access the OAuth scopes described in the Privacy Policy **solely to operate the Service for you**. We do not use your data for advertising, model training, or any purpose beyond providing the Service to you.
 
-You retain full control: you can revoke our OAuth permissions at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions), uninstall the add-on, and delete your Sheet and Drive folders. See Section 10 of the [Privacy Policy](./privacy-policy.md) for retention and deletion details.
+You retain full control: you can revoke our OAuth permissions at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions), stop using the web app, and delete your Sheet and Drive folders. See Section 10 of the [Privacy Policy](./privacy-policy.md) for retention and deletion details.
 
 ---
 
@@ -211,7 +211,7 @@ If you reside outside the United States, the courts of **Florida** shall have no
 
 We may update these Terms from time to time. The "Last Updated" date at the top reflects the most recent version. Material changes will be announced inside the Service or by email to the address associated with your license at least **30 days** before they take effect. Continued use of the Service after a change takes effect constitutes acceptance of the revised Terms.
 
-If you do not agree to a change, your sole remedy is to stop using the Service and uninstall the add-on. If a material change reduces functionality you have paid for, you are entitled to a pro-rated refund of prepaid fees covering the remaining license term after the effective date of that change.
+If you do not agree to a change, your sole remedy is to stop using the Service and revoke OAuth access. If a material change reduces functionality you have paid for, you are entitled to a pro-rated refund of prepaid fees covering the remaining license term after the effective date of that change.
 
 ---
 

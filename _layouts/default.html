@@ -6,12 +6,28 @@
     <title>
       {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
     </title>
+    {%- comment -%}
+      jekyll-seo-tag injects meta description, canonical, OG, and Twitter tags
+      on every page. The blog-post layout additionally renders custom JSON-LD.
+      Render only on pages that do NOT already render it inside their layout (blog-post handles its own).
+    {%- endcomment -%}
+    {% unless page.layout == 'blog-post' %}{% seo %}{% endunless %}
+    <!-- Atom feed + sitemap -->
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
     <!-- Google Fonts - DM Sans -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..700&display=swap" rel="stylesheet" />
     <!-- UPDATED: Added ?plugins=typography to the end of this URL -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!--
+      ANALYTICS SNIPPET GOES HERE.
+      Decision pending (Bram, 2026-05-14): Plausible (privacy-aligned, no cookie banner)
+      vs. GA4 (more data, requires consent banner per GDPR/CCPA).
+      User must choose before snippet is added. Do not insert tracking here without sign-off.
+    -->
+
     <script>
       tailwind.config = {
         theme: {
@@ -257,6 +273,11 @@
               >Home</a
             >
             <a
+              href="{{ '/blog/' | relative_url }}"
+              class="{% if page.url == '/blog/' or page.layout == 'blog-post' %}text-brand-teal font-semibold{% else %}text-off-white hover:text-brand-teal{% endif %} transition-colors"
+              >Blog</a
+            >
+            <a
               href="{{ '/updates/' | relative_url }}"
               class="{% if page.url == '/updates/' or page.layout == 'post' %}text-brand-teal font-semibold{% else %}text-off-white hover:text-brand-teal{% endif %} transition-colors"
               >Updates</a
@@ -305,6 +326,7 @@
               <li><a href="{{ '/privacy-policy' | relative_url }}" class="hover:text-brand-teal">Privacy Policy</a></li>
               <li><a href="{{ '/terms-of-service' | relative_url }}" class="hover:text-brand-teal">Terms of Service</a></li>
               <li><a href="{{ '/oauth-disclosure' | relative_url }}" class="hover:text-brand-teal">OAuth Disclosure</a></li>
+              <li><a href="{{ '/editorial-standards/' | relative_url }}" class="hover:text-brand-teal">Editorial Standards</a></li>
             </ul>
           </div>
         </div>

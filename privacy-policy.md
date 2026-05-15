@@ -6,9 +6,9 @@ title: Privacy Policy
 # Privacy Policy
 
 **Effective Date:** 2026-04-27
-**Last Updated:** 2026-04-27
+**Last Updated:** 2026-05-13
 
-This Privacy Policy explains how **Nemerai, LLC** ("Verascribe," "we," "us") handles information when you install and use **Verascribe Guardian** (the "Service"), a Google Workspace add-on that runs inside Google Sheets to help co-parents and guardians track custody schedules, communications, expenses, and related events.
+This Privacy Policy explains how **Nemerai, LLC** ("Verascribe," "we," "us") handles information when you use **Verascribe Guardian** (the "Service"), a Google Apps Script web app — used alongside a Google Sheet workbook you select — that helps co-parents and guardians track custody schedules, communications, expenses, and related events.
 
 We have written this policy to be specific and verifiable. Where Google's OAuth consent screen displays a permission, this document explains exactly what we do — and do not do — with the data that permission unlocks.
 
@@ -29,7 +29,7 @@ In particular:
 
 ## 1. The short version
 
-- Verascribe Guardian is an **offline-first** add-on. The data you enter is stored locally in your browser (IndexedDB) and in **your own** Google Sheet and Google Drive folder.
+- Verascribe Guardian is an **offline-first** web app. The data you enter is stored locally in your browser (IndexedDB) and in **your own** Google Sheet and Google Drive folder.
 - We **do not** operate a cloud database that holds your custody, financial, or evidence records. There is no Verascribe-hosted copy of your data.
 - We **do not** use Google Analytics, advertising trackers, Sentry, or any third-party telemetry.
 - The only information transmitted to a Verascribe-controlled server is your **email address** and a **workbook identifier**, and only for the purpose of validating your license or trial. See Section 5.
@@ -40,7 +40,7 @@ In particular:
 ## 2. Who this policy applies to
 
 This policy applies to:
-- Users who install Verascribe Guardian from the Google Workspace Marketplace or via a direct add-on URL.
+- Users who install Verascribe Guardian from the Google Workspace Marketplace or open it via the web-app URL.
 - Visitors to **myverascribe.com**.
 
 It does **not** govern your use of Google Sheets, Google Drive, or any Google product itself — those are governed by [Google's Privacy Policy](https://policies.google.com/privacy).
@@ -49,7 +49,7 @@ It does **not** govern your use of Google Sheets, Google Drive, or any Google pr
 
 ## 3. Information we access via Google OAuth
 
-When you install Verascribe Guardian, Google's OAuth consent screen will ask you to authorize the following scopes. This section explains, scope by scope, exactly what each one does and why we need it.
+When you first open Verascribe Guardian, Google's OAuth consent screen will ask you to authorize the following scopes. This section explains, scope by scope, exactly what each one does and why we need it.
 
 ### 3.1 `https://www.googleapis.com/auth/userinfo.email`
 
@@ -57,27 +57,30 @@ When you install Verascribe Guardian, Google's OAuth consent screen will ask you
 
 **Why we need it:** To register your free trial, validate your paid license against our license registry, route support emails sent through the in-app "Contact Us" feature, and identify you for future license-key recovery.
 
-**Where it goes:** Stored in the Google Apps Script Document Properties of the Sheet you've installed the add-on into, and transmitted to **`_registry.myverascribe.com`** for license validation.
+**Where it goes:** Stored in the Google Apps Script Document Properties of the workbook you selected, and transmitted to **`_registry.myverascribe.com`** for license validation.
 
 ### 3.2 `https://www.googleapis.com/auth/spreadsheets.currentonly`
 
-**What it lets us see:** The single Google Sheet you currently have open with the add-on running. We **cannot** read or modify any other spreadsheet in your Drive.
+**What it lets us see:** This scope lets the app read and edit Google Sheets at runtime. Combined with the file-picker handshake on `drive.file` (Section 3.3 below), the practical effect is that the app can only ever act on the one workbook you explicitly selected — we do not read or modify any other spreadsheet in your Drive.
 
-**Why we need it:** Your custody log, schedule rules, settings, and reports are written into hidden tabs of your active Sheet. This is your durable, portable copy of the data and is owned entirely by you.
+**Why we need it:** Your custody log, schedule rules, settings, and reports are written into hidden system tabs of the workbook you select. This is your durable, portable copy of the data and is owned entirely by you.
 
 **Where it goes:** Stays inside your own Google Sheet. Verascribe does not receive a copy.
 
 ### 3.3 `https://www.googleapis.com/auth/drive.file`
 
-**What it lets us see:** Only the files Verascribe Guardian creates or that you specifically open with the add-on. We **cannot** see your other Drive files.
+**What it lets us see:** Only (a) the files you explicitly select via Google's file-picker dialog when you open Verascribe Guardian, and (b) files that Verascribe Guardian itself creates in your Drive. We cannot see any of your other Drive files.
 
-**Why we need it:** To save evidence attachments (photos, documents, receipts) you upload, and to write generated reports (PDF and CSV) and full data backups (JSON) to a Verascribe-managed folder in your own Drive.
+**Why we need it:** Two purposes:
 
-**Where it goes:** Stays inside your own Google Drive in folders named "Verascribe Evidence" and "Verascribe - Archived Evidence (Standalone)."
+1. **Picker-based workbook selection** — The first time you open Verascribe Guardian, you pick the one Sheet workbook you want to use with it via Google's file-picker. The `drive.file` scope is what makes that handshake work: you explicitly grant the app access to that single file, and the grant covers only that file.
+2. **Evidence and exports** — To save evidence attachments (photos, documents, receipts) you upload, and to write generated reports (PDF and CSV) and full data backups (JSON) to a Verascribe-managed folder in your own Drive.
+
+**Where it goes:** Stays inside your own Google Drive in folders named `Verascribe Evidence — {Your Workbook Name}` and `Verascribe — Archived Evidence (Standalone)`.
 
 ### 3.4 `https://www.googleapis.com/auth/script.send_mail`
 
-**What it lets us see:** Nothing. This scope only allows the add-on to send mail **from your account**.
+**What it lets us see:** Nothing. This scope only allows the app to send mail **from your account**.
 
 **Why we need it:** To send (a) license registration confirmation messages to you, and (b) support requests routed through the in-app "Contact Us" form to Verascribe support.
 
@@ -85,13 +88,17 @@ When you install Verascribe Guardian, Google's OAuth consent screen will ask you
 
 ### 3.5 `https://www.googleapis.com/auth/script.external_request`
 
-**What it lets us see:** Nothing. This scope allows the add-on's server-side code to make outbound HTTPS calls.
+**What it lets us see:** Nothing. This scope allows the app's server-side code to make outbound HTTPS calls. The set of permitted destinations is fixed by the app's manifest:
 
-**Why we need it:** To call our license registry at `_registry.myverascribe.com` for license validation, and to fetch a fallback configuration file from a public GitHub URL if the registry is unreachable.
+- **`_registry.myverascribe.com`** — the primary license registry; receives your email, workbook identifier, license token, and cryptographic signature for license validation. See Section 5.
+- **`raw.githubusercontent.com`** — a public GitHub URL used as a fallback for the license-registry configuration only when the primary registry is unreachable. This call does **not** transmit any of your data.
+- **`dns.google` and `cloudflare-dns.com`** — DNS-over-HTTPS lookups used to verify that the registry domain has not been hijacked by a hostile network. These calls transmit only the domain name being looked up — never any of your data.
 
-### 3.6 `https://www.googleapis.com/auth/script.container.ui` and `https://www.googleapis.com/auth/script.scriptapp`
+### 3.6 `https://www.googleapis.com/auth/script.scriptapp`
 
-**What they let us see:** Nothing about your data. These are operational scopes that allow the add-on to render its sidebar interface and run its own internal Apps Script logic.
+**What it lets us see:** Nothing about your data. This is an operational scope that allows the app to install and manage its own time-based triggers.
+
+**Why we need it:** To install a daily maintenance trigger that refreshes rolling-window metrics and periodically cleans up temporary files generated by export operations.
 
 ---
 
@@ -113,8 +120,8 @@ When you use Verascribe Guardian, you generate records about your family and cus
 |---|---|---|
 | Your browser's IndexedDB (Dexie) | Working copy of all of the above for offline-first performance | Only you, on the device/browser where you installed the add-on |
 | Your Google Sheet | Durable copy synced from IndexedDB | You and anyone you share the Sheet with |
-| Your Google Drive folders ("Verascribe Evidence", etc.) | Evidence attachments and exports | You and anyone you share those folders with |
-| Google Apps Script Document Properties on your Sheet | License email, license token, trial dates, workbook ID | You (Verascribe service can read these via the OAuth scopes you granted) |
+| Your Google Drive folders (`Verascribe Evidence — {Your Workbook Name}`, etc.) | Evidence attachments and exports | You and anyone you share those folders with |
+| Google Apps Script Document Properties on your selected workbook | License email, license token, trial dates, workbook ID | You (Verascribe service can read these via the OAuth scopes you granted) |
 
 **Verascribe never receives a copy** of your custody, financial, or evidence data. The license-registration call described in Section 5 is the **only** outbound transmission to Verascribe-controlled infrastructure.
 
@@ -125,7 +132,7 @@ When you use Verascribe Guardian, you generate records about your family and cus
 The only data sent to Verascribe-controlled servers is the minimum needed to operate the licensing system. Specifically, calls to **`_registry.myverascribe.com`** include:
 
 - Your Google Account email address.
-- A workbook identifier (a stable ID for the Sheet you installed the add-on into).
+- A workbook identifier (a stable ID for the Sheet workbook you selected via the file-picker).
 - A license token (if you have one) and an HMAC-SHA256 signature used to prevent tampering.
 - A timestamp.
 
@@ -188,8 +195,8 @@ Where we rely on legitimate interests (Art. 6(1)(f)), you have the right to obje
 We share information only with the following categories of recipients:
 
 - **Google LLC** — because the Service runs entirely on Google Workspace infrastructure (Apps Script, Sheets, Drive, Gmail). Google's processing of your data is governed by Google's own privacy policy and the Google Workspace terms.
-- **Porkbun, Inc.** — domain registrar and hosting provider for `myverascribe.com` and `_registry.myverascribe.com`. `_registry.myverascribe.com` acts as a redirect beacon that routes license-validation calls to a Google Apps Script endpoint; Porkbun's servers may log the IP address and timestamp of requests passing through that redirect, but do not store or process the license payload itself. Porkbun does not receive any custody, financial, or evidence data.
-- **Google LLC** (see above) — the Google Apps Script endpoint that `_registry.myverascribe.com` redirects to is the system that actually receives and processes license-validation data (email address, workbook ID, token, signature).
+- **Porkbun, Inc.** — domain registrar and DNS provider for `myverascribe.com` and `_registry.myverascribe.com`. `_registry.myverascribe.com` is a DNS record that resolves to the actual Google Apps Script endpoint that processes license-validation calls. Porkbun's DNS servers may log the lookup of the registry domain (IP address and timestamp of the DNS query), but never receive the HTTP request itself or the license payload. Porkbun does not receive any custody, financial, or evidence data.
+- **Google LLC** (see above) — the Google Apps Script endpoint that `_registry.myverascribe.com` resolves to is the system that actually receives and processes license-validation data (email address, workbook ID, token, signature).
 - **Email infrastructure** — all outbound mail (in-app support requests, license receipts, and any replies from Verascribe) is sent via **Gmail / Google Workspace** and is therefore also covered under Google LLC.
 - **Google LLC (infrastructure logging)** — The Google Apps Script web app that processes license-validation requests (`script.google.com/macros/s/…`) generates server-side request logs (IP address, timestamp, HTTP status code) as part of Google's standard Cloud Logging infrastructure. This logging is automatic and occurs on Google's side; it is governed by Google's Privacy Policy. Verascribe can access these logs as the project owner but does not routinely use them for any purpose other than debugging.
 - **Legal authorities** — if required by law, court order, or to defend our legal rights.
@@ -218,7 +225,7 @@ Because we do not host your custody data, **deletion is in your hands** for most
 
 | Data category | Where stored | Retention period | How to delete |
 |---|---|---|---|
-| Custody logs, schedules, settings (working copy) | Your browser's IndexedDB | Until you clear site data or uninstall the add-on | Clear browser site data |
+| Custody logs, schedules, settings (working copy) | Your browser's IndexedDB | Until you clear site data | Clear browser site data |
 | Custody logs, schedules, settings (durable copy) | Your Google Sheet | Until you delete the Sheet | Delete the Sheet in Google Drive |
 | Evidence attachments, exported reports, backups | Your Google Drive ("Verascribe Evidence" folders) | Until you delete those folders | Delete the folders in Google Drive |
 | License email, workbook ID, license dates, trial dates | Verascribe license registry (`_registry.myverascribe.com`) | Retained **indefinitely** to support fraud prevention, license-key recovery for past customers, and identification of returning customers — subject to your right of erasure | Contact us (Section 14); we will acknowledge within 72 hours and complete deletion within 30 days. **Note:** deletion disables write functionality in the Service for that workbook, equivalent to license expiration. See Section 11 for details. |
@@ -238,7 +245,7 @@ Your rights typically include:
 - **Correction** — Ask us to correct inaccurate information.
 - **Deletion** — Ask us to delete your license records. Note that we cannot delete data stored in your own Sheet or Drive — only you can do that. **Important consequence:** Deleting your license record will cause license validation to fail on the next check, which will **disable the Service's write functionality** (creating new records) for the affected workbook — exactly as if your license had expired. Read access and the JSON/PDF export tools remain available, and the data in your Google Sheet and Google Drive is not affected. If you intend to continue actively using the Service, do not request deletion of your license record while your license is current.
 - **Portability** — The Service includes built-in JSON export of your full dataset, which you can run at any time without contacting us.
-- **Withdraw consent / object to processing** — Revoke our OAuth permissions at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions). Doing so will stop the add-on from functioning but will not delete the data already in your Sheet or Drive. You may also object to processing based on legitimate interests (see Section 7a).
+- **Withdraw consent / object to processing** — Revoke our OAuth permissions at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions). Doing so will stop the web app from opening but will not delete the data already in your Sheet or Drive. You may also object to processing based on legitimate interests (see Section 7a).
 - **Lodge a complaint** — With your local supervisory authority (e.g., your state Attorney General, or an EU Data Protection Authority).
 
 To exercise any of these rights, contact us at the address in Section 14. We will respond within the timeframes required by applicable law (generally 30 to 45 days).

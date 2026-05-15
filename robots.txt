@@ -1,0 +1,9 @@
+---
+# Front matter required so Jekyll processes this file at build.
+permalink: /robots.txt
+sitemap: false
+---
+User-agent: *
+Allow: /
+
+Sitemap: https://myverascribe.com/sitemap.xml

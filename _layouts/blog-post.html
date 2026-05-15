@@ -1,0 +1,333 @@
+---
+layout: default
+---
+{%- comment -%}
+  Blog post layout for Verascribe Editorial long-form content.
+  Distinct from `_layouts/post.html` which handles release notes.
+  Pulls SEO, JSON-LD, breadcrumbs, reading-time, hero, sticky CTA, and disclaimers
+  from frontmatter (see Pipeline-Blog/Templates/frontmatter-template.md).
+{%- endcomment -%}
+
+{%- assign hero_image = page.image | default: "/assets/images/blog/default-electric-fortress.jpg" -%}
+{%- assign canonical_url = page.canonical | default: page.url | absolute_url -%}
+{%- assign word_count = content | strip_html | number_of_words -%}
+{%- assign read_time = word_count | divided_by: 200 | plus: 1 -%}
+{%- if page.reading_time -%}{%- assign read_time = page.reading_time -%}{%- endif -%}
+
+<!-- jekyll-seo-tag renders <title>, meta description, canonical, OG, Twitter, and a base Article schema -->
+{% seo %}
+
+<link rel="canonical" href="{{ canonical_url }}" />
+
+<!-- Article JSON-LD (Google Rich Results spec) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ page.schema_type | default: 'Article' }}",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "image": [
+    "{{ hero_image | absolute_url }}"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Verascribe Editorial",
+    "url": "{{ '/editorial-standards/' | absolute_url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Verascribe Guardian",
+    "url": "{{ '/' | absolute_url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/images/logo.png' | absolute_url }}"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ canonical_url }}"
+  }
+}
+</script>
+
+{% if page.schema_type == "HowTo" and page.howto_steps %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "step": [
+    {% for step in page.howto_steps %}
+    {
+      "@type": "HowToStep",
+      "name": {{ step.name | jsonify }},
+      "text": {{ step.text | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if page.schema_type == "FAQPage" and page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<!-- BreadcrumbList JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ '/' | absolute_url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ '/blog/' | absolute_url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ canonical_url }}"
+    }
+  ]
+}
+</script>
+
+<!-- Hero -->
+<div class="w-full bg-charcoal border-b border-slate-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="text-sm text-gray-400 mb-6">
+      <ol class="flex flex-wrap items-center gap-2">
+        <li><a href="{{ '/' | relative_url }}" class="hover:text-brand-teal">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="{{ '/blog/' | relative_url }}" class="hover:text-brand-teal">Blog</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-off-white/70 truncate max-w-xs" aria-current="page">{{ page.title }}</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+    <div class="aspect-[16/9] w-full rounded-2xl overflow-hidden border border-white/5 bg-[#0F172A]">
+      <img
+        src="{{ hero_image | relative_url }}"
+        alt="{{ page.title | escape }}"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Wrapper -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 fade-in">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- MAIN CONTENT COLUMN -->
+    <article class="lg:col-span-8">
+      <!-- Header -->
+      <div class="mb-8 md:mb-12">
+        {% if page.lens %}
+        <span
+          class="inline-block px-3 py-1 bg-[#A855F7]/15 text-electric-purple rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#A855F7]/25"
+        >
+          {{ page.lens }} lens
+        </span>
+        {% endif %}
+
+        <h1
+          class="text-3xl md:text-5xl font-bold text-[#f9fafb] mb-6 tracking-tight leading-tight"
+        >
+          {{ page.title }}
+        </h1>
+
+        {% if page.description %}
+        <p class="text-lg md:text-xl text-[#f9fafb]/70 leading-relaxed mb-6">
+          {{ page.description }}
+        </p>
+        {% endif %}
+
+        <div
+          class="flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-400 text-sm"
+        >
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+          <span aria-hidden="true">•</span>
+          <span class="inline-flex items-center">
+            <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5"></i>
+            {{ read_time }} min read
+          </span>
+          <span aria-hidden="true">•</span>
+          <a href="{{ '/editorial-standards/' | relative_url }}" class="text-[#2a9d8f] hover:text-[#238b7e] font-medium">
+            Published by Verascribe Editorial
+          </a>
+        </div>
+
+        {% if page.tags and page.tags.size > 0 %}
+        <div class="mt-5 flex flex-wrap gap-2">
+          {% for tag in page.tags %}
+          <span class="px-2.5 py-1 rounded-full text-xs bg-white/5 border border-white/10 text-[#f9fafb]/70">
+            #{{ tag }}
+          </span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Body -->
+      <div
+        class="prose prose-lg prose-invert prose-img:mx-auto prose-img:rounded-xl prose-headings:font-bold prose-headings:text-[#f9fafb] prose-p:text-[#f9fafb]/80 prose-li:text-[#f9fafb]/80 prose-a:text-[#2a9d8f] hover:prose-a:text-[#238b7e] prose-strong:text-[#f9fafb] prose-blockquote:border-electric-purple prose-blockquote:text-[#f9fafb]/90 max-w-none"
+      >
+        {{ content }}
+      </div>
+
+      <!-- Disclaimer block -->
+      {% if page.disclaimer and page.disclaimer != "none" %}
+      <div class="mt-12 space-y-4">
+        {% if page.disclaimer == "legal" or page.disclaimer == "both" %}
+        <aside
+          class="rounded-xl border border-[#2a9d8f]/30 bg-[#2a9d8f]/5 p-5 text-sm text-[#f9fafb]/80 leading-relaxed"
+          aria-label="Legal disclaimer"
+        >
+          <p class="font-semibold text-[#2a9d8f] mb-2 flex items-center">
+            <i data-lucide="scale" class="w-4 h-4 mr-2"></i>
+            Legal disclaimer
+          </p>
+          <p class="italic">
+            This post describes documentation strategy and provides general educational information about family law processes. It is not legal advice and does not create an attorney-client relationship. Every custody situation is unique. Consult a licensed family law attorney for guidance on your specific case.
+          </p>
+        </aside>
+        {% endif %}
+        {% if page.disclaimer == "mental_health" or page.disclaimer == "both" %}
+        <aside
+          class="rounded-xl border border-electric-purple/30 bg-electric-purple/5 p-5 text-sm text-[#f9fafb]/80 leading-relaxed"
+          aria-label="Mental health disclaimer"
+        >
+          <p class="font-semibold text-electric-purple mb-2 flex items-center">
+            <i data-lucide="heart-pulse" class="w-4 h-4 mr-2"></i>
+            Mental health disclaimer
+          </p>
+          <p class="italic">
+            This post discusses evidence-based co-parenting frameworks and psychological concepts for educational purposes. It is not therapy, clinical advice, or a substitute for professional mental health support. If you are in crisis or need clinical support, please contact a licensed mental health professional.
+          </p>
+        </aside>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <!-- Footer Navigation -->
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+        <a
+          href="{{ '/blog/' | relative_url }}"
+          class="inline-flex items-center text-[#2a9d8f] font-bold hover:text-[#238b7e] transition-colors"
+        >
+          <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Back to the Blog
+        </a>
+        <a
+          href="{{ '/editorial-standards/' | relative_url }}"
+          class="inline-flex items-center text-gray-400 text-sm hover:text-brand-teal transition-colors"
+        >
+          How we edit and fact-check
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1.5"></i>
+        </a>
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="lg:col-span-4 space-y-8">
+      <div class="sticky top-24 space-y-8">
+        <!-- Primary CTA: Guardian -->
+        <div
+          class="bg-[#7c3aed] rounded-2xl p-6 text-white shadow-lg relative overflow-hidden group border border-white/5"
+        >
+          <div
+            class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-110 transition-transform duration-500"
+          ></div>
+          <h3 class="text-xl font-bold mb-3 relative z-10">
+            Document your custody case with Verascribe Guardian.
+          </h3>
+          <p class="text-white/90 mb-6 text-sm relative z-10 leading-relaxed">
+            A purpose-built workbook for tracking schedules, communications, expenses, and evidence — court-ready when you need it.
+          </p>
+          <a
+            href="{{ '/' | relative_url }}"
+            class="block w-full text-center bg-white text-[#7c3aed] font-bold py-3 rounded-xl hover:bg-gray-50 transition-colors relative z-10 shadow-sm"
+          >
+            See how it works
+          </a>
+        </div>
+
+        <!-- Secondary: Latest from the blog -->
+        {% assign blog_posts = site.posts | where: "category", "blog" %}
+        {% if blog_posts.size > 1 %}
+        <div class="bg-[#1e1f20] rounded-2xl p-6 border border-white/5 shadow-sm">
+          <h3 class="text-lg font-bold text-[#f9fafb] mb-4 border-b border-white/10 pb-2">
+            More from the blog
+          </h3>
+          <ul class="space-y-4">
+            {% for post in blog_posts limit:4 %}
+              {% unless post.url == page.url %}
+              <li>
+                <a href="{{ post.url | relative_url }}" class="group">
+                  <span class="block text-xs text-gray-400 mb-1">{{ post.date | date: "%b %d, %Y" }}</span>
+                  <span
+                    class="block text-[#f9fafb]/90 font-medium group-hover:text-[#2a9d8f] transition-colors line-clamp-2"
+                  >
+                    {{ post.title }}
+                  </span>
+                </a>
+              </li>
+              {% endunless %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <!-- Editorial trust signal -->
+        <div class="bg-[#1e1f20] rounded-2xl p-6 border border-white/5 shadow-sm">
+          <h3 class="text-base font-bold text-[#f9fafb] mb-2 flex items-center">
+            <i data-lucide="shield-check" class="w-4 h-4 mr-2 text-[#2a9d8f]"></i>
+            Verascribe Editorial standards
+          </h3>
+          <p class="text-sm text-[#f9fafb]/70 mb-4 leading-relaxed">
+            Every post passes a six-step editorial process: brief, draft, edit, fact-check, legal or reflective review, publish.
+          </p>
+          <a
+            href="{{ '/editorial-standards/' | relative_url }}"
+            class="inline-flex items-center text-[#2a9d8f] text-sm font-semibold hover:text-[#238b7e]"
+          >
+            Read our standards
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>

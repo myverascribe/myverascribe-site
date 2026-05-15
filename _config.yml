@@ -2,3 +2,58 @@ title: Verascribe Guardian
 description: Your Truth. Secured.
 baseurl: "/"
 url: "https://myverascribe.com"
+
+# --- Author / Brand ---
+author:
+  name: Verascribe Editorial
+  url: https://myverascribe.com/editorial-standards/
+
+social:
+  name: Verascribe Guardian
+  links:
+    - https://myverascribe.com
+
+# twitter: not yet active — add username when handle is created
+#   username: your-handle-here
+#   card: summary_large_image
+
+# Google Search Console verification.
+# If you verified via DNS TXT record (common for GitHub Pages), this tag is not required —
+# GSC already recognises ownership via DNS. Leave commented.
+# If you want HTML tag as secondary verification: go to GSC → Settings → Ownership verification
+# → HTML tag → copy only the content="..." value and paste it below.
+# google_site_verification: "PASTE_CONTENT_VALUE_HERE"
+
+# --- Plugins ---
+# Note: GitHub Pages whitelists these three plugins. The `github-pages` gem
+# already bundles them; declaring them here ensures Jekyll loads them locally.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# --- Permalinks ---
+# Release notes (existing) keep Jekyll's default permalink so existing URLs are not broken.
+# Blog posts live in `_posts/blog/` and get the /blog/:year/:month/:day/:slug/ permalink
+# plus the `blog-post` layout, applied via a path-scoped default.
+defaults:
+  - scope:
+      path: "_posts/blog"
+      type: posts
+    values:
+      layout: blog-post
+      permalink: /blog/:year/:month/:day/:slug/
+      category: blog
+
+# --- Feed ---
+feed:
+  path: /feed.xml
+
+# Ignore upstream content build artifacts
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - assets/images/blog/README.md
