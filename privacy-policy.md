@@ -6,7 +6,7 @@ title: Privacy Policy
 # Privacy Policy
 
 **Effective Date:** 2026-04-27
-**Last Updated:** 2026-05-13
+**Last Updated:** 2026-05-16
 
 This Privacy Policy explains how **Nemerai, LLC** ("Verascribe," "we," "us") handles information when you use **Verascribe Guardian** (the "Service"), a Google Apps Script web app — used alongside a Google Sheet workbook you select — that helps co-parents and guardians track custody schedules, communications, expenses, and related events.
 
@@ -286,7 +286,9 @@ No internet-connected service can be guaranteed 100% secure. If we ever become a
 
 ## 13. International transfers
 
-If you are located outside the United States, please be aware that the license registry is currently hosted in the **United States**. By using the Service, you consent to the transfer of the limited license-related information described in Section 5 to that jurisdiction. For transfers from the European Economic Area or United Kingdom, we rely on the European Commission's **Standard Contractual Clauses (2021 EU Commission Implementing Decision, Module 1: Controller-to-Controller)** or equivalent UK transfer mechanisms as appropriate safeguards. We have conducted a **Transfer Impact Assessment** covering the limited license-validation data described in Section 5 and have concluded that U.S. law and practice do not, in the specific context of that narrow processing activity (an email address and license token transmitted for a single license-check purpose), present an unacceptable risk to the rights and freedoms of EU/UK data subjects.
+If you are located outside the United States, please be aware that the license registry is currently hosted in the **United States**. By using the Service, you consent to the transfer of the limited license-related information described in Section 5 to that jurisdiction.
+
+Verascribe Guardian is not currently marketed to or directed at residents of the European Economic Area, the United Kingdom, or other jurisdictions with cross-border data-transfer regimes. If we begin directing the Service to those jurisdictions, this section will be updated and the corresponding transfer safeguards (such as Standard Contractual Clauses and a Transfer Impact Assessment) will be put in place before that offering goes live.
 
 ---
 
