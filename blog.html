@@ -11,7 +11,7 @@ permalink: /blog/
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">
   <header class="text-center mb-16">
-    <p class="text-base font-semibold uppercase tracking-[0.2em] text-electric-purple mb-3">
+    <p class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-3">
       Verascribe Editorial
     </p>
     <h1 class="text-4xl md:text-5xl font-bold text-off-white mb-4 tracking-tight">
@@ -42,7 +42,7 @@ permalink: /blog/
           <a href="{{ post.url | relative_url }}" class="block p-6 md:p-8 group">
             <div class="flex flex-wrap items-center gap-x-3 gap-y-2 mb-4 text-xs">
               {% if post.lens %}
-              <span class="px-2.5 py-1 rounded-full bg-electric-purple/15 text-electric-purple font-bold uppercase tracking-wider border border-electric-purple/25">
+              <span class="px-2.5 py-1 rounded-full bg-brand-purple/15 text-brand-purple font-bold uppercase tracking-wider border border-brand-purple/25">
                 {{ post.lens }} lens
               </span>
               {% endif %}
@@ -61,11 +61,11 @@ permalink: /blog/
             </h2>
 
             {% if post.description %}
-            <p class="text-[#f9fafb]/70 leading-relaxed mb-4">
+            <p class="text-off-white/70 leading-relaxed mb-4">
               {{ post.description }}
             </p>
             {% else %}
-            <p class="text-[#f9fafb]/70 leading-relaxed mb-4">
+            <p class="text-off-white/70 leading-relaxed mb-4">
               {{ post.excerpt | strip_html | truncatewords: 35 }}
             </p>
             {% endif %}
@@ -73,7 +73,7 @@ permalink: /blog/
             {% if post.tags and post.tags.size > 0 %}
             <div class="flex flex-wrap gap-2 mb-4">
               {% for tag in post.tags limit: 5 %}
-              <span class="px-2 py-0.5 rounded text-xs bg-white/5 border border-white/10 text-[#f9fafb]/80">
+              <span class="px-2 py-0.5 rounded text-xs bg-white/5 border border-white/10 text-off-white/80">
                 #{{ tag }}
               </span>
               {% endfor %}

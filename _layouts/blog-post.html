@@ -138,7 +138,7 @@ layout: default
 
   {% if hero_image %}
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-    <div class="aspect-[16/9] w-full rounded-2xl overflow-hidden border border-white/5 bg-[#0F172A]">
+    <div class="aspect-[16/9] w-full rounded-2xl overflow-hidden border border-white/5 bg-charcoal">
       <img
         src="{{ hero_image | relative_url }}"
         alt="{{ page.title | escape }}"
@@ -159,20 +159,20 @@ layout: default
       <div class="mb-8 md:mb-12">
         {% if page.lens %}
         <span
-          class="inline-block px-3 py-1 bg-[#A855F7]/15 text-electric-purple rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#A855F7]/25"
+          class="inline-block px-3 py-1 bg-brand-purple/15 text-brand-purple rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-brand-purple/25"
         >
           {{ page.lens }} lens
         </span>
         {% endif %}
 
         <h1
-          class="text-7xl font-serif-display font-normal text-[#f9fafb] mb-6 tracking-tight leading-tight"
+          class="text-7xl font-serif-display font-normal text-off-white mb-6 tracking-tight leading-tight"
         >
           {{ page.title }}
         </h1>
 
         {% if page.description %}
-        <p class="text-lg md:text-xl text-[#f9fafb]/70 leading-relaxed mb-6">
+        <p class="text-lg md:text-xl text-off-white/70 leading-relaxed mb-6">
           {{ page.description }}
         </p>
         {% endif %}
@@ -185,7 +185,7 @@ layout: default
             {{ read_time }} min read
           </span>
           <span aria-hidden="true">•</span>
-          <a href="{{ '/editorial-standards/' | relative_url }}" class="text-[#2a9d8f] hover:text-[#238b7e] font-medium">
+          <a href="{{ '/editorial-standards/' | relative_url }}" class="text-brand-teal hover:text-brand-teal/80 font-medium">
             Published by Verascribe Editorial
           </a>
         </div>
@@ -193,7 +193,7 @@ layout: default
         {% if page.tags and page.tags.size > 0 %}
         <div class="mt-5 flex flex-wrap gap-2">
           {% for tag in page.tags %}
-          <span class="px-2.5 py-1 rounded-full text-xs bg-white/5 border border-white/10 text-[#f9fafb]/70">
+          <span class="px-2.5 py-1 rounded-full text-xs bg-white/5 border border-white/10 text-off-white/70">
             #{{ tag }}
           </span>
           {% endfor %}
@@ -203,7 +203,7 @@ layout: default
 
       <!-- Body -->
       <div
-        class="prose prose-lg prose-invert prose-img:mx-auto prose-img:rounded-xl prose-headings:font-bold prose-headings:text-[#f9fafb] prose-p:text-[#f9fafb]/80 prose-li:text-[#f9fafb]/80 prose-a:text-[#2a9d8f] hover:prose-a:text-[#238b7e] prose-strong:text-[#f9fafb] prose-blockquote:border-electric-purple prose-blockquote:text-[#f9fafb]/90 max-w-none"
+        class="prose prose-lg prose-invert prose-img:mx-auto prose-img:rounded-xl prose-headings:font-bold prose-headings:text-off-white prose-p:text-off-white/80 prose-li:text-off-white/80 prose-a:text-brand-teal hover:prose-a:text-brand-teal/80 prose-strong:text-off-white prose-blockquote:border-brand-purple prose-blockquote:text-off-white/90 max-w-none"
       >
         {{ content }}
       </div>
@@ -213,10 +213,10 @@ layout: default
       <div class="mt-12 space-y-4">
         {% if page.disclaimer == "legal" or page.disclaimer == "both" %}
         <aside
-          class="rounded-xl border border-[#2a9d8f]/30 bg-[#2a9d8f]/5 p-5 text-base text-[#f9fafb]/80 leading-relaxed"
+          class="rounded-xl border border-brand-teal/30 bg-brand-teal/5 p-5 text-base text-off-white/80 leading-relaxed"
           aria-label="Legal disclaimer"
         >
-          <p class="font-semibold text-[#2a9d8f] mb-2 flex items-center">
+          <p class="font-semibold text-brand-teal mb-2 flex items-center">
             <i data-lucide="scale" class="w-4 h-4 mr-2"></i>
             Legal disclaimer
           </p>
@@ -227,10 +227,10 @@ layout: default
         {% endif %}
         {% if page.disclaimer == "mental_health" or page.disclaimer == "both" %}
         <aside
-          class="rounded-xl border border-electric-purple/30 bg-electric-purple/5 p-5 text-base text-[#f9fafb]/80 leading-relaxed"
+          class="rounded-xl border border-brand-purple/30 bg-brand-purple/5 p-5 text-base text-off-white/80 leading-relaxed"
           aria-label="Mental health disclaimer"
         >
-          <p class="font-semibold text-electric-purple mb-2 flex items-center">
+          <p class="font-semibold text-brand-purple mb-2 flex items-center">
             <i data-lucide="heart-pulse" class="w-4 h-4 mr-2"></i>
             Mental health disclaimer
           </p>
@@ -246,7 +246,7 @@ layout: default
       <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
         <a
           href="{{ '/blog/' | relative_url }}"
-          class="inline-flex items-center text-[#2a9d8f] font-bold hover:text-[#238b7e] transition-colors"
+          class="inline-flex items-center text-brand-teal font-bold hover:text-brand-teal/80 transition-colors"
         >
           <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Back to the Blog
         </a>
@@ -265,7 +265,7 @@ layout: default
       <div class="sticky top-24 space-y-8">
         <!-- Primary CTA: Guardian -->
         <div
-          class="bg-[#7c3aed] rounded-2xl p-6 text-white shadow-lg relative overflow-hidden group border border-white/5"
+          class="bg-brand-purple rounded-2xl p-6 text-white shadow-lg relative overflow-hidden group border border-white/5"
         >
           <div
             class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-110 transition-transform duration-500"
@@ -278,7 +278,7 @@ layout: default
           </p>
           <a
             href="{{ '/' | relative_url }}"
-            class="block w-full text-center bg-white text-[#7c3aed] font-bold py-3 rounded-xl hover:bg-gray-50 transition-colors relative z-10 shadow-sm"
+            class="block w-full text-center bg-white text-brand-purple font-bold py-3 rounded-xl hover:bg-gray-50 transition-colors relative z-10 shadow-sm"
           >
             See how it works
           </a>
@@ -288,7 +288,7 @@ layout: default
         {% assign blog_posts = site.posts | where: "category", "blog" %}
         {% if blog_posts.size > 1 %}
         <div class="bg-[#1e1f20] rounded-2xl p-6 border border-white/5 shadow-sm">
-          <h3 class="text-lg font-bold text-[#f9fafb] mb-4 border-b border-white/10 pb-2">
+          <h3 class="text-lg font-bold text-off-white mb-4 border-b border-white/10 pb-2">
             More from the blog
           </h3>
           <ul class="space-y-4">
@@ -297,7 +297,7 @@ layout: default
               <li>
                 <a href="{{ post.url | relative_url }}" class="group">
                   <span
-                    class="block text-[#f9fafb]/90 font-medium group-hover:text-[#2a9d8f] transition-colors line-clamp-2"
+                    class="block text-off-white/90 font-medium group-hover:text-brand-teal transition-colors line-clamp-2"
                   >
                     {{ post.title }}
                   </span>
@@ -311,16 +311,16 @@ layout: default
 
         <!-- Editorial trust signal -->
         <div class="bg-[#1e1f20] rounded-2xl p-6 border border-white/5 shadow-sm">
-          <h3 class="text-base font-bold text-[#f9fafb] mb-2 flex items-center">
-            <i data-lucide="shield-check" class="w-4 h-4 mr-2 text-[#2a9d8f]"></i>
+          <h3 class="text-base font-bold text-off-white mb-2 flex items-center">
+            <i data-lucide="shield-check" class="w-4 h-4 mr-2 text-brand-teal"></i>
             Verascribe Editorial standards
           </h3>
-          <p class="text-base text-[#f9fafb]/70 mb-4 leading-relaxed">
+          <p class="text-base text-off-white/70 mb-4 leading-relaxed">
             Every post passes a six-step editorial process: brief, draft, edit, fact-check, legal or reflective review, publish.
           </p>
           <a
             href="{{ '/editorial-standards/' | relative_url }}"
-            class="inline-flex items-center text-[#2a9d8f] text-base font-semibold hover:text-[#238b7e]"
+            class="inline-flex items-center text-brand-teal text-base font-semibold hover:text-brand-teal/80"
           >
             Read our standards
             <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>

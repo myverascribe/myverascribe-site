@@ -37,11 +37,12 @@
               "serif-display": ["DM Serif Display", "serif"],
             },
             colors: {
-              charcoal: "#0F172A",
-              "off-white": "#f9fafb",
-              "brand-teal": "#2a9d8f",
-              "brand-purple": "#7c3aed",
-              "electric-purple": "#BF5FFF",
+              // Electric Fortress master palette (per Strategic Brand Directive)
+              charcoal: "#0F172A",        // Deep Slate — primary background
+              "off-white": "#F1F5F9",     // Off-White — typography / canvas
+              "brand-purple": "#A855F7",  // Neon Purple — primary action / glow
+              "brand-teal": "#14B8A6",    // Professional Teal — secondary accent
+              "alert-rose": "#F43F5E",    // Alert Rose — urgency (reserved: high-severity tags, missed exchanges)
             },
           },
         },
@@ -167,6 +168,36 @@
       .embed-mode footer {
         display: none !important;
       }
+
+      /* A11y: visible focus ring for keyboard navigation (WCAG 2.4.7) */
+      a:focus-visible,
+      button:focus-visible,
+      [role="button"]:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid #A855F7;
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+
+      /* A11y: respect prefers-reduced-motion (vestibular safety) */
+      @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .stagger-reveal > *,
+        .fade-in {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+          animation: none !important;
+        }
+        .hero-overlay,
+        .hero-image,
+        .hero-sticky-container {
+          transition: none !important;
+        }
+        * {
+          scroll-behavior: auto !important;
+        }
+      }
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -263,7 +294,7 @@
             class="flex items-center cursor-pointer group"
           >
             <span class="font-bold text-xl text-off-white tracking-tight"
-              >Verascribe <span class="text-electric-purple">Guardian</span></span
+              >Verascribe <span class="text-brand-purple">Guardian</span></span
             >
           </a>
 
