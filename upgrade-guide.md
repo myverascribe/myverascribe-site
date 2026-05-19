@@ -10,7 +10,7 @@ description: "A step-by-step guide to exporting and importing your workbook data
 ## Upgrading In 3 Easy Steps
 
 <div class="rounded-2xl border border-blue-500 border-opacity-40 bg-gradient-to-tl from-blue-900 via-blue-800 to-sky-900 p-6 text-slate-100 shadow-2xl">
-  <p class="text-sm font-semibold uppercase tracking-wide text-blue-200">Before You Begin</p>
+  <p class="text-base font-semibold uppercase tracking-wide text-blue-200">Before You Begin</p>
   <div class="mt-4 space-y-6 text-base leading-relaxed text-slate-100">
     <div>
       <h4 class="mb-2 flex items-center gap-2 text-lg font-semibold text-blue-50">

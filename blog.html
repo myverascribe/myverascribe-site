@@ -11,7 +11,7 @@ permalink: /blog/
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">
   <header class="text-center mb-16">
-    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-electric-purple mb-3">
+    <p class="text-base font-semibold uppercase tracking-[0.2em] text-electric-purple mb-3">
       Verascribe Editorial
     </p>
     <h1 class="text-4xl md:text-5xl font-bold text-off-white mb-4 tracking-tight">
@@ -46,11 +46,11 @@ permalink: /blog/
                 {{ post.lens }} lens
               </span>
               {% endif %}
-              <time datetime="{{ post.date | date_to_xmlschema }}" class="text-gray-400">
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="text-gray-300">
                 {{ post.date | date: "%B %d, %Y" }}
               </time>
-              <span class="text-gray-500" aria-hidden="true">•</span>
-              <span class="text-gray-400 inline-flex items-center">
+              <span class="text-gray-300" aria-hidden="true">•</span>
+              <span class="text-gray-300 inline-flex items-center">
                 <i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i>
                 {{ rt }} min read
               </span>
@@ -73,14 +73,14 @@ permalink: /blog/
             {% if post.tags and post.tags.size > 0 %}
             <div class="flex flex-wrap gap-2 mb-4">
               {% for tag in post.tags limit: 5 %}
-              <span class="px-2 py-0.5 rounded text-xs bg-white/5 border border-white/10 text-[#f9fafb]/60">
+              <span class="px-2 py-0.5 rounded text-xs bg-white/5 border border-white/10 text-[#f9fafb]/80">
                 #{{ tag }}
               </span>
               {% endfor %}
             </div>
             {% endif %}
 
-            <span class="inline-flex items-center text-brand-teal font-semibold text-sm">
+            <span class="inline-flex items-center text-brand-teal font-semibold text-base">
               Read the post
               <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-0.5"></i>
             </span>
@@ -91,7 +91,7 @@ permalink: /blog/
 
     {% if total > per_page %}
     <nav class="mt-12 flex justify-center" aria-label="Pagination">
-      <p class="text-sm text-gray-400">
+      <p class="text-base text-gray-400">
         Showing {{ per_page }} of {{ total }} posts. Older posts coming to /blog/page/2/ once the publishing volume requires it.
       </p>
     </nav>

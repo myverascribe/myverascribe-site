@@ -12,7 +12,7 @@ layout: default
         {% if page.version %}
         <!-- Updated: Teal Background (Low Opacity) / Teal Text -->
         <span
-          class="inline-block px-3 py-1 bg-[#2a9d8f]/20 text-[#2a9d8f] rounded-full text-sm font-bold mb-4 border border-[#2a9d8f]/20"
+          class="inline-block px-3 py-1 bg-[#2a9d8f]/20 text-[#2a9d8f] rounded-full text-base font-bold mb-4 border border-[#2a9d8f]/20"
         >
           {{ page.version }}
         </span>
@@ -26,7 +26,7 @@ layout: default
         </h1>
 
         <div
-          class="flex items-center space-x-4 text-gray-400 text-sm md:text-base"
+          class="flex items-center space-x-4 text-gray-400 text-base md:text-base"
         >
           <time datetime="{{ page.date | date_to_xmlschema }}"
             >{{ page.date | date: "%B %d, %Y" }}</time
@@ -70,7 +70,7 @@ layout: default
           <div>
             <!-- Sub-Heading -->
             <h4
-              class="font-bold text-[#f9fafb] text-sm uppercase tracking-wider mb-3 border-b border-white/10 pb-1"
+              class="font-bold text-[#f9fafb] text-base uppercase tracking-wider mb-3 border-b border-white/10 pb-1"
             >
               {{ group.name }}
             </h4>
@@ -144,7 +144,7 @@ layout: default
           </h3>
 
           <!-- Body -->
-          <p class="text-white/90 mb-6 text-sm relative z-10 leading-relaxed">
+          <p class="text-white/90 mb-6 text-base relative z-10 leading-relaxed">
             Etsy reviews fuel our development and help parents find the tools
             they need. It takes less than a minute to support the mission.
           </p>
@@ -172,7 +172,7 @@ layout: default
           </h3>
 
           <!-- Body Copy -->
-          <p class="text-sm text-[#f9fafb] mb-6 leading-relaxed">
+          <p class="text-base text-[#f9fafb] mb-6 leading-relaxed">
             Don't worry—you don't need to be a tech wizard. Follow our easy
             picture guide to get set up in just a few minutes.
           </p>
@@ -222,7 +222,7 @@ layout: default
           <h3 class="text-lg font-bold text-[#f9fafb] mb-2">
             Stay in the loop
           </h3>
-          <p class="text-sm text-gray-400 mb-4">
+          <p class="text-base text-gray-400 mb-4">
             Get the latest features delivered to your inbox.
           </p>
           <input
