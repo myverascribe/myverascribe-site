@@ -1,0 +1,628 @@
+---
+layout: trial
+title: Start your 7-day trial
+description: Try the full Verascribe Guardian app free for 7 days. No card, no auto-billing. Your records stay in your Google account whether you buy or not.
+permalink: /trial/
+variant: a
+---
+
+<!--
+  trial.myverascribe.com (subdomain-masked to /trial/)
+
+  Canonical copy source: ai-docs/marketing/website/trial-page-copy.md
+  Layout spec source: Axis layout spec dispatch 2026-05-19
+
+  Variant flag: `variant: a` (pre-Google-verification, current)
+                Switch to `variant: b` when Google Workspace Marketplace listing is live.
+
+  Open items at publish-time:
+  - Hero CTA href is "#" placeholder — paste Apps Script webapp deployment URL before publish
+  - Etsy CTA href is "#" placeholder — paste live Etsy listing URL before publish
+  - Asset TODOs on hero composition, 4 step thumbnails, 3 Variant A screenshots
+  - Safari support is hedged until Tecton confirms parity
+-->
+
+<!-- ============================================================
+     SECTION 1 — HERO
+     Static, CTA above fold, scroll-reveal disabled per Axis.
+     ============================================================ -->
+<section class="relative bg-charcoal pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.1),transparent_60%)] -z-10"></div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-6">
+      Free trial
+    </p>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-off-white mb-6">
+      Start your 7-day trial.
+    </h1>
+    <p class="text-2xl md:text-3xl font-bold text-off-white/90 mb-10 leading-[1.15]">
+      Full access. No card. No surprises.
+    </p>
+    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-10 max-w-3xl mx-auto">
+      You'll sign in with your Google account, pick a workbook, and have your first entry logged inside five minutes. Verascribe stays in your Google account from the first second &mdash; we never see what you write.
+    </p>
+
+    <!-- Variant-dependent primary CTA -->
+    {% if page.variant == 'a' %}
+    <a
+      href="#"
+      class="inline-block cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-10 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl"
+      style="box-shadow: 0 0 40px rgba(168,85,247,0.4);"
+    >
+      Start free for 7 days
+    </a>
+    {% else %}
+    <!-- ASSET TODO: Replace with official Google Workspace Marketplace badge per Google brand guidelines -->
+    <a href="#" class="inline-block">
+      <div class="asset-todo rounded-lg px-6 py-3 inline-flex items-center text-brand-purple/70">
+        <i data-lucide="badge-check" class="w-5 h-5 mr-2"></i>
+        <span class="font-semibold">Marketplace badge (official Google asset)</span>
+      </div>
+    </a>
+    {% endif %}
+
+    <p class="text-base text-gray-400 mt-6 max-w-xl mx-auto">
+      No payment. No credit card. Your records stay in your Google account when the trial ends, whether you buy or not.
+    </p>
+
+    <!-- Hero UI Spotlight asset (below CTA per Axis spec — scroll reward, not above-fold) -->
+    <div class="mt-20 max-w-4xl mx-auto">
+      <!-- ASSET TODO: /assets/images/trial/hero.png — 1280x800 (16:10), UI Spotlight, dark app UI in laptop frame, radial Neon Purple glow -->
+      <div class="asset-todo aspect-[16/10] rounded-2xl flex items-center justify-center" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
+        <div class="text-center text-brand-purple/60">
+          <i data-lucide="image" class="w-16 h-16 mx-auto mb-3"></i>
+          <p class="text-sm font-semibold uppercase tracking-wider">Hero UI Spotlight</p>
+          <p class="text-xs mt-1 opacity-60">/assets/images/trial/hero.png &middot; 1280&times;800 &middot; UI Spotlight</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2 — WHAT YOU GET FOR 7 DAYS
+     6-card capability grid, 2 cols desktop, 1 col mobile.
+     ============================================================ -->
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center reveal mb-16">
+      <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
+        The full app
+      </p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+        Not a demo.<br />The real product, for a week.
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] max-w-3xl mx-auto">
+        Every feature, unlocked for seven days. No "lite" version, no upsell traps, no gated capabilities.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 reveal">
+      <!-- Card 1: Custody logging -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="clipboard-list" class="w-7 h-7 text-brand-teal mb-4"></i>
+        <h3 class="text-xl font-bold text-off-white mb-3">Custody logging</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Structured entries for incidents, behavior, communications, school, medical, and exchanges. Not a blank note field &mdash; categorized fields that read cleanly six months later.
+        </p>
+      </div>
+
+      <!-- Card 2: Custody calendar -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="calendar" class="w-7 h-7 text-brand-teal mb-4"></i>
+        <h3 class="text-xl font-bold text-off-white mb-3">Custody calendar</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Generate recurring schedules (2-2-3, 50/50, alternating, custom) or build one from scratch.
+        </p>
+      </div>
+
+      <!-- Card 3: Finance ledger -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="receipt" class="w-7 h-7 text-brand-teal mb-4"></i>
+        <h3 class="text-xl font-bold text-off-white mb-3">Finance ledger</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Log child-related expenses, running balance, arrears tracking, attach receipts.
+        </p>
+      </div>
+
+      <!-- Card 4: Evidence locker -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="folder-lock" class="w-7 h-7 text-brand-teal mb-4"></i>
+        <h3 class="text-xl font-bold text-off-white mb-3">Evidence locker</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Keep photos, screenshots, and PDFs in a Verascribe folder inside your own Google Drive. Pull them into a report later, or just keep them on hand.
+        </p>
+      </div>
+
+      <!-- Card 5: One-click PDF reports -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="file-text" class="w-7 h-7 text-brand-teal mb-4"></i>
+        <h3 class="text-xl font-bold text-off-white mb-3">One-click PDF reports</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Generate court-ready documents for your attorney, filtered by date, child, or category.
+        </p>
+      </div>
+
+      <!-- Card 6: Full audit trail -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="history" class="w-7 h-7 text-brand-teal mb-4"></i>
+        <h3 class="text-xl font-bold text-off-white mb-3">Full audit trail</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Every entry timestamped, every edit and deletion tracked, so your record can show its own history. That's what makes it hold up.
+        </p>
+      </div>
+    </div>
+
+    <p class="text-center text-lg text-gray-300 mt-16 reveal">
+      You're not trialing a "lite" version. You're trialing the real product.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3 — THE FIRST FIVE MINUTES
+     4-step diagram: horizontal lg+, vertical stack on smaller.
+     ============================================================ -->
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center reveal mb-16">
+      <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
+        What to expect
+      </p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+        Your first five minutes<br />inside the app.
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] max-w-3xl mx-auto">
+        A preview, not a tutorial.
+      </p>
+    </div>
+
+    <!-- 4-step grid with desktop connector line -->
+    <div class="relative reveal">
+      <!-- Connector line: desktop only, behind the chips -->
+      <div class="hidden lg:block absolute top-12 left-[12%] right-[12%] h-px bg-slate-700/60 -z-0"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-6 relative z-10">
+
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
+            1
+          </div>
+          <!-- ASSET TODO: /assets/images/trial/step-1.png — 1280x960 (4:3), workbook-picker UI screenshot -->
+          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
+            <div class="text-center text-brand-purple/50">
+              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+              <p class="text-xs opacity-70">step-1.png</p>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-off-white mb-2">Tell us where you are.</h3>
+          <p class="text-base text-gray-400 leading-[1.5]">
+            New to Verascribe, or returning to an existing workbook? One tap.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
+            2
+          </div>
+          <!-- ASSET TODO: /assets/images/trial/step-2.png — 1280x960 (4:3), Google file picker screenshot -->
+          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
+            <div class="text-center text-brand-purple/50">
+              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+              <p class="text-xs opacity-70">step-2.png</p>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-off-white mb-2">Create your workbook.</h3>
+          <p class="text-base text-gray-400 leading-[1.5]">
+            Google's file picker opens. The app creates a Google Sheets workbook in your Drive. That workbook is yours &mdash; it stays in your account whether you stay with us or not.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
+            3
+          </div>
+          <!-- ASSET TODO: /assets/images/trial/step-3.png — 1280x960 (4:3), family profile entry (DO NOT include birthday — input doesn't exist yet) -->
+          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
+            <div class="text-center text-brand-purple/50">
+              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+              <p class="text-xs opacity-70">step-3.png</p>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-off-white mb-2">Enter your family profile.</h3>
+          <p class="text-base text-gray-400 leading-[1.5]">
+            Names for your child or children. Names for the parents. The relationships between them. Two minutes.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center">
+          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
+            4
+          </div>
+          <!-- ASSET TODO: /assets/images/trial/step-4.png — 1280x960 (4:3), schedule generator screenshot -->
+          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
+            <div class="text-center text-brand-purple/50">
+              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+              <p class="text-xs opacity-70">step-4.png</p>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-off-white mb-2">Generate your custody schedule.</h3>
+          <p class="text-base text-gray-400 leading-[1.5]">
+            Pick a template (2-2-3, week-on-week-off, every-other-weekend, custom) and the calendar fills in. Adjust as needed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-lg text-gray-300 mt-16 reveal">
+      That's the first five minutes. From there, you're logging.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4 — WHAT YOU'RE GRANTING GOOGLE
+     4-card permissions grid + implicit email callout + "what we don't access" bullet list.
+     ============================================================ -->
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center reveal mb-16">
+      <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
+        Permissions, in plain English
+      </p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+        What you're granting Google<br />to let the app run.
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] max-w-3xl mx-auto">
+        Verascribe is a Google Workspace app. When you sign in, Google asks you to approve <strong class="text-off-white">four specific permissions</strong>. Each one is checked individually &mdash; you see the full list and can review each before you grant.
+      </p>
+    </div>
+
+    <!-- 4-card 2x2 permissions grid -->
+    <div class="grid md:grid-cols-2 gap-6 reveal mb-12">
+
+      <!-- Permission 1: drive.file -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="folder-open" class="w-8 h-8 text-brand-teal mb-4"></i>
+        <h3 class="text-lg font-bold text-off-white mb-3">See, edit, create, and delete only the specific Google Drive files you use with this app</h3>
+        <p class="text-base text-gray-400 leading-[1.6]">
+          This is the <code class="text-brand-teal text-sm">drive.file</code> scope. It lets the app reach the workbook you pick via Google's own file picker, plus files Verascribe creates inside a Verascribe folder it makes in your Drive. Nothing else in your Drive is visible to it.
+        </p>
+      </div>
+
+      <!-- Permission 2: external_request -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="globe" class="w-8 h-8 text-brand-teal mb-4"></i>
+        <h3 class="text-lg font-bold text-off-white mb-3">Connect to an external service</h3>
+        <p class="text-base text-gray-400 leading-[1.6]">
+          Used for license validation and to confirm the registry domain hasn't been tampered with. The full host list (four domains total) is in the OAuth Disclosure.
+        </p>
+      </div>
+
+      <!-- Permission 3: send_mail -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="mail" class="w-8 h-8 text-brand-teal mb-4"></i>
+        <h3 class="text-lg font-bold text-off-white mb-3">Send email as you</h3>
+        <p class="text-base text-gray-400 leading-[1.6]">
+          Used to send you a license-registration receipt and to route any "Contact Us" support message you write. The app never reads your inbox, your drafts, or any other message.
+        </p>
+      </div>
+
+      <!-- Permission 4: scriptapp -->
+      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+        <i data-lucide="clock" class="w-8 h-8 text-brand-teal mb-4"></i>
+        <h3 class="text-lg font-bold text-off-white mb-3">Allow this application to run when you are not present</h3>
+        <p class="text-base text-gray-400 leading-[1.6]">
+          Installs a daily maintenance trigger that refreshes metrics and cleans up temporary files once a day. No data leaves your account.
+        </p>
+      </div>
+    </div>
+
+    <!-- Implicit email permission callout -->
+    <div class="glass-card rounded-2xl p-6 border border-slate-700/40 border-l-4 border-l-brand-teal reveal mb-16">
+      <div class="flex items-start gap-4">
+        <i data-lucide="user" class="w-6 h-6 text-brand-teal flex-shrink-0 mt-1"></i>
+        <div>
+          <h3 class="text-lg font-bold text-off-white mb-2">Implicit permission (not a checkbox)</h3>
+          <p class="text-base text-gray-400 leading-[1.6]">
+            When you sign in with Google, the app also sees your <strong class="text-off-white">Google email address</strong> (the address only &mdash; never your inbox or messages). This is part of Google's standard sign-in. The app uses it to register your trial, validate your license, and reach you for support.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- "What we do not access" — Type-Driven sub-block -->
+    <div class="max-w-3xl mx-auto reveal">
+      <h3 class="text-2xl md:text-3xl font-bold text-off-white mb-6 text-center">What we do not access</h3>
+      <ul class="grid md:grid-cols-2 gap-x-8 gap-y-3 mb-10">
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0"></i>
+          <span class="text-gray-300">Any other spreadsheet in your Drive</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0"></i>
+          <span class="text-gray-300">Your Gmail inbox, drafts, or any messages</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0"></i>
+          <span class="text-gray-300">Your Google Calendar</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0"></i>
+          <span class="text-gray-300">Your Google Contacts</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0"></i>
+          <span class="text-gray-300">Your Google Photos</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0"></i>
+          <span class="text-gray-300">Any advertising or tracking identifier</span>
+        </li>
+      </ul>
+
+      <p class="text-lg text-gray-400 leading-[1.6] text-center mb-8">
+        We do not run a database that holds your custody, financial, or evidence records. The only data we receive on our side is what's needed to validate your license &mdash; your email, your workbook ID, and your license token. Everything else stays in your Google account.
+      </p>
+
+      <div class="text-center">
+        <a
+          href="https://myverascribe.com/oauth-disclosure"
+          class="inline-flex items-center text-brand-teal hover:text-brand-teal/80 font-semibold transition-colors"
+        >
+          Read the complete OAuth Disclosure
+          <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5 — VARIANT A / VARIANT B
+     Variant A: Unverified screenshots + walkthrough
+     Variant B: Marketplace listing + badge
+     ============================================================ -->
+{% if page.variant == 'a' %}
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center reveal mb-12">
+      <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
+        About the "Unverified" label
+      </p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+        Why you'll see "Unverified" &mdash;<br />and what that actually means.
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] max-w-3xl mx-auto">
+        When you first authorize Verascribe, Google will show two screens. Here's exactly what each one looks like, and what to do.
+      </p>
+    </div>
+
+    <!-- Screenshot triptych (inline per Axis spec, not <details>) -->
+    <div class="grid md:grid-cols-3 gap-5 reveal mb-16">
+      <div>
+        <!-- ASSET TODO: /assets/images/trial/oauth-1-trust-prompt.png — 1200x900 (4:3), Apps Script trust prompt with "Unverified" highlighted in red callout -->
+        <div class="asset-todo aspect-[4/3] rounded-xl flex items-center justify-center">
+          <div class="text-center text-brand-purple/50">
+            <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+            <p class="text-xs opacity-70">oauth-1-trust-prompt.png</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 mt-3 text-center">Screen 1: The Apps Script trust prompt with the red "Unverified" label.</p>
+      </div>
+
+      <div>
+        <!-- ASSET TODO: /assets/images/trial/oauth-2-review-button.png — 1200x900 (4:3), same dialog with blue arrow on REVIEW PERMISSIONS button -->
+        <div class="asset-todo aspect-[4/3] rounded-xl flex items-center justify-center">
+          <div class="text-center text-brand-purple/50">
+            <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+            <p class="text-xs opacity-70">oauth-2-review-button.png</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 mt-3 text-center">Click the blue REVIEW PERMISSIONS button to continue.</p>
+      </div>
+
+      <div>
+        <!-- ASSET TODO: /assets/images/trial/oauth-3-checklist.png — 1200x900 (4:3), Google permissions checklist with 4 checkboxes -->
+        <div class="asset-todo aspect-[4/3] rounded-xl flex items-center justify-center">
+          <div class="text-center text-brand-purple/50">
+            <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
+            <p class="text-xs opacity-70">oauth-3-checklist.png</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 mt-3 text-center">Screen 2: Review each permission, check the boxes you're granting, then continue.</p>
+      </div>
+    </div>
+
+    <!-- Sub-blocks: "Why you're seeing 'Unverified'" + "What stays true either way" -->
+    <div class="max-w-3xl mx-auto reveal space-y-10">
+      <div>
+        <h3 class="text-2xl font-bold text-off-white mb-4">Why you're seeing "Unverified"</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Verascribe is in active Google security review. Until review completes, Google labels every new Workspace app this way. The label is about Google's review queue, not about the app's security or your data. Once Google completes review, the label goes away and is replaced by a Google Workspace Marketplace listing.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold text-off-white mb-4">What stays true either way</h3>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          Your records live in your own Google account. Verascribe has no database holding your custody, financial, or evidence records. We cannot see your logs or your evidence files &mdash; the architecture doesn't permit it, regardless of where the app sits in Google's queue.
+        </p>
+      </div>
+
+      <p class="text-base text-gray-400 leading-[1.6]">
+        Verascribe follows Google's <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-brand-teal hover:text-brand-teal/80 underline transition-colors">API Services User Data Policy</a>, including the Limited Use requirements.
+      </p>
+
+      <p class="text-base text-gray-400 leading-[1.6]">
+        If you'd rather wait until verification completes, email <a href="mailto:support@myverascribe.com" class="text-brand-teal hover:text-brand-teal/80 underline transition-colors">support@myverascribe.com</a> and we'll let you know the moment the label changes.
+      </p>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
+      Listed on Google Workspace Marketplace
+    </p>
+    <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+      Verified by Google.<br />Listed on the Workspace Marketplace.
+    </h2>
+    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-10">
+      Google has completed its OAuth verification review for Verascribe Guardian and listed the app on the Google Workspace Marketplace. Verification confirms the app's declared permissions match its actual behavior; it is not a general endorsement.
+    </p>
+
+    <!-- ASSET TODO: Replace with official Google Workspace Marketplace badge per Google brand guidelines (~300x80) -->
+    <div class="my-12">
+      <a href="#" class="inline-block">
+        <div class="asset-todo rounded-lg px-6 py-4 inline-flex items-center text-brand-teal/70">
+          <i data-lucide="badge-check" class="w-6 h-6 mr-3"></i>
+          <span class="font-semibold">Marketplace badge (official Google asset, ~300&times;80)</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="text-lg text-gray-400 leading-[1.6]">
+      The trust ground is the same as it ever was &mdash; your records live in your own Google account, on Google's infrastructure. Marketplace listing means Google has confirmed the permissions we request match the work the app actually does.
+    </p>
+  </div>
+</section>
+{% endif %}
+
+
+<!-- ============================================================
+     SECTION 6 — AFTER THE SEVEN DAYS
+     Type-Driven Mode B. License terms + Etsy CTA. DM Serif Display pull-quote.
+     ============================================================ -->
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <div class="text-center mb-12">
+      <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
+        What happens next
+      </p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+        No auto-billing.<br />No surprises.<br />Your records are yours either way.
+      </h2>
+    </div>
+
+    <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
+      <strong class="text-off-white">No auto-billing.</strong> We never asked for a card. The trial ends on day seven and nothing is charged.
+    </p>
+
+    <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
+      <strong class="text-off-white">Your records stay yours.</strong> The workbook you created, the entries you logged, the evidence you uploaded &mdash; all of it stays in your Google account, exactly where you left it. You can view it, search it, and export it any time, with no payment, for as long as you have a Google account. We have no claim on it. We cannot withhold it. It was never on our servers.
+    </p>
+
+    <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
+      <strong class="text-off-white">To keep adding new entries past day seven</strong>, the next step is a one-year license &mdash; $24.99 once, on Etsy. That unlocks the full app for a full year. After your year is up, the app moves to read-only &mdash; your existing records stay in your Google account, viewable and exportable, for as long as you have a Google account.
+    </p>
+
+    <!-- Pull-quote — the page's only DM Serif Display moment -->
+    <div class="glass-card rounded-2xl px-8 py-7 my-12 border border-brand-teal/30 text-center">
+      <p class="text-2xl md:text-3xl font-serif-display text-off-white leading-[1.25]">
+        One year of full access. Then read-only &mdash; your records stay in your Google account, viewable and exportable.
+      </p>
+    </div>
+
+    <div class="text-center mb-6">
+      <a
+        href="#"
+        class="inline-block border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-charcoal px-8 py-3 rounded-full font-semibold transition-all"
+      >
+        Buy the one-year license on Etsy <i data-lucide="arrow-right" class="w-4 h-4 ml-1 inline"></i>
+      </a>
+    </div>
+
+    <p class="text-base text-gray-400 text-center leading-[1.6] mb-3">
+      After purchase, Etsy delivers a quick-start PDF; your personal license token arrives by email separately, usually within the hour.
+    </p>
+
+    <p class="text-sm text-gray-500 text-center italic">
+      On-site checkout is in development. For now, Etsy is the route.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 7 — WHAT YOU'LL NEED
+     Type-Driven Mode B. System requirements.
+     ============================================================ -->
+<section class="py-20 md:py-24 bg-charcoal border-t border-slate-800/40">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <div class="text-center mb-12">
+      <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
+        System requirements
+      </p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] text-off-white mb-6">
+        What you'll need<br />to run the trial.
+      </h2>
+    </div>
+
+    <ul class="space-y-6">
+      <li>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          <strong class="text-off-white">A personal Google account is best.</strong> Personal Gmail accounts (<code class="text-brand-teal text-base">@gmail.com</code>) work without restrictions.
+        </p>
+      </li>
+      <li>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          <strong class="text-off-white">Workspace or school accounts may not work.</strong> Google Workspace administrators and school IT often block third-party apps by default. If you sign in with a work or school account and see an error like "admin has not allowed access," you have two options: ask your admin to approve Verascribe Guardian for your account, or sign out and use a personal Google account. We recommend the personal-account route &mdash; it's faster, and it keeps your custody records out of your employer's or school's audit logs entirely.
+        </p>
+      </li>
+      <li>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          <strong class="text-off-white">A desktop or laptop.</strong> Verascribe runs on Chrome, Edge, and Firefox. Safari support is in active testing &mdash; if you hit a snag, drop us a line. Currently desktop and laptop only; mobile and tablet support coming soon.
+        </p>
+      </li>
+    </ul>
+
+    <p class="text-base text-gray-500 mt-10 text-center italic">
+      That's the list.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 8 — FINAL CTA
+     ============================================================ -->
+<section class="py-24 md:py-32 bg-charcoal text-center relative overflow-hidden border-t border-slate-800/40">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_60%)] -z-10"></div>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-10">
+      Start the trial.
+    </h2>
+
+    {% if page.variant == 'a' %}
+    <a
+      href="#"
+      class="inline-block cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-10 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl"
+      style="box-shadow: 0 0 40px rgba(168,85,247,0.4);"
+    >
+      Start free for 7 days
+    </a>
+    {% else %}
+    <!-- ASSET TODO: Replace with official Google Workspace Marketplace badge -->
+    <a href="#" class="inline-block">
+      <div class="asset-todo rounded-lg px-6 py-3 inline-flex items-center text-brand-purple/70">
+        <i data-lucide="badge-check" class="w-5 h-5 mr-2"></i>
+        <span class="font-semibold">Marketplace badge (official Google asset)</span>
+      </div>
+    </a>
+    {% endif %}
+
+    <p class="text-lg text-gray-400 mt-8 max-w-2xl mx-auto leading-[1.6]">
+      Your records live in your own Google account &mdash; your Sheets workbook for logs, your Drive folder for evidence. We never see them, before, during, or after your trial.
+    </p>
+  </div>
+</section>

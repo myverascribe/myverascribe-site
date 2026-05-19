@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+    {% seo %}
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
+    <!-- Google Fonts - DM Sans & DM Serif Display -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..700&family=DM+Serif+Display:wght@400&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              "serif-display": ["DM Serif Display", "serif"],
+            },
+            colors: {
+              // Electric Fortress master palette (per Strategic Brand Directive)
+              charcoal: "#0F172A",
+              "off-white": "#F1F5F9",
+              "brand-purple": "#A855F7",
+              "brand-teal": "#14B8A6",
+              "alert-rose": "#F43F5E",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .fade-in {
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        will-change: transform, opacity;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .glass-card {
+        background: rgba(28, 28, 30, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* A11y: visible focus ring for keyboard navigation (WCAG 2.4.7) */
+      a:focus-visible,
+      button:focus-visible,
+      [role="button"]:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid #A855F7;
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+
+      /* A11y: respect prefers-reduced-motion (vestibular safety) */
+      @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .fade-in {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+          animation: none !important;
+        }
+        * {
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Asset TODO placeholder treatment */
+      .asset-todo {
+        background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(20, 184, 166, 0.05));
+        border: 2px dashed rgba(168, 85, 247, 0.3);
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        }, observerOptions);
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+  </head>
+  <body class="bg-charcoal text-off-white font-sans flex flex-col min-h-screen">
+    <!-- Stripped header: logo only, no nav. Absolute positioning so it sits over the hero. -->
+    <header class="absolute top-0 left-0 right-0 z-50 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <a href="https://myverascribe.com/" class="flex items-center cursor-pointer group">
+          <span class="font-bold text-xl text-off-white tracking-tight">
+            Verascribe <span class="text-brand-purple">Guardian</span>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow">{{ content }}</main>
+
+    <!-- Stripped footer: single-row, centered, restrained -->
+    <footer class="bg-charcoal text-off-white py-12 border-t border-slate-800 mt-auto">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          Verascribe Guardian is a documentation tool, not legal advice. Whether
+          any report is sufficient for your case is for you and your attorney to decide.
+        </p>
+        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
+          <a href="https://myverascribe.com/privacy-policy" class="hover:text-brand-teal transition-colors">Privacy Policy</a>
+          <a href="https://myverascribe.com/oauth-disclosure" class="hover:text-brand-teal transition-colors">OAuth Disclosure</a>
+          <a href="https://myverascribe.com/terms-of-service" class="hover:text-brand-teal transition-colors">Terms of Service</a>
+          <a href="https://myverascribe.com/" class="hover:text-brand-teal transition-colors">About Verascribe Guardian</a>
+          <a href="mailto:support@myverascribe.com" class="hover:text-brand-teal transition-colors">support@myverascribe.com</a>
+        </nav>
+        <p class="text-xs text-gray-500">&copy; 2026 Verascribe Guardian. Operated by Nemerai, LLC.</p>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
