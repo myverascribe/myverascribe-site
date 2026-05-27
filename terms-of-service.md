@@ -174,7 +174,7 @@ These Terms are governed by the laws of the **State of Florida, United States**,
 
 ### 13.1 Informal resolution first
 
-Before filing a claim, you agree to try to resolve the dispute informally by contacting us at **myverascribe@gmail.com**. We will try to resolve the dispute informally within 60 days.
+Before filing a claim, you agree to try to resolve the dispute informally by contacting us at **support@myverascribe.com**. We will try to resolve the dispute informally within 60 days.
 
 ### 13.2 Binding arbitration (United States)
 
@@ -199,7 +199,7 @@ Notwithstanding the foregoing, the arbitrator may award public injunctive relief
 
 ### 13.4 Arbitration opt-out
 
-You may opt out of the arbitration agreement in Section 13.2 by sending written notice to **myverascribe@gmail.com** within **30 days** of the date you first accepted these Terms (or of the date you first received notice of this arbitration provision). Your notice must include your name, the email address associated with your account, and a clear statement that you wish to opt out of arbitration. If you opt out, Section 13.2 and 13.3 will not apply to you, but the remainder of these Terms will continue in full force.
+You may opt out of the arbitration agreement in Section 13.2 by sending written notice to **support@myverascribe.com** within **30 days** of the date you first accepted these Terms (or of the date you first received notice of this arbitration provision). Your notice must include your name, the email address associated with your account, and a clear statement that you wish to opt out of arbitration. If you opt out, Section 13.2 and 13.3 will not apply to you, but the remainder of these Terms will continue in full force.
 
 ### 13.5 Jurisdiction (outside the United States)
 
@@ -231,7 +231,7 @@ If you do not agree to a change, your sole remedy is to stop using the Service a
 For legal notices and questions about these Terms:
 
 **Nemerai, LLC**
-Email: **myverascribe@gmail.com**
+Email: **support@myverascribe.com**
 Postal: 2113 Everglades Ln, #146, The Villages, FL 32163
 
 **Agent for service of legal process:** The registered agent on file for Nemerai, LLC with the Florida Division of Corporations. Current registration can be verified at [sunbiz.org](https://search.sunbiz.org).

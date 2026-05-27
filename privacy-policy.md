@@ -8,7 +8,7 @@ title: Privacy Policy
 **Effective Date:** 2026-04-27
 **Last Updated:** 2026-05-16
 
-This Privacy Policy explains how **Nemerai, LLC** ("Verascribe," "we," "us") handles information when you use **Verascribe Guardian** (the "Service"), a Google Apps Script web app — used alongside a Google Sheet workbook you select — that helps co-parents and guardians track custody schedules, communications, expenses, and related events.
+This Privacy Policy explains how **Nemerai, LLC** ("Verascribe," "we," "us") handles information when you use **Verascribe Guardian** (the "Service"), a Google Apps Script web app — used alongside one or more Google Sheets workbooks you create through the app — that helps co-parents and guardians track custody schedules, communications, expenses, and related events.
 
 We have written this policy to be specific and verifiable. Where Google's OAuth consent screen displays a permission, this document explains exactly what we do — and do not do — with the data that permission unlocks.
 
@@ -29,7 +29,7 @@ In particular:
 
 ## 1. The short version
 
-- Verascribe Guardian is an **offline-first** web app. The data you enter is stored locally in your browser (IndexedDB) and in **your own** Google Sheet and Google Drive folder.
+- Verascribe Guardian is an **offline-first** web app. The data you enter is stored locally in your browser (IndexedDB) and in **your own** Google Sheets workbooks and Google Drive folders.
 - We **do not** operate a cloud database that holds your custody, financial, or evidence records. There is no Verascribe-hosted copy of your data.
 - We **do not** use Google Analytics, advertising trackers, Sentry, or any third-party telemetry.
 - The only information transmitted to a Verascribe-controlled server is your **email address** and a **workbook identifier**, and only for the purpose of validating your license or trial. See Section 5.
@@ -40,7 +40,7 @@ In particular:
 ## 2. Who this policy applies to
 
 This policy applies to:
-- Users who install Verascribe Guardian from the Google Workspace Marketplace or open it via the web-app URL.
+- Users who install Verascribe Guardian from the Google Workspace Marketplace (or, while Marketplace publication is pending, open it via the web-app URL).
 - Visitors to **myverascribe.com**.
 
 It does **not** govern your use of Google Sheets, Google Drive, or any Google product itself — those are governed by [Google's Privacy Policy](https://policies.google.com/privacy).
@@ -59,46 +59,33 @@ When you first open Verascribe Guardian, Google's OAuth consent screen will ask 
 
 **Where it goes:** Stored in the Google Apps Script Document Properties of the workbook you selected, and transmitted to **`_registry.myverascribe.com`** for license validation.
 
-### 3.2 `https://www.googleapis.com/auth/spreadsheets.currentonly`
+### 3.2 `https://www.googleapis.com/auth/drive.file`
 
-**What it lets us see:** This scope lets the app read and edit Google Sheets at runtime. Combined with the file-picker handshake on `drive.file` (Section 3.3 below), the practical effect is that the app can only ever act on the one workbook you explicitly selected — we do not read or modify any other spreadsheet in your Drive.
-
-**Why we need it:** Your custody log, schedule rules, settings, and reports are written into hidden system tabs of the workbook you select. This is your durable, portable copy of the data and is owned entirely by you.
-
-**Where it goes:** Stays inside your own Google Sheet. Verascribe does not receive a copy.
-
-### 3.3 `https://www.googleapis.com/auth/drive.file`
-
-**What it lets us see:** Only (a) the files you explicitly select via Google's file-picker dialog when you open Verascribe Guardian, and (b) files that Verascribe Guardian itself creates in your Drive. We cannot see any of your other Drive files.
+**What it lets us see:** Only the files that Verascribe Guardian itself creates in your Drive. We cannot see any of your other Drive files.
 
 **Why we need it:** Two purposes:
 
-1. **Picker-based workbook selection** — The first time you open Verascribe Guardian, you pick the one Sheet workbook you want to use with it via Google's file-picker. The `drive.file` scope is what makes that handshake work: you explicitly grant the app access to that single file, and the grant covers only that file.
-2. **Evidence and exports** — To save evidence attachments (photos, documents, receipts) you upload, and to write generated reports (PDF and CSV) and full data backups (JSON) to a Verascribe-managed folder in your own Drive.
+1. **Workbook creation** — The app creates Google Sheets workbooks for your custody records. You can create more than one workbook and switch between them inside the app (for example, one per child or one per case). The `drive.file` scope lets the app create, read, write, and delete only the workbooks it creates — never any other file in your Drive.
+2. **Evidence and exports** — Saves evidence attachments you upload, generated PDF/CSV reports, and JSON backups to Verascribe-managed folders in your own Drive.
 
-**Where it goes:** Stays inside your own Google Drive in folders named `Verascribe Evidence — {Your Workbook Name}` and `Verascribe — Archived Evidence (Standalone)`.
+**Where it goes:** Stays inside your own Google Drive. The app uses folders named `Verascribe Evidence — {Your Workbook Name}` and `Verascribe — Archived Evidence (Standalone)` for evidence and backups.
 
-### 3.4 `https://www.googleapis.com/auth/script.send_mail`
+### 3.3 `https://www.googleapis.com/auth/script.send_mail`
 
 **What it lets us see:** Nothing. This scope only allows the app to send mail **from your account**.
 
-**Why we need it:** To send (a) license registration confirmation messages to you, and (b) support requests routed through the in-app "Contact Us" form to Verascribe support.
+**Why we need it:** Used only when you submit a "Contact Us" support request from inside the app. The message is sent from your own Gmail to a fixed Verascribe support address — you cannot choose another recipient.
 
-**Where it goes:** Mail is sent from your own Gmail account using Google's `MailApp`/`GmailApp` services. We do not read your inbox, drafts, or any other mail.
+**Where it goes:** Mail is sent from your own Gmail account using Google's `MailApp` service. We do not read your inbox, drafts, or any other mail. The send is initiated only by your explicit action inside the app.
 
-### 3.5 `https://www.googleapis.com/auth/script.external_request`
+### 3.4 `https://www.googleapis.com/auth/script.external_request`
 
 **What it lets us see:** Nothing. This scope allows the app's server-side code to make outbound HTTPS calls. The set of permitted destinations is fixed by the app's manifest:
 
-- **`_registry.myverascribe.com`** — the primary license registry; receives your email, workbook identifier, license token, and cryptographic signature for license validation. See Section 5.
+- **`sheets.googleapis.com` and `www.googleapis.com`** — Google's Sheets API and Drive API. The app calls these to read and write your workbook content (Sheets API) and to create, read, and delete the workbooks, evidence files, reports, and backups it manages on your behalf (Drive API). These are Google's own services and are governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+- **`script.google.com`** — the host that runs our license-validation endpoint. The `_registry.myverascribe.com` hostname is a CNAME (a DNS alias) for a Google Apps Script web app we own that lives at `script.google.com`. Calls receive your email, workbook identifier, license token, and cryptographic signature for license validation. See Section 5.
 - **`raw.githubusercontent.com`** — a public GitHub URL used as a fallback for the license-registry configuration only when the primary registry is unreachable. This call does **not** transmit any of your data.
 - **`dns.google` and `cloudflare-dns.com`** — DNS-over-HTTPS lookups used to verify that the registry domain has not been hijacked by a hostile network. These calls transmit only the domain name being looked up — never any of your data.
-
-### 3.6 `https://www.googleapis.com/auth/script.scriptapp`
-
-**What it lets us see:** Nothing about your data. This is an operational scope that allows the app to install and manage its own time-based triggers.
-
-**Why we need it:** To install a daily maintenance trigger that refreshes rolling-window metrics and periodically cleans up temporary files generated by export operations.
 
 ---
 
@@ -125,6 +112,8 @@ When you use Verascribe Guardian, you generate records about your family and cus
 
 **Verascribe never receives a copy** of your custody, financial, or evidence data. The license-registration call described in Section 5 is the **only** outbound transmission to Verascribe-controlled infrastructure.
 
+When you submit a "Contact Us" support request, the contents of that message reach a Verascribe email inbox. If you choose to include specific details about your custody, financial, or evidence records in that message, Verascribe will receive that information only because you sent it — please include only what you want us to see.
+
 ---
 
 ## 5. Information transmitted to Verascribe
@@ -132,15 +121,15 @@ When you use Verascribe Guardian, you generate records about your family and cus
 The only data sent to Verascribe-controlled servers is the minimum needed to operate the licensing system. Specifically, calls to **`_registry.myverascribe.com`** include:
 
 - Your Google Account email address.
-- A workbook identifier (a stable ID for the Sheet workbook you selected via the file-picker).
+- A workbook identifier (a stable ID for the Google Sheets workbook the app created for you).
 - A license token (if you have one) and an HMAC-SHA256 signature used to prevent tampering.
 - A timestamp.
 
 We use this data only to:
 - Determine whether you have a valid trial or paid license.
 - Prevent abuse (e.g., the same license being used across an unreasonable number of workbooks).
-- Notify you of important **transactional** Service updates, such as expiration notices and critical security announcements (we do not send marketing or promotional emails).
-- Maintain a continuous record of customer relationships, including supporting license-key recovery for past customers and identifying returning customers when they purchase a new license.
+- May notify you of important **transactional** Service updates, such as expiration notices and critical security announcements (we do not send marketing or promotional emails).
+- Maintain a continuous record of customer relationships. License-key recovery for past customers is handled manually: if you lose your license key, you contact us at the email address in Section 14 and we look up your record and respond. We also use the record to identify returning customers when they purchase a new license.
 
 We do not use this data for advertising, profiling, or sale to third parties. License records are retained indefinitely by default to support the purposes above; you may request deletion at any time (see Sections 10 and 11).
 
@@ -288,7 +277,7 @@ No internet-connected service can be guaranteed 100% secure. If we ever become a
 
 If you are located outside the United States, please be aware that the license registry is currently hosted in the **United States**. By using the Service, you consent to the transfer of the limited license-related information described in Section 5 to that jurisdiction.
 
-Verascribe Guardian is not currently marketed to or directed at residents of the European Economic Area, the United Kingdom, or other jurisdictions with cross-border data-transfer regimes. If we begin directing the Service to those jurisdictions, this section will be updated and the corresponding transfer safeguards (such as Standard Contractual Clauses and a Transfer Impact Assessment) will be put in place before that offering goes live.
+While the Service does not specifically target EU/UK residents through localized advertising, EU-language content, or EU-directed marketing, EU and UK users may reach the Service through the Google Workspace Marketplace. Where they do, we apply the GDPR legal bases and rights described in Sections 7a and 11. If we begin actively directing the Service to those jurisdictions, this section will be updated and any additional transfer safeguards (such as Standard Contractual Clauses and a Transfer Impact Assessment) will be put in place before that offering goes live.
 
 ---
 
@@ -297,7 +286,7 @@ Verascribe Guardian is not currently marketed to or directed at residents of the
 If you have any questions about this policy, or wish to exercise any rights described above, please contact:
 
 **Nemerai, LLC**
-Email: **myverascribe@gmail.com**
+Email: **support@myverascribe.com**
 Postal: 2113 Everglades Ln, #146, The Villages, FL 32163
 
 **Person responsible for personal information protection (Quebec Law 25 / Loi 25):** Nem Le, Principal, Nemerai, LLC — contactable at the email and postal address above.

@@ -11,7 +11,7 @@ This page explains, in plain language, every Google OAuth permission that **Vera
 
 For full detail, see our [Privacy Policy](./privacy-policy.md) and [Terms of Service](./terms-of-service.md).
 
-> **Note for Google OAuth reviewers:** This page is linked directly from the OAuth consent screen and is intended for your review. Verascribe Guardian is published as a **Google Apps Script Web App** (executed as `USER_ACCESSING`, accessible to anyone with a Google account). The scopes listed below correspond to the declared scopes in the deployed web-app manifest (`appsscript.webapp.json`), in the same order they appear in that manifest. The product also includes a thin add-on launcher card that lives in Google Sheets (a separate manifest, `appsscript.addon.json`); the launcher is **not part of v1 Marketplace submission** and requests no Drive scopes. Users who install only the web app authorize only the scopes below.
+> **Note for Google OAuth reviewers:** This page is linked directly from the OAuth consent screen and is intended for your review. Verascribe Guardian is published as a **Google Apps Script Web App** (executed as `USER_ACCESSING`, accessible to anyone with a Google account). The scopes listed below correspond to the declared scopes in the deployed manifest (`appsscript.json`), in the same order they appear in that manifest.
 
 ---
 
@@ -33,13 +33,11 @@ In particular:
 | OAuth Scope | Plain-language summary | Why we need it |
 |---|---|---|
 | `userinfo.email` | See the email address on your Google Account | License registration, trial validation, and support correspondence |
-| `spreadsheets.currentonly` | Read and edit a Google Sheet workbook only during the active app session | Combined with the file-picker handshake on `drive.file` (next row), this means the app can only ever read or edit the one workbook you explicitly selected. Persists your custody log, schedule, and settings into hidden system tabs of that workbook |
-| `drive.file` | Access **only the files you explicitly select** via Google's file-picker dialog, plus files Verascribe Guardian creates in your Drive | Let you use Google's own file-picker to grant access to the one workbook you choose — the app can only see what you explicitly select. Also stores evidence attachments, generated PDF/CSV reports, and JSON backups in a Verascribe folder you own |
-| `script.send_mail` | Send mail from your Gmail account | Email license-registration receipts to you and route "Contact Us" support messages. Mail is sent from your own account using Google's `MailApp` service — we never read your inbox, drafts, or any other mail |
-| `script.external_request` | Make outbound HTTPS calls from the app's server code | Validate your license against `_registry.myverascribe.com`; fetch a fallback configuration file from `raw.githubusercontent.com` if the registry is unreachable; perform DNS-over-HTTPS lookups (`dns.google` and `cloudflare-dns.com`) to detect network tampering with the registry domain. These four hosts are the complete list permitted by the app's manifest |
-| `script.scriptapp` | Manage time-based triggers | Install a daily maintenance trigger that refreshes rolling-window metrics and cleans up temporary files |
+| `drive.file` | Access only the files Verascribe Guardian creates in your Drive — workbooks, evidence attachments, reports, and backups | The app creates Google Sheets workbooks for your custody records. You can create more than one and switch between them inside the app. The same scope lets the app save evidence attachments, generated PDF/CSV reports, and JSON backups into Verascribe-named folders in your Drive. Verascribe Guardian cannot see any other file in your Drive that it did not create |
+| `script.send_mail` | Send mail from your Gmail account | Used only when you submit a "Contact Us" support request from inside the app. The message is sent from your own Gmail to a fixed Verascribe support address — you cannot choose another recipient. Mail is sent using Google's `MailApp` service. We never read your inbox, drafts, or any other mail |
+| `script.external_request` | Make outbound HTTPS calls from the app's server code, to a fixed list of six hosts | Four kinds of outbound HTTPS calls:<br><br>**Google's Sheets and Drive APIs** (`sheets.googleapis.com`, `www.googleapis.com`) — to read and write your workbook content and to manage your evidence files, reports, and backups. These endpoints belong to Google, not Verascribe; calls are governed by Google's Privacy Policy.<br><br>**License validation** — calls go to `_registry.myverascribe.com`, a CNAME (a DNS alias) that points to a Google Apps Script web app we own and operate at `script.google.com`.<br><br>**Fallback config** (`raw.githubusercontent.com`) — used only if the license registry is temporarily unreachable. No user data sent.<br><br>**DNS-over-HTTPS lookups** (`dns.google`, `cloudflare-dns.com`) — confirm the registry domain hasn't been redirected by a hostile network. Only the domain name is sent — never any of your data.<br><br>These six hosts are the complete list permitted by the app's `urlFetchWhitelist` |
 
-> **Note on the Verascribe Guardian Library (for Google reviewers):** The web app depends on a shared Apps Script library (Library ID: `1jn6m2AA4sSvniiT-FC6j_QgDunt3o60REnVM5PE1ekvoulIISTxOFUM0`). The library runs *inside* the web-app project — it is not installed separately by users and does not present its own OAuth consent screen. The library's `appsscript.json` declares a subset of the scopes above. The scopes listed in this document correspond to the **web-app project's manifest** (`appsscript.webapp.json`), which is the project users authorize on first launch.
+> **Note on the Verascribe Guardian Library (for Google reviewers):** The web app depends on a shared Apps Script library (Library ID: `1jn6m2AA4sSvniiT-FC6j_QgDunt3o60REnVM5PE1ekvoulIISTxOFUM0`). The library runs *inside* the web-app project — it is not installed separately by users and does not present its own OAuth consent screen. The library's `appsscript.json` declares a subset of the scopes above. The scopes listed in this document correspond to the web-app project's manifest (`appsscript.json`), which is the project users authorize on first launch.
 
 ---
 
@@ -47,8 +45,8 @@ In particular:
 
 By design and by application code, Verascribe Guardian does not:
 
-- Read or modify any Google Sheet other than the one workbook you select via Google's file-picker.
-- Read, list, or modify any file in your Google Drive other than (a) files you explicitly select via the file-picker, or (b) files Verascribe Guardian itself creates in your "Verascribe Evidence" folder.
+- Read or modify any Google Sheet other than the workbooks Verascribe Guardian itself created for you.
+- Read, list, or modify any file in your Google Drive other than the files Verascribe Guardian itself creates. That means: workbooks you create through the app, evidence attachments you upload through the app, and reports and backups the app generates in Verascribe-named folders.
 - Read your Gmail inbox, drafts, or any message we did not send through the app.
 - See your Google Calendar, Contacts, Photos, YouTube, Search history, or any other Google product data.
 - Track you across the web, build advertising profiles, or share your data with advertisers or data brokers.
@@ -60,12 +58,14 @@ By design and by application code, Verascribe Guardian does not:
 The Service is **offline-first**. The custody, financial, and evidence data you create stays in three places, all of which **you** own and control:
 
 1. **Your browser's IndexedDB** — a working copy on your device for fast offline access.
-2. **Your Google Sheet** — durable storage in your chosen workbook. The first time you open Verascribe Guardian, you'll pick this workbook yourself using Google's file-picker. The app reads and writes hidden system tabs inside it (these hold your data — they're not visible during normal Sheets use and cannot be accidentally edited).
+2. **Your Google Sheets workbooks** — durable storage that mirrors your local working copy. When you first use Verascribe Guardian you create a workbook inside the app (you can create additional workbooks later and switch between them — for example, one per child or one per case). The app reads and writes inside each workbook to keep your durable copy in sync with the working copy in your browser.
 3. **Your Google Drive** — evidence attachments, generated reports, and backups in folders named `Verascribe Evidence — {Your Workbook Name}` and `Verascribe — Archived Evidence (Standalone)`. The folder names include your workbook name so each tracker has its own evidence folder.
 
 ### Outbound network calls
 
-The only outbound transmission to Verascribe-controlled infrastructure that carries any of **your data** is a license-validation call. The app contacts `_registry.myverascribe.com` — a DNS record owned by Nemerai, LLC — which redirects to a Google Apps Script endpoint also owned and operated by Nemerai, LLC. The payload contains only your email address, a workbook identifier, your license token, and a cryptographic signature — nothing else. See [Section 5 of the Privacy Policy](./privacy-policy.md#5-information-transmitted-to-verascribe).
+The only outbound transmission to **Verascribe-controlled** infrastructure that carries any of your data is a license-validation call. The app contacts the `_registry.myverascribe.com` hostname (a DNS record on a domain owned by Nemerai, LLC). It is a CNAME alias for a Google Apps Script web app also owned and operated by Nemerai, LLC, hosted at `script.google.com`. The payload contains only your email address, a workbook identifier, your license token, and a cryptographic signature — nothing else. See [Section 5 of the Privacy Policy](./privacy-policy.md#5-information-transmitted-to-verascribe).
+
+The app's other outbound calls go to Google's own infrastructure — the Sheets API and Drive API (`sheets.googleapis.com`, `www.googleapis.com`) — to read and write your workbook content. These calls are governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
 For completeness, the app's network whitelist also permits two other kinds of outbound calls that do **not** carry your data:
 
@@ -88,4 +88,4 @@ Revoking access will stop the app from opening. If you change your mind, you can
 
 ## Questions?
 
-Email **myverascribe@gmail.com** and we will respond within a reasonable time, generally no more than 5 business days.
+Email **support@myverascribe.com** and we will respond within a reasonable time, generally no more than 5 business days.
