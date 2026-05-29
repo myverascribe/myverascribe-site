@@ -263,7 +263,7 @@ layout: default
     <!-- SIDEBAR -->
     <aside class="lg:col-span-4 space-y-8">
       <div class="sticky top-24 space-y-8">
-        <!-- Primary CTA: Guardian -->
+        <!-- Primary CTA: Guardian (copy + URL centralized in _config.yml → cta) -->
         <div
           class="bg-brand-purple rounded-2xl p-6 text-white shadow-lg relative overflow-hidden group border border-white/5"
         >
@@ -271,16 +271,16 @@ layout: default
             class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-110 transition-transform duration-500"
           ></div>
           <h3 class="text-xl font-bold mb-3 relative z-10">
-            Document your custody case with Verascribe Guardian.
+            {{ site.cta.heading | default: "Document your custody case with Verascribe Guardian." }}
           </h3>
           <p class="text-white/90 mb-6 text-base relative z-10 leading-relaxed">
-            A purpose-built workbook for tracking schedules, communications, expenses, and evidence — court-ready when you need it.
+            {{ site.cta.blurb | default: "A purpose-built workbook for tracking schedules, communications, expenses, and evidence — organized for review when it matters." }}
           </p>
           <a
-            href="{{ '/' | relative_url }}"
+            href="{{ site.cta.url | default: '/' }}"
             class="block w-full text-center bg-white text-brand-purple font-bold py-3 rounded-xl hover:bg-gray-50 transition-colors relative z-10 shadow-sm"
           >
-            See how it works
+            {{ site.cta.button | default: "See how it works" }}
           </a>
         </div>
 

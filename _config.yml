@@ -13,6 +13,45 @@ social:
   links:
     - https://myverascribe.com
 
+# --- Main-site home URL (override in _config.dev.yml for local dev) ---
+# The trial layout links to the main site with absolute URLs because in production
+# the trial page is served from the trial.* subdomain (relative links wouldn't reach
+# the main site). Locally there's no subdomain, so dev overrides this to a relative
+# path so the header logo returns to the local index.
+home_url: "https://myverascribe.com/"
+
+# --- App launch URL (single front door for trial + licensed users) ---
+# Both trial and licensed users hit the same app; the workbook auto-detects trial
+# mode when no license token is present. The /trial/launch/ redirect stub forwards
+# here, and the trial-page prep modal's "Continue" button targets that stub.
+# Override in _config.dev.yml for local dev. Not live yet — points to the future home.
+trial_url: "https://app.myverascribe.com"
+
+# --- Contact form (public pre-sales inquiries only) ---
+# The standalone Apps Script mail webapp lives in the APP repo (alongside the main
+# app + registry webapp), not here — the site stays a static front end. Paste the
+# webapp's deployment URL here once it's built/deployed. While this is empty, the
+# /contact/ form runs in MOCK mode: it shows the success state without sending.
+contact_form_url: ""
+
+# Cloudflare Turnstile SITE key for the contact form (free, unlimited).
+# Create a widget at dash.cloudflare.com → Turnstile, paste the site key here.
+# While empty, the Turnstile widget is omitted and the form relies on the honeypot only.
+turnstile_sitekey: ""
+
+# --- Product CTA (single source of truth) ---
+# The blog-post layout renders the sidebar CTA from these values, and post bodies
+# should link the in-text CTA with {{ site.cta.url }} instead of a hardcoded URL.
+# There is currently ONE product (Guardian) served at the site root. If Guardian
+# moves to its own path (e.g. /guardian) or a second product is added, update `url`
+# here once — no post or template edit needed.
+cta:
+  name: Verascribe Guardian
+  url: "https://myverascribe.com"
+  heading: "Document your custody case with Verascribe Guardian."
+  blurb: "A purpose-built workbook for tracking schedules, communications, expenses, and evidence — organized for review when it matters."
+  button: "See how it works"
+
 # twitter: not yet active — add username when handle is created
 #   username: your-handle-here
 #   card: summary_large_image

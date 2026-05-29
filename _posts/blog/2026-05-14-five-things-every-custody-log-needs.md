@@ -39,7 +39,7 @@ This is the frame that makes the five elements matter. Each one increases the ev
 
 ## 1. Date and time, exact
 
-**Specificity isn't optional.** "Last Tuesday at pickup" cannot anchor a pattern, cannot be cross-referenced against the parenting plan, and reads as reconstruction rather than contemporaneous record.
+**Specificity is what makes an entry usable.** "Last Tuesday at pickup" cannot anchor a pattern, cannot be cross-referenced against the parenting plan, and reads as reconstruction rather than contemporaneous record.
 
 The strong version: "Tuesday, April 21, 2026, 5:23pm." The exact date locks the entry to your court order's schedule. The exact time lets you demonstrate compliance or deviation with precision.
 
@@ -59,7 +59,7 @@ When your child reports something to you about time spent with the co-parent, do
 
 ## 3. Verbatim words
 
-**Paraphrase loses cases.** "He said hurtful things in front of our child" can be challenged as your interpretation. "He said, in front of M (8): 'Tell your mom she's always making things harder than they need to be'" cannot.
+**Paraphrase is harder to defend.** "He said hurtful things in front of our child" can be challenged as your interpretation. "He said, in front of M (8): 'Tell your mom she's always making things harder than they need to be'" cannot.
 
 Quote exact words in quotation marks. If you can't remember the precise wording, say so explicitly: "He said something close to: 'I'm not driving across town just because she wants this.'" This is more credible than fabricating precision you don't have.
 
@@ -83,7 +83,7 @@ Document what the child did, what the child said, and what the child's demeanor 
 
 ## 5. Your response
 
-**What you did matters as much as what they did.** Custody decisions consider both parents' co-parenting conduct. An entry that documents your measured, responsible response is part of the record a custody evaluator or judge will consider when assessing each parent's conduct — the same way an entry documenting the other parent's behavior is part of theirs.
+**What you did is part of the record too.** Custody decisions consider both parents' co-parenting conduct. An entry that documents your measured, responsible response is part of the record a custody evaluator or judge will consider when assessing each parent's conduct — the same way an entry documenting the other parent's behavior is part of theirs.
 
 This is the element most parents skip. They log what the co-parent did and not what they did about it. But the record is incomplete without your side. What you did about an incident is itself documentable: "I did not respond," "I redirected M to her room," "I drafted a response and chose not to send it," "I logged the comment in this entry instead of replying."
 
@@ -115,11 +115,11 @@ Same incident. The weak version is twelve words and could describe a hundred dif
 
 That means no twenty-minute organizing tax at the start of your next meeting. The log is already in the format your lawyer expects.
 
-Every entry is also part of a cryptographically-verified chain. If any entry were added, removed, or edited after the fact, the chain would break and the workbook would flag it. When the authenticity of your records comes into question, that's the difference between "these notes" and "these notes that can be proven not to have been altered."
+Every entry is part of a cryptographically-verified chain — each entry's fingerprint includes the one before it. If any entry is added, removed, or edited after the fact, that chain no longer matches, and the workbook flags it when you export. When the authenticity of your records comes into question, that's the difference between "these notes" and "these notes where any alteration would be detected and flagged at export."
 
 Here's what most custody apps don't tell you: every other tool in this space stores your logs on their servers. That means a company you don't control has access to your most sensitive family records. Verascribe works differently. Your log lives in your own Google account — your Google Drive, your data, your control. Verascribe never holds your records, never sees them, and can never hand them over to anyone. The co-parent has no access. Neither do we.
 
-[Start your custody log](https://myverascribe.com)
+[Start your custody log]({{ site.cta.url }})
 
 ## What you have now
 

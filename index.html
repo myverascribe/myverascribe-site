@@ -57,12 +57,12 @@ title: Home
         <p
           class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed mt-6"
         >
-          $24.99 for one year of full access. Then read-only, forever. Your records stay in your Google account regardless.
+          $24.99 for one year of full access.<br />Then read-only, forever.<br />Your records stay in your Google account regardless.
         </p>
         <div class="flex flex-col items-center gap-6">
           <a
-            href="https://trial.myverascribe.com"
-            class="cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-10 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl"
+            href="{{ '/trial/' | relative_url }}"
+            class="cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-10 py-4 rounded-full font-semibold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl"
             style="box-shadow: 0 0 40px rgba(168,85,247,0.4);"
           >
             Try Free for 7 Days
@@ -94,10 +94,10 @@ title: Home
     <h3 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-12">
       The record should belong to the person keeping it.
     </h3>
-    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-8">
+    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-8 text-left">
       Documentation is what you have when cooperation isn't available. The parent keeping the record alone shouldn't have to depend on a co-parent's participation, a vendor's goodwill, or a subscription that can lock them out of their own history.
     </p>
-    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5]">
+    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] text-left">
       We built Verascribe Guardian to make sure that outcome is structural — not a setting, not a policy, not a vendor's promise. Your records live in your own Google account before, during, and after your license — because the alternative is a tool that owns the thing it was supposed to protect.
     </p>
   </div>
@@ -253,14 +253,14 @@ title: Home
       <img src="assets/images/index/summary-report.png" alt="Summary Report" class="w-full h-auto block" />
     </div>
 
-    <div class="max-w-3xl mx-auto mt-16">
+    <div class="max-w-3xl mx-auto mt-16 text-left">
       <p class="text-xl text-gray-400 mb-8">
         The other co-parenting apps give you a <strong class="text-white">generic notes field</strong> — OFW calls it "Info Bank," TalkingParents calls it "Info Library," AppClose doesn't offer dedicated structured logging fields. You're left typing freeform paragraphs into a cell and hoping you'll remember, six months from now, what mattered about that day.
       </p>
 
       <details class="group py-6 border-t border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
-          Read more →
+          Read more
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
         </summary>
         <p class="mt-4 text-xl text-gray-400 leading-relaxed">
@@ -338,7 +338,7 @@ title: Home
       <div class="reveal">
         <h4 class="font-bold text-white mb-3 text-xl">Timestamped from the moment you save</h4>
         <p class="text-gray-400 text-lg">
-          Every entry, every edit, and every deletion is recorded in an audit trail you control. When the authenticity of your records matters, the audit trail is your defense.
+          Every entry, every edit, and every deletion is recorded in an audit trail you control. When the authenticity of your records matters, the audit trail is your record — a transparent history of what was written and when.
         </p>
       </div>
     </div>
@@ -354,7 +354,7 @@ title: Home
       Custody Calendar
     </h2>
     <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-[1.1]">
-      Your schedule, in your account — with no co-parent side.
+      Your schedule, in your account —<br />with no co-parent side.
     </h3>
     <p class="text-xl text-gray-400 mb-16 max-w-3xl mx-auto">
       Privacy isn't a checkbox you remembered to tick — it's the architecture.
@@ -366,14 +366,14 @@ title: Home
       <img src="assets/images/index/custody-calendar.png" alt="Custody Calendar" class="w-full h-auto block" />
     </div>
 
-    <div class="max-w-3xl mx-auto mt-16">
+    <div class="max-w-3xl mx-auto mt-16 text-left">
       <p class="text-xl text-gray-400 mb-8">
         The other co-parenting apps build their calendars as a shared platform — both parents log in, both parents see events, and a privacy toggle decides what one parent shares with the other. OFW defaults to shared (with a per-event toggle to hide). AppClose defaults to private (with opt-in sharing). Both architectures assume both parents are on the platform. <strong class="text-white">Verascribe doesn't.</strong> There is no co-parent side. No portal for the other parent to log into. No setting that could leak.
       </p>
 
       <details class="group py-6 border-t border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
-          Read more →
+          Read more
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
         </summary>
         <p class="mt-4 text-xl text-gray-400 leading-relaxed">
@@ -507,7 +507,7 @@ title: Home
   </div>
 </section>
 
-<!-- Section 7: Audit Trail — Your Defense (NEW) -->
+<!-- Section 7: Audit Trail — Proof of Keeping (NEW) -->
 <section class="py-32 bg-charcoal border-t border-slate-800/5 relative">
   <div class="max-w-7xl mx-auto px-4 text-center reveal">
     <h2
@@ -516,7 +516,7 @@ title: Home
       Proof of Keeping
     </h2>
     <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-[1.15]">
-      A record kept honestly —<br />and proven to be.
+      A record kept honestly —<br />and with a trail that shows it.
     </h3>
     <p class="text-xl text-gray-400 mb-16 max-w-3xl mx-auto">
       If anyone ever questions whether the record was kept honestly, the answer can't be "trust me" — it has to be something you can show.
@@ -537,18 +537,18 @@ title: Home
       <p class="text-lg font-semibold text-brand-teal">The audit trail doesn't work against you. It works for you.</p>
     </div>
 
-    <div class="max-w-3xl mx-auto mb-16">
+    <div class="max-w-3xl mx-auto mb-16 text-left">
       <p class="text-xl text-gray-400 mb-8">
         You can edit or delete any entry — it's your record, after all. But every change you make is logged automatically with a timestamp and user attribution, in an audit trail that lives alongside your data. OFW and TalkingParents track timestamps on messages — but only on messages, and only when sent or viewed. Verascribe tracks <strong class="text-white">every operation</strong> — create, edit, delete — across every category of record. Custody exchanges, expenses, communications, behavioral notes, court filings, the whole record. Each operation is signed with your user attribution and timestamped at the moment it happens.
       </p>
 
       <details class="group py-6 border-t border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
-          Read more →
+          Read more
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
         </summary>
         <p class="mt-4 text-xl text-gray-400 leading-relaxed">
-          If anyone ever questions whether you've been honest about what you wrote — a co-parent, an opposing attorney, an evaluator — the audit trail is <strong class="text-white">your defense</strong>: a transparent history of every entry, every edit, every deletion, with who made each change and when.
+          If anyone ever questions whether you've been honest about what you wrote — a co-parent, an opposing attorney, an evaluator — the audit trail is <strong class="text-white">your record of transparency</strong>: every entry, every edit, every deletion, with who made each change and when — so the history speaks for itself.
         </p>
       </details>
     </div>
@@ -602,14 +602,14 @@ title: Home
       />
     </div>
 
-    <div class="max-w-3xl mx-auto mt-16">
+    <div class="max-w-3xl mx-auto mt-16 text-left">
       <p class="text-xl text-gray-400 mb-8">
         Every entry you've made — categorized, timestamped, with its full audit trail attached — can be exported as a structured PDF in <strong class="text-white">under two minutes</strong>. Filter by date range, by child, by category. Get exactly the slice your attorney asked for, or the full record you want to bring to mediation. You're not printing a spreadsheet and hoping it makes sense to someone else. The document is formatted for them to read it.
       </p>
 
       <details class="group py-6 border-t border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
-          Read more →
+          Read more
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
         </summary>
         <p class="mt-4 text-xl text-gray-400 leading-relaxed">
@@ -698,77 +698,77 @@ title: Home
             </tr>
           </thead>
           <tbody class="divide-y divide-white/5">
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Built for</td>
               <td class="p-6 text-gray-300 text-base">Anyone with a printer</td>
               <td class="p-6 text-gray-300 text-base">Anyone with Excel</td>
               <td class="p-6 text-gray-300 text-base">Two cooperating parents</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">The parent documenting alone</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Calendar architecture</td>
               <td class="p-6 text-gray-300 text-base">N/A</td>
               <td class="p-6 text-gray-300 text-base">N/A</td>
               <td class="p-6 text-gray-300 text-base">Shared with co-parent (privacy toggle per event)</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">No co-parent side — privacy is structural, not a setting</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Price</td>
               <td class="p-6 text-gray-300 text-base">Free–$15 once</td>
               <td class="p-6 text-gray-300 text-base">$5–$15 once</td>
               <td class="p-6 text-gray-300 text-base">$110–$300/year, ongoing</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">$24.99 once</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">5-year cost</td>
               <td class="p-6 text-gray-300 text-base">Varies</td>
               <td class="p-6 text-gray-300 text-base">Varies</td>
               <td class="p-6 text-gray-300 text-base">$550–$1,500</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">$24.99 (or $124.95 if renewed yearly)</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Where records live</td>
               <td class="p-6 text-gray-300 text-base">A binder on a shelf</td>
               <td class="p-6 text-gray-300 text-base">A file you own</td>
               <td class="p-6 text-gray-300 text-base">Vendor's servers</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Your own Google account</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">If you stop / leave</td>
               <td class="p-6 text-gray-300 text-base">N/A</td>
               <td class="p-6 text-gray-300 text-base">N/A</td>
               <td class="p-6 text-gray-300 text-base">OFW: 2 grace logins in 6 mo, then locked out</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Records stay yours, forever</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Can you delete your data?</td>
               <td class="p-6 text-gray-300 text-base">Tear it up</td>
               <td class="p-6 text-gray-300 text-base">Delete the file</td>
               <td class="p-6 text-gray-300 text-base">OFW &amp; TalkingParents: blocked*</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Nothing to delete — we never had it</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Payments</td>
               <td class="p-6 text-gray-300 text-base">Manual</td>
               <td class="p-6 text-gray-300 text-base">Manual</td>
               <td class="p-6 text-gray-300 text-base">Routed through vendor (sees history, may charge fees)</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">External (Venmo/Zelle/bank); receipt attached; $0 fees; zero vendor visibility</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Audit trail</td>
               <td class="p-6 text-gray-300 text-base">None</td>
               <td class="p-6 text-gray-300 text-base">None</td>
               <td class="p-6 text-gray-300 text-base">Some (message timestamps only)</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Every operation, every category, timestamp + user attribution</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">PDF export, structured</td>
               <td class="p-6 text-gray-300 text-base">None</td>
               <td class="p-6 text-gray-300 text-base">"Print to PDF" — messy</td>
               <td class="p-6 text-gray-300 text-base">Yes (varies by tier)</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Yes, filtered &amp; formatted</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">One-time payment</td>
               <td class="p-6 text-gray-300 text-base text-center">✓</td>
               <td class="p-6 text-gray-300 text-base text-center">✓</td>
@@ -814,14 +814,14 @@ title: Home
       />
     </div>
 
-    <div class="reveal max-w-4xl mx-auto mb-12">
+    <div class="reveal max-w-4xl mx-auto mb-12 text-left">
       <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
         Verascribe is built differently — because your records were <strong class="text-white">never ours to hold</strong>. They live in your Google Sheets workbook and your Google Drive folder. Both of those are yours: you owned them the day you opened your Google account; you'll own them the day you stop using Verascribe; you'll own them the day Verascribe ceases to exist. Your one-year license is your access to the app — the logging sidebar, the calendar, the PDF export tools. When the license expires, the app stops accepting new entries.
       </p>
 
       <details class="group py-6 border-t border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
-          Read more about how this works →
+          Read more about how this works
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
         </summary>
         <p class="mt-4 text-xl text-gray-400 mb-8 leading-[1.5]">
@@ -870,25 +870,25 @@ title: Home
             </tr>
           </thead>
           <tbody class="divide-y divide-white/5">
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">After you stop paying</td>
               <td class="p-6 text-gray-300 text-base">2 grace logins in 6 months, then locked out</td>
               <td class="p-6 text-gray-300 text-base">Paid access ends; records permanently retained on TP servers</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Records stay in your Google account forever — free, read-only</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Can you delete your records?</td>
               <td class="p-6 text-gray-300 text-base">Only with mutual consent from co-parent (ToS, verified 2026-05-18)</td>
               <td class="p-6 text-gray-300 text-base">No — ToS §16 prohibits deletion of accounts and records regardless of account status (verified 2026-05-18)</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Yes — it's a Google Sheets file and Drive folder; delete them like any file</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Can we access your records?</td>
               <td class="p-6 text-gray-300 text-base">Yes (vendor hosts all data)</td>
               <td class="p-6 text-gray-300 text-base">Yes (vendor hosts all data)</td>
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">No — we never had them</td>
             </tr>
-            <tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">If Verascribe / the vendor closes</td>
               <td class="p-6 text-gray-300 text-base">Your records disappear with the vendor</td>
               <td class="p-6 text-gray-300 text-base">Your records are on the vendor's servers — your fate is their fate</td>
@@ -1000,7 +1000,7 @@ title: Home
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
         </summary>
         <p class="mt-4 text-gray-300 leading-relaxed">
-          Because we're not a communication tool — we're a defense system. The bigger co-parenting apps (OFW, TalkingParents) need both parents to have accounts to function properly; their value proposition assumes cooperation. Verascribe is built for the parent doing the documentation alone. You record the communications that happen wherever they happen — texts, emails, calls — by logging them yourself, with screenshots and tone notes. That's a record you can keep whether your co-parent participates or not — and bring to your attorney when it matters.
+          Because we're not a communication tool — we're a defense system. The bigger co-parenting apps (OFW, TalkingParents) need both parents to have accounts to function properly; their value proposition assumes cooperation. Verascribe is built for the parent doing the documentation alone. You record the communications that happen wherever they happen — texts, emails, calls — by logging them yourself, with screenshots and tone notes. That's a record you can keep whether your co-parent participates or not — and bring to your attorney when it matters. (Recording-consent laws vary by location — in some places, recording a call or conversation may have legal implications. If in doubt, check local law before recording calls or conversations.)
         </p>
       </details>
 
@@ -1168,7 +1168,7 @@ title: Home
       <h3 class="text-4xl md:text-5xl font-bold mb-8">
         Documentation strategy for parents who keep records.
       </h3>
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed text-left">
         Verascribe Editorial publishes long-form writing on documentation strategy, custody-case operating practice, and reflective frameworks for parents in high-conflict separations. Every post fact-checked against primary sources. Every disclaimer policy in place.
       </p>
     </div>
@@ -1223,10 +1223,10 @@ title: Home
 
     <div class="reveal max-w-3xl mx-auto">
       <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
-        Verascribe Guardian was built by <strong class="text-white">[FOUNDER NAME]</strong> and <strong class="text-white">[FOUNDER NAME]</strong> — the two people who are also the support team, the engineering team, and the ones who answer when you email. We built it because co-parenting documentation tools assumed something we knew wasn't universally true: that both parents are cooperating, both parents are on the platform, and both parents have an interest in accuracy. We built it for the parent doing this alone. That's the parent we designed every screen for.
+        Verascribe Guardian was built by <strong class="text-white">Nem</strong> and <strong class="text-white">Rylan Le</strong> — the two people who are also the support team, the engineering team, and the ones who answer when you email. We built it because co-parenting documentation tools assumed something we knew wasn't universally true: that both parents are cooperating, both parents are on the platform, and both parents have an interest in accuracy. We built it for the parent doing this alone. That's the parent we designed every screen for.
       </p>
       <p class="text-xl text-gray-400 mb-12 leading-[1.5]">
-        Bear &amp; Tree Studios is not a startup. There's no venture capital, no growth team, no acquisition strategy, no analytics pipeline, and no community forum. There are two founders who ship updates, answer emails, and make decisions about what to build next based on what you actually tell us. Just two people who will still answer your email in year three. The tool runs on your own Google account, which means we don't need to hold your records to keep the lights on. We built it to last. <strong class="text-white">[YEAR FOUNDED]</strong> · <strong class="text-white">[LOCATION]</strong>.
+        Bear &amp; Tree Studios is not a startup. There's no venture capital, no growth team, no acquisition strategy, no analytics pipeline, and no community forum. There are two founders who ship updates, answer emails, and make decisions about what to build next based on what you actually tell us. Just two people who will still answer your email in year three. The tool runs on your own Google account, which means we don't need to hold your records to keep the lights on. We built it to last.<br /><strong class="text-white">2025 · The Villages, FL.</strong>
       </p>
     </div>
 
@@ -1274,7 +1274,7 @@ title: Home
       <p class="text-gray-400">No credit card. No commitment.</p>
     </div>
     <a
-      href="https://trial.myverascribe.com"
+      href="{{ '/trial/' | relative_url }}"
       class="cursor-pointer inline-block bg-brand-purple text-white hover:bg-brand-purple/90 px-12 py-5 rounded-full font-bold text-xl shadow-2xl transition-all transform hover:scale-105 active:scale-95"
       style="box-shadow: 0 0 60px rgba(168,85,247,0.4);"
     >
