@@ -1,0 +1,49 @@
+---
+layout: null
+permalink: /trial/launch/
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Launching Verascribe Guardian…</title>
+    <!--
+      Redirect stub. Single memorable internal URL (/trial/launch/) that forwards
+      to the live app (site.trial_url). Keeps the ugly Apps Script / app URL out of
+      the markup and gives one place to change the destination.
+      The prep modal's "Continue to Google" button targets this page.
+    -->
+    <meta http-equiv="refresh" content="0; url={{ site.trial_url }}" />
+    <link rel="canonical" href="{{ site.trial_url }}" />
+    <script>
+      window.location.replace("{{ site.trial_url }}");
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0F172A;
+        color: #F1F5F9;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        text-align: center;
+        padding: 1.5rem;
+      }
+      a { color: #A855F7; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">Opening Verascribe Guardian…</p>
+      <p style="color: #94a3b8;">
+        If nothing happens,
+        <a href="{{ site.trial_url }}">click here to continue</a>.
+      </p>
+    </div>
+  </body>
+</html>

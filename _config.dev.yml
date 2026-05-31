@@ -1,0 +1,13 @@
+# Local dev overrides. Load with:
+#   bundle exec jekyll serve --config _config.yml,_config.dev.yml
+# (or just run .\serve.ps1)
+
+# In dev, the app isn't running locally, so point the launch target at the
+# trial page itself — this lets you click the full CTA -> modal -> "Continue"
+# flow without hitting an external dead domain. Swap to a local app URL if you
+# ever run the app locally.
+trial_url: "/trial/"
+
+# Locally the trial page is just /trial/ on the same host, so the header logo
+# should point back to the local index instead of the production domain.
+home_url: "/"

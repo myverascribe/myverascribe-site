@@ -37,7 +37,7 @@ permalink: /blog/
         {%- assign rt = words | divided_by: 200 | plus: 1 -%}
         {%- if post.reading_time -%}{%- assign rt = post.reading_time -%}{%- endif -%}
         <article
-          class="bg-[#1e1f20] rounded-2xl shadow-sm border border-white/5 overflow-hidden hover:border-brand-teal/40 transition-colors"
+          class="bg-gray-800 rounded-2xl shadow-sm border border-white/5 overflow-hidden hover:border-brand-teal/40 transition-colors"
         >
           <a href="{{ post.url | relative_url }}" class="block p-6 md:p-8 group">
             <div class="flex flex-wrap items-center gap-x-3 gap-y-2 mb-4 text-xs">
