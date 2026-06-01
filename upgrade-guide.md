@@ -83,7 +83,7 @@ description: "A step-by-step guide to exporting and importing your workbook data
 </div>
 
 <ol>
-  <li>Ensure you are signed into only one Google account.</li>
+  <li>Ensure you are signed into only one Google account. This is important because you will not be able to move your workbook to a different account later.</li>
   <li>Launch the webapp at <a href="https://app.myverascribe.com" target="_blank" class="text-brand-teal hover:text-brand-teal/80 transition-colors">https://app.myverascribe.com</a></li>
   <li>Select "I'm upgrading from the legacy workbook".</li>
 </ol>
