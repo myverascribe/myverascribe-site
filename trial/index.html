@@ -65,14 +65,7 @@ variant: b
 
     <!-- Hero UI Spotlight asset (below CTA per Axis spec — scroll reward, not above-fold) -->
     <div class="mt-20 max-w-4xl mx-auto">
-      <!-- ASSET TODO: /assets/images/trial/hero.png — 1280x800 (16:10), UI Spotlight, dark app UI in laptop frame, radial Neon Purple glow -->
-      <div class="asset-todo aspect-[16/10] rounded-2xl flex items-center justify-center" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
-        <div class="text-center text-brand-purple/60">
-          <i data-lucide="image" class="w-16 h-16 mx-auto mb-3"></i>
-          <p class="text-sm font-semibold uppercase tracking-wider">Hero UI Spotlight</p>
-          <p class="text-xs mt-1 opacity-60">/assets/images/trial/hero.png &middot; 1280&times;800 &middot; UI Spotlight</p>
-        </div>
-      </div>
+      <img src="{{ '/assets/images/index/dashboard.png' | relative_url }}" alt="Verascribe Guardian dashboard" class="w-full rounded-2xl shadow-2xl" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
     </div>
   </div>
 </section>
@@ -98,7 +91,7 @@ variant: b
 
     <div class="grid md:grid-cols-2 gap-6 reveal">
       <!-- Card 1: Custody logging -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="clipboard-list" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">Custody logging</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
@@ -107,7 +100,7 @@ variant: b
       </div>
 
       <!-- Card 2: Custody calendar -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="calendar" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">Custody calendar</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
@@ -116,7 +109,7 @@ variant: b
       </div>
 
       <!-- Card 3: Finance ledger -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="receipt" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">Finance ledger</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
@@ -125,7 +118,7 @@ variant: b
       </div>
 
       <!-- Card 4: Evidence locker -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="folder-lock" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">Evidence locker</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
@@ -134,7 +127,7 @@ variant: b
       </div>
 
       <!-- Card 5: One-click PDF reports -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="file-text" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">One-click PDF reports</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
@@ -143,7 +136,7 @@ variant: b
       </div>
 
       <!-- Card 6: Full audit trail -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="history" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">Full audit trail</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
@@ -177,85 +170,65 @@ variant: b
       </p>
     </div>
 
-    <!-- 4-step grid with desktop connector line -->
-    <div class="relative reveal">
-      <!-- Connector line: desktop only, behind the chips -->
-      <div class="hidden lg:block absolute top-12 left-[12%] right-[12%] h-px bg-slate-700/60 -z-0"></div>
+    <!-- 4-step vertical list -->
+    <div class="space-y-16 reveal">
 
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-6 relative z-10">
-
-        <!-- Step 1 -->
-        <div class="text-center">
-          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
-            1
-          </div>
-          <!-- ASSET TODO: /assets/images/trial/step-1.png — 1280x960 (4:3), workbook-picker UI screenshot -->
-          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
-            <div class="text-center text-brand-purple/50">
-              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
-              <p class="text-xs opacity-70">step-1.png</p>
-            </div>
-          </div>
-          <h3 class="text-lg font-bold text-off-white mb-2">Tell us where you are.</h3>
-          <p class="text-base text-gray-400 leading-[1.5]">
+      <!-- Step 1 -->
+      <div class="flex flex-col md:flex-row items-start gap-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center border-2 border-charcoal mt-1">
+          1
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-off-white mb-3">Tell us where you are.</h3>
+          <p class="text-base text-gray-400 leading-[1.5] mb-6">
             New to Verascribe, or returning to an existing workbook? One tap.
           </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="text-center">
-          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
-            2
-          </div>
-          <!-- ASSET TODO: /assets/images/trial/step-2.png — 1280x960 (4:3), in-app "Create new workbook" screen -->
-          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
-            <div class="text-center text-brand-purple/50">
-              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
-              <p class="text-xs opacity-70">step-2.png</p>
-            </div>
-          </div>
-          <h3 class="text-lg font-bold text-off-white mb-2">Create your workbook.</h3>
-          <p class="text-base text-gray-400 leading-[1.5]">
-            Click "Create workbook" in the app. A new Google Sheets workbook is created in your Drive. That workbook is yours &mdash; it stays in your account whether you stay with us or not.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="text-center">
-          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
-            3
-          </div>
-          <!-- ASSET TODO: /assets/images/trial/step-3.png — 1280x960 (4:3), family profile entry (DO NOT include birthday — input doesn't exist yet) -->
-          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
-            <div class="text-center text-brand-purple/50">
-              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
-              <p class="text-xs opacity-70">step-3.png</p>
-            </div>
-          </div>
-          <h3 class="text-lg font-bold text-off-white mb-2">Enter your family profile.</h3>
-          <p class="text-base text-gray-400 leading-[1.5]">
-            Names for your child or children. Names for the parents. The relationships between them. Two minutes.
-          </p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="text-center">
-          <div class="w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center mx-auto mb-4 border-2 border-charcoal">
-            4
-          </div>
-          <!-- ASSET TODO: /assets/images/trial/step-4.png — 1280x960 (4:3), schedule generator screenshot -->
-          <div class="asset-todo aspect-[4/3] rounded-xl mb-5 flex items-center justify-center">
-            <div class="text-center text-brand-purple/50">
-              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2"></i>
-              <p class="text-xs opacity-70">step-4.png</p>
-            </div>
-          </div>
-          <h3 class="text-lg font-bold text-off-white mb-2">Generate your custody schedule.</h3>
-          <p class="text-base text-gray-400 leading-[1.5]">
-            Pick a template (2-2-3, week-on-week-off, every-other-weekend, custom) and the calendar fills in. Adjust as needed.
-          </p>
+          <img src="{{ '/assets/images/guides/new-user-guide/select-new-user.png' | relative_url }}" alt="Select new user" class="w-full rounded-xl" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
         </div>
       </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col md:flex-row items-start gap-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center border-2 border-charcoal mt-1">
+          2
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-off-white mb-3">Create your workbook.</h3>
+          <p class="text-base text-gray-400 leading-[1.5] mb-6">
+            Click "Create workbook" in the app. A new Google Sheets workbook is created in your Drive. That workbook is yours &mdash; it stays in your account whether you stay with us or not.
+          </p>
+          <img src="{{ '/assets/images/guides/new-user-guide/create-new-workbook.png' | relative_url }}" alt="Create new workbook" class="w-full rounded-xl" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col md:flex-row items-start gap-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center border-2 border-charcoal mt-1">
+          3
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-off-white mb-3">Enter your family profile.</h3>
+          <p class="text-base text-gray-400 leading-[1.5] mb-6">
+            Names for your child or children. Names for the parents. The relationships between them. Two minutes.
+          </p>
+          <img src="{{ '/assets/images/guides/new-user-guide/family-profile.png' | relative_url }}" alt="Enter family profile" class="w-full rounded-xl" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flex flex-col md:flex-row items-start gap-8">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-purple/15 text-brand-purple font-bold flex items-center justify-center border-2 border-charcoal mt-1">
+          4
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-off-white mb-3">Generate your custody schedule.</h3>
+          <p class="text-base text-gray-400 leading-[1.5] mb-6">
+            Pick a template (2-2-3, week-on-week-off, every-other-weekend, custom) and the calendar fills in. Adjust as needed.
+          </p>
+          <img src="{{ '/assets/images/guides/new-user-guide/generate-schedule.png' | relative_url }}" alt="Generate custody schedule" class="w-full rounded-xl" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
+        </div>
+      </div>
+
     </div>
 
     <p class="text-center text-lg text-gray-300 mt-16 reveal">
@@ -287,7 +260,7 @@ variant: b
     <div class="grid md:grid-cols-3 gap-6 reveal mb-12">
 
       <!-- Permission 1: drive.file -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="folder-open" class="w-8 h-8 text-brand-teal mb-4"></i>
         <h3 class="text-lg font-bold text-off-white mb-3">See, edit, create, and delete only the specific Google Drive files you use with this app</h3>
         <p class="text-base text-gray-400 leading-[1.6]">
@@ -296,7 +269,7 @@ variant: b
       </div>
 
       <!-- Permission 2: external_request -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="globe" class="w-8 h-8 text-brand-teal mb-4"></i>
         <h3 class="text-lg font-bold text-off-white mb-3">Connect to an external service</h3>
         <p class="text-base text-gray-400 leading-[1.6]">
@@ -305,7 +278,7 @@ variant: b
       </div>
 
       <!-- Permission 3: send_mail -->
-      <div class="glass-card rounded-2xl p-7 border border-slate-700/40">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
         <i data-lucide="mail" class="w-8 h-8 text-brand-teal mb-4"></i>
         <h3 class="text-lg font-bold text-off-white mb-3">Send email as you</h3>
         <p class="text-base text-gray-400 leading-[1.6]">
@@ -316,7 +289,7 @@ variant: b
     </div>
 
     <!-- Implicit email permission callout -->
-    <div class="glass-card rounded-2xl p-6 border border-slate-700/40 border-l-4 border-l-brand-teal reveal mb-16">
+    <div class="glass-card rounded-2xl p-6 bg-white/5 border border-white/10 border-l-4 border-l-brand-teal reveal mb-16">
       <div class="flex items-start gap-4">
         <i data-lucide="user" class="w-6 h-6 text-brand-teal flex-shrink-0 mt-1"></i>
         <div>
@@ -514,7 +487,7 @@ variant: b
     </p>
 
     <!-- Pull-quote — the page's only DM Serif Display moment -->
-    <div class="glass-card rounded-2xl px-8 py-7 my-12 border border-brand-teal/30 text-center">
+    <div class="glass-card rounded-2xl px-8 py-7 my-12 bg-white/5 border border-white/10 text-center">
       <p class="text-2xl md:text-3xl font-serif-display text-off-white leading-[1.25]">
         One year of full access. Then read-only &mdash; your records stay in your Google account, viewable and exportable.
       </p>
@@ -712,7 +685,9 @@ variant: b
     </ul>
 
     <a
-      href="{{ '/trial/launch/' | relative_url }}"
+      href="https://app.myverascribe.com"
+      target="_blank"
+      rel="noopener noreferrer"
       class="block w-full text-center cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-[1.02] active:scale-95 shadow-xl"
       style="box-shadow: 0 0 40px rgba(168,85,247,0.4);"
     >
