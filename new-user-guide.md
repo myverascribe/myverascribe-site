@@ -46,7 +46,7 @@ description: "A step-by-step guide to setting up your Verascribe Guardian workbo
 ### Step 1: Launch the Webapp and Create Your Workbook.
 
 <ol>
-  <li>Ensure you are signed into only one Google account. This is important because you will not be able to move your workbook to a different account later.</li>
+  <li>Ensure you are signed into only one Google account. This is important because Google can often get the accounts mixed up if you are signed into more than one at a time, and you will not be able to move your workbook to a different account later.</li>
   <li>Launch the webapp at <a href="https://app.myverascribe.com" target="_blank" class="text-brand-teal hover:text-brand-teal/80 transition-colors">https://app.myverascribe.com</a></li>
   <li>Select "I'm new to Verascribe".</li>
 </ol>
