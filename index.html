@@ -84,45 +84,48 @@ title: Home
   </div>
 </section>
 
-<!-- Section 1: Why This Exists (Sinek WHY — manifesto, Type-Driven Mode B sub-mode on Deep Slate canvas) -->
+<!-- Section 1: Why This Exists (Sinek WHY — manifesto + portrait, two-column) -->
 <section id="why-this-exists" class="py-32 md:py-40 bg-charcoal relative">
-  <div class="max-w-3xl mx-auto px-4 text-center reveal">
-    <h2
-      class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-8"
-    >
-      Why This Exists
-    </h2>
-    <h3 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-12">
-      The record should belong to the person keeping it.
-    </h3>
-    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-8 text-left">
-      Documentation is what you have when cooperation isn't available. The parent keeping the record alone shouldn't have to depend on a co-parent's participation, a vendor's goodwill, or a subscription that can lock them out of their own history.
-    </p>
-    <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] text-left">
-      So we built Verascribe Guardian so that outcome isn't a vendor's promise — it's the architecture. Your records live in your own Google account, not on a server we control.
-    </p>
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="reveal">
+        <h2 class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-8">
+          Why This Exists
+        </h2>
+        <h3 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-12">
+          The record should belong to the person keeping it.
+        </h3>
+        <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-8">
+          Documentation is what you have when cooperation isn't available. The parent keeping the record alone shouldn't have to depend on a co-parent's participation, a vendor's goodwill, or a subscription that can lock them out of their own history.
+        </p>
+        <p class="text-xl md:text-2xl text-gray-300 leading-[1.5]">
+          So we built Verascribe Guardian so that outcome isn't a vendor's promise — it's the architecture. Your records live in your own Google account, not on a server we control.
+        </p>
+      </div>
+      <div class="reveal flex justify-center lg:justify-end">
+        <div class="relative max-w-md rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(168,85,247,0.35)]">
+          <img
+            src="{{ '/assets/images/index/the-why-1.png' | relative_url }}"
+            alt="A parent keeping the record alone, late at night"
+            class="w-full h-auto block"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Section 2: Privacy & Architecture (The Shield) — moved up for Sinek HOW position -->
 <section class="py-32 bg-charcoal border-y border-slate-800/5">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-      <div class="reveal relative flex justify-center">
-        <div class="w-64 h-64 md:w-80 md:h-80 relative">
-          <div
-            class="absolute inset-0 bg-brand-teal/20 blur-[100px] rounded-full"
-          ></div>
-          <div
-            class="relative z-10 w-full h-full glass-card rounded-full flex items-center justify-center border-slate-800/10"
-          >
-            <i data-lucide="shield" class="w-32 h-32 text-brand-teal"></i>
-            <div
-              class="absolute -right-4 top-1/4 w-16 h-16 glass-card rounded-xl flex items-center justify-center"
-            >
-              <i data-lucide="database" class="w-8 h-8 text-white"></i>
-            </div>
-          </div>
+    <div class="grid lg:grid-cols-2 gap-20 items-start">
+      <div class="reveal self-start lg:sticky lg:top-28 flex justify-center lg:justify-start">
+        <div class="relative max-w-md rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(168,85,247,0.35)]">
+          <img
+            src="{{ '/assets/images/index/the-vault-1.png' | relative_url }}"
+            alt="Your records, sealed in a space only you hold"
+            class="w-full h-auto block"
+          />
         </div>
       </div>
       <div class="reveal">
@@ -135,11 +138,22 @@ title: Home
           Your data. Your Drive.<br />Your control.
         </h3>
         <p class="text-lg text-gray-400 mb-6 leading-relaxed">
-          Most apps in this category store your records on the company's servers. That means a company you don't control has the most sensitive details of your family life sitting in their database. They can read it. They can lose it. They can be subpoenaed. And — as you'd discover if you tried to leave OurFamilyWizard or TalkingParents — you may not be able to get your data off their servers even if you ask.
+          Most apps in this category keep your records on the company's servers — a company you don't control, holding the most sensitive details of your family life. They can read it, lose it, or be subpoenaed. And if you tried to leave OurFamilyWizard or TalkingParents, you may not be able to get your data off their servers even if you ask.
         </p>
         <p class="text-lg text-gray-400 mb-6 leading-relaxed">
-          The other apps are also built as two-party platforms. Both parents typically have accounts. Verascribe doesn't have a <strong class="text-white">"co-parent side"</strong>. There's no portal for the other parent to log into. No setting that could leak. No account on our side that could be misconfigured. Your records are private not because you remembered to mark them private, but because the architecture makes any other state structural — not a setting, not a permission you forgot to flip.
+          Verascribe is built the opposite way: there's no <strong class="text-white">"co-parent side"</strong> — no portal for the other parent to log into, and no setting that could leak.
         </p>
+
+        <details class="group mb-8 border-t border-slate-800 pt-4">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-white list-none">
+            Why that means private by design
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-lg text-gray-400 leading-relaxed">
+            The other apps are two-party platforms — both parents typically have accounts. Verascribe has no account on our side at all. Your records are private not because you remembered to mark them private, but because the architecture makes any other state structural — not a setting, not a permission you forgot to flip.
+          </p>
+        </details>
+
         <p class="text-lg text-gray-400 mb-8 leading-relaxed">
           Your records live in two places, both of which you already own:
         </p>
@@ -173,8 +187,8 @@ title: Home
           </li>
         </ul>
 
-        <div class="glass-card rounded-xl p-5 border border-slate-700/50">
-          <h5 class="font-semibold text-gray-300 text-base mb-2">Verified by Google:</h5>
+        <div class="glass-card rounded-xl p-5" style="border-left: 3px solid rgba(20, 184, 166, 0.7);">
+          <h5 class="font-semibold text-brand-teal text-base mb-2">Verified by Google:</h5>
           <p class="text-gray-300 text-base leading-relaxed">
             Verascribe has completed Google's OAuth verification review. When you authorize the app, you'll see Google's standard permission screen — no "unverified app" notice. Verascribe follows Google's Limited Use policy; verification confirms the permissions we request match what the app actually does.
           </p>
@@ -737,26 +751,39 @@ title: Home
       />
     </div>
 
-    <div class="reveal max-w-4xl mx-auto mb-12 text-left">
-      <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
-        Verascribe is built differently — because your records were <strong class="text-white">never ours to hold</strong>. They live in your Google Sheets workbook and your Google Drive folder. Both of those are yours: you owned them the day you opened your Google account; you'll own them the day you stop using Verascribe; you'll own them the day Verascribe ceases to exist. Your one-year license is your access to the app — the logging sidebar, the calendar, the PDF export tools. When the license expires, the app stops accepting new entries.
-      </p>
+    <div class="reveal max-w-6xl mx-auto mb-12">
+      <div class="grid lg:grid-cols-[minmax(0,360px)_1fr] gap-12 lg:gap-16 items-center">
+        <div class="flex justify-center lg:justify-start">
+          <div class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(42,157,143,0.35)]">
+            <img
+              src="{{ '/assets/images/index/its-yours-to-keep-1.png' | relative_url }}"
+              alt="Your records, kept and yours"
+              class="w-full h-auto block"
+            />
+          </div>
+        </div>
+        <div class="text-left">
+          <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
+            Verascribe is built differently — because your records were <strong class="text-white">never ours to hold</strong>. They live in your Google Sheets workbook and your Google Drive folder. Both of those are yours: you owned them the day you opened your Google account; you'll own them the day you stop using Verascribe; you'll own them the day Verascribe ceases to exist. Your one-year license is your access to the app — the logging sidebar, the calendar, the PDF export tools. When the license expires, the app stops accepting new entries.
+          </p>
 
-      <details class="group py-6 border-t border-slate-800">
-        <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
-          Read more about how this works
-          <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
-        </summary>
-        <p class="mt-4 text-xl text-gray-400 mb-8 leading-[1.5]">
-          Most apps in this category hold your records as long as you keep paying. With OurFamilyWizard, your subscription window closes and your records become inaccessible — you get two grace logins over six months, then you need to pay again to see your own history. With TalkingParents, it's more severe: their Terms of Service state that accounts and records <strong class="text-white">"cannot be deleted or removed</strong>, regardless of account status, suspension, termination, or non-payment" (ToS §16, verified 2026-05-18). You can't leave, and you can't take your records with you. OFW requires mutual consent from all connected parties even to request deletion of shared records (ToS, verified 2026-05-18). Your co-parent can block you from deleting your own history.
-        </p>
-        <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
-          The pattern is the same in both: the company holds the data, and they decide what you can do with it. Verascribe doesn't fit that pattern.
-        </p>
-        <p class="text-xl text-gray-400 leading-[1.5]">
-          If you stop using Verascribe for any reason — end of the custody situation, switching tools, our studio closing — your records stay <strong class="text-white">in your Google account</strong>, exactly where you left them. We have no claim on them. We cannot see them, hold them, or withhold them. The workbook is a Google Sheets file. The evidence folder is a Google Drive folder. Both open in Google without Verascribe in the room.
-        </p>
-      </details>
+          <details class="group py-6 border-t border-slate-800">
+            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
+              Read more about how this works
+              <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <p class="mt-4 text-xl text-gray-400 mb-8 leading-[1.5]">
+              Most apps in this category hold your records as long as you keep paying. With OurFamilyWizard, your subscription window closes and your records become inaccessible — you get two grace logins over six months, then you need to pay again to see your own history. With TalkingParents, it's more severe: their Terms of Service state that accounts and records <strong class="text-white">"cannot be deleted or removed</strong>, regardless of account status, suspension, termination, or non-payment" (ToS §16, verified 2026-05-18). You can't leave, and you can't take your records with you. OFW requires mutual consent from all connected parties even to request deletion of shared records (ToS, verified 2026-05-18). Your co-parent can block you from deleting your own history.
+            </p>
+            <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
+              The pattern is the same in both: the company holds the data, and they decide what you can do with it. Verascribe doesn't fit that pattern.
+            </p>
+            <p class="text-xl text-gray-400 leading-[1.5]">
+              If you stop using Verascribe for any reason — end of the custody situation, switching tools, our studio closing — your records stay <strong class="text-white">in your Google account</strong>, exactly where you left them. We have no claim on them. We cannot see them, hold them, or withhold them. The workbook is a Google Sheets file. The evidence folder is a Google Drive folder. Both open in Google without Verascribe in the room.
+            </p>
+          </details>
+        </div>
+      </div>
     </div>
 
     <div class="reveal grid md:grid-cols-3 gap-12 mb-20 text-left stagger-reveal max-w-6xl mx-auto">
@@ -785,7 +812,7 @@ title: Home
 
 <!-- Section 12: The License Model (new section) -->
 <section class="py-32 bg-charcoal border-b border-slate-800/5">
-  <div class="max-w-4xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4">
     <div class="reveal text-center mb-16">
       <h2
         class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4"
@@ -797,13 +824,24 @@ title: Home
       </h3>
     </div>
 
-    <div class="reveal max-w-3xl mx-auto">
-      <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
-        Verascribe Guardian is a <strong class="text-white">one-year license</strong> — not a subscription. Pay $24.99 once, and you have full access to every feature for a full year: log unlimited entries, generate unlimited PDF exports, upload unlimited evidence files, and receive every update we ship during that year.
-      </p>
-      <p class="text-xl text-gray-400 mb-12 leading-[1.5]">
-        After your year is up, the app moves to <strong class="text-white">read-only mode</strong> — view, search, and export anytime, with no further payment. The only thing that pauses is adding new entries. Renew whenever you want: no auto-billing, no surprise charges, no lockout.
-      </p>
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+      <div class="reveal order-last lg:order-first">
+        <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
+          Verascribe Guardian is a <strong class="text-white">one-year license</strong> — not a subscription. Pay $24.99 once, and you have full access to every feature for a full year: log unlimited entries, generate unlimited PDF exports, upload unlimited evidence files, and receive every update we ship during that year.
+        </p>
+        <p class="text-xl text-gray-400 leading-[1.5]">
+          After your year is up, the app moves to <strong class="text-white">read-only mode</strong> — view, search, and export anytime, with no further payment. The only thing that pauses is adding new entries. Renew whenever you want: no auto-billing, no surprise charges, no lockout.
+        </p>
+      </div>
+      <div class="reveal flex justify-center lg:justify-end">
+        <div class="relative max-w-md rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(168,85,247,0.35)]">
+          <img
+            src="{{ '/assets/images/index/after-the-storm-1.png' | relative_url }}"
+            alt="Looking out at a clear horizon — your records endure"
+            class="w-full h-auto block"
+          />
+        </div>
+      </div>
     </div>
 
     <!-- Timeline graphic -->
@@ -1151,35 +1189,48 @@ title: Home
 -->
 <!-- ================================================================= -->
 
-<!-- Final CTA: Apple-style Conversion -->
+<!-- Final CTA: Apple-style Conversion (faded background image, text on the dark side) -->
 <section class="py-48 bg-charcoal text-off-white relative overflow-hidden">
+  <!-- Background image -->
   <div
-    class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full"
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image: url('{{ '/assets/images/index/documenting-alone-late-1.png' | relative_url }}');"
+  ></div>
+  <!-- Legibility scrim: dark on the left where the copy sits, lighter on the right so the subject shows -->
+  <div
+    class="absolute inset-0"
+    style="background: linear-gradient(to right, rgba(15,23,42,0.96) 0%, rgba(15,23,42,0.88) 38%, rgba(15,23,42,0.55) 72%, rgba(15,23,42,0.3) 100%);"
+  ></div>
+  <!-- Brand glow -->
+  <div
+    class="absolute top-0 left-0 w-[800px] h-[800px] rounded-full"
     style="background: radial-gradient(ellipse at center, rgba(168,85,247,0.15) 0%, transparent 70%); filter: blur(40px);"
   ></div>
 
-  <div class="max-w-4xl mx-auto px-4 text-center reveal relative z-10">
-    <div
-      class="inline-block px-4 py-1 rounded-full border border-brand-purple/40 text-base font-bold uppercase tracking-widest mb-8 text-brand-purple"
-    >
-      Start Free
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="max-w-xl text-left reveal">
+      <div
+        class="inline-block px-4 py-1 rounded-full border border-brand-purple/40 text-base font-bold uppercase tracking-widest mb-8 text-brand-purple"
+      >
+        Start Free
+      </div>
+      <h3 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1]">
+        Start organizing your records today.
+      </h3>
+      <div class="space-y-2 mb-12">
+        <p class="text-2xl font-medium">Try it free for 7 days.</p>
+        <p class="text-gray-300">No credit card. No commitment.</p>
+      </div>
+      <a
+        href="{{ '/trial/' | relative_url }}"
+        class="cursor-pointer inline-block bg-brand-purple text-white hover:bg-brand-purple/90 px-12 py-5 rounded-full font-bold text-xl shadow-2xl transition-all transform hover:scale-105 active:scale-95"
+        style="box-shadow: 0 0 60px rgba(168,85,247,0.4);"
+      >
+        Get Started Now
+      </a>
+      <p class="text-base text-gray-300 mt-8">
+        Currently desktop &amp; laptop only. Mobile and tablet support coming soon. Google account required.
+      </p>
     </div>
-    <h3 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1]">
-      Start organizing your records today.
-    </h3>
-    <div class="space-y-2 mb-12">
-      <p class="text-2xl font-medium">Try it free for 7 days.</p>
-      <p class="text-gray-400">No credit card. No commitment.</p>
-    </div>
-    <a
-      href="{{ '/trial/' | relative_url }}"
-      class="cursor-pointer inline-block bg-brand-purple text-white hover:bg-brand-purple/90 px-12 py-5 rounded-full font-bold text-xl shadow-2xl transition-all transform hover:scale-105 active:scale-95"
-      style="box-shadow: 0 0 60px rgba(168,85,247,0.4);"
-    >
-      Get Started Now
-    </a>
-    <p class="text-base text-gray-400 mt-8">
-      Currently desktop &amp; laptop only. Mobile and tablet support coming soon. Google account required.
-    </p>
   </div>
 </section>
