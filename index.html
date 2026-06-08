@@ -650,11 +650,11 @@ title: Home
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">The parent documenting alone</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">Calendar architecture</td>
-              <td class="p-6 text-gray-300 text-base">N/A</td>
-              <td class="p-6 text-gray-300 text-base">N/A</td>
-              <td class="p-6 text-gray-300 text-base">Shared with co-parent (privacy toggle per event)</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">No co-parent side — privacy is structural, not a setting</td>
+              <td class="p-6 font-semibold text-white">Can your co-parent see it?</td>
+              <td class="p-6 text-gray-300 text-base">Only if you show them</td>
+              <td class="p-6 text-gray-300 text-base">Only if you share the file</td>
+              <td class="p-6 text-gray-300 text-base">Yes — it's a shared platform you both log into</td>
+              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">No — there's no co-parent side at all</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Price</td>
@@ -678,32 +678,25 @@ title: Home
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Your own Google account</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">If you stop / leave</td>
-              <td class="p-6 text-gray-300 text-base">N/A</td>
-              <td class="p-6 text-gray-300 text-base">N/A</td>
-              <td class="p-6 text-gray-300 text-base">OFW: 2 grace logins in 6 mo, then locked out</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Records stay yours, forever</td>
-            </tr>
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">Can you delete your data?</td>
-              <td class="p-6 text-gray-300 text-base">Tear it up</td>
-              <td class="p-6 text-gray-300 text-base">Delete the file</td>
-              <td class="p-6 text-gray-300 text-base">OFW &amp; TalkingParents: blocked*</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Nothing to delete — we never had it</td>
+              <td class="p-6 font-semibold text-white">If you leave, delete, or they shut down</td>
+              <td class="p-6 text-gray-300 text-base">It's on your shelf</td>
+              <td class="p-6 text-gray-300 text-base">The file stays yours</td>
+              <td class="p-6 text-gray-300 text-base">OFW: 2 grace logins in 6 months, then locked out — and deletion is blocked by their terms*</td>
+              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">It's all in your own Google account — yours to keep, export, or delete anytime</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Payments</td>
               <td class="p-6 text-gray-300 text-base">Manual</td>
               <td class="p-6 text-gray-300 text-base">Manual</td>
-              <td class="p-6 text-gray-300 text-base">Routed through vendor (sees history, may charge fees)</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">External (Venmo/Zelle/bank); receipt attached; $0 fees; zero vendor visibility</td>
+              <td class="p-6 text-gray-300 text-base">Routed through the vendor (they see your history, may charge fees)</td>
+              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">You pay outside the app (Venmo, Zelle, bank). No fees, and we never see it.</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">Audit trail</td>
               <td class="p-6 text-gray-300 text-base">None</td>
               <td class="p-6 text-gray-300 text-base">None</td>
               <td class="p-6 text-gray-300 text-base">Some (message timestamps only)</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Every operation, every category, timestamp + user attribution</td>
+              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Every change timestamped and tracked, so you can prove your records were kept honestly</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">PDF export, structured</td>
@@ -800,50 +793,6 @@ title: Home
       </div>
     </div>
 
-    <!-- Competitive contrast table -->
-    <div class="reveal glass-card rounded-3xl overflow-hidden border border-slate-800/10 max-w-6xl mx-auto">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="border-b border-slate-800/10 bg-white/5">
-              <th class="p-6 text-base font-bold uppercase tracking-wider text-gray-400"></th>
-              <th class="p-6 text-base font-bold uppercase tracking-wider text-gray-400">OurFamilyWizard</th>
-              <th class="p-6 text-base font-bold uppercase tracking-wider text-gray-400">TalkingParents</th>
-              <th class="p-6 text-base font-bold uppercase tracking-wider text-brand-teal" style="border-left: 2px solid #14B8A6;">Verascribe Guardian</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-white/5">
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">After you stop paying</td>
-              <td class="p-6 text-gray-300 text-base">2 grace logins in 6 months, then locked out</td>
-              <td class="p-6 text-gray-300 text-base">Paid access ends; records permanently retained on TP servers</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Records stay in your Google account forever — free, read-only</td>
-            </tr>
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">Can you delete your records?</td>
-              <td class="p-6 text-gray-300 text-base">Only with mutual consent from co-parent (ToS, verified 2026-05-18)</td>
-              <td class="p-6 text-gray-300 text-base">No — ToS §16 prohibits deletion of accounts and records regardless of account status (verified 2026-05-18)</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Yes — it's a Google Sheets file and Drive folder; delete them like any file</td>
-            </tr>
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">Can we access your records?</td>
-              <td class="p-6 text-gray-300 text-base">Yes (vendor hosts all data)</td>
-              <td class="p-6 text-gray-300 text-base">Yes (vendor hosts all data)</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">No — we never had them</td>
-            </tr>
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-6 font-semibold text-white">If Verascribe / the vendor closes</td>
-              <td class="p-6 text-gray-300 text-base">Your records disappear with the vendor</td>
-              <td class="p-6 text-gray-300 text-base">Your records are on the vendor's servers — your fate is their fate</td>
-              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Your records are in your own Google account — unaffected</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <p class="text-xs text-gray-400 mt-4 max-w-4xl mx-auto">
-      Sources: OFW ToS (verified 2026-05-18); TalkingParents ToS §16 (verified 2026-05-18); Verascribe architecture — OAuth scope inspection + product license terms.
-    </p>
   </div>
 </section>
 
