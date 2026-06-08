@@ -229,7 +229,11 @@
           const navHeight = navEl ? navEl.offsetHeight : 64;
           heroSection.style.setProperty("--nav-height", `${navHeight}px`);
 
-          const heroUrl = heroImage.getAttribute("data-hero-url");
+          const heroUrlDesktop = heroImage.getAttribute("data-hero-url");
+          const heroUrlMobile = heroImage.getAttribute("data-hero-url-mobile");
+          const isMobile = window.matchMedia("(max-width: 768px)").matches;
+          const heroUrl =
+            isMobile && heroUrlMobile ? heroUrlMobile : heroUrlDesktop;
           if (heroUrl) {
             heroImage.style.backgroundImage = `url('${heroUrl}')`;
           }
