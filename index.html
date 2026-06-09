@@ -134,12 +134,8 @@ title: Home
     </div>
   </div>
   <!-- Full-width dashboard screenshot, ~500px tall, sides cropped by page -->
-  <div class="reveal relative overflow-hidden shadow-[0_-30px_60px_-10px_rgba(124,58,247,0.4),0_30px_60px_-10px_rgba(124,58,247,0.4)]" style="height:500px;">
-    <img src="assets/images/index/dashboard.png" alt="Dashboard overview" class="w-full h-full object-cover object-top block" />
-    <!-- left scrim -->
-    <div class="absolute inset-y-0 left-0 w-24 pointer-events-none" style="background: linear-gradient(to right, #0F172A 0%, transparent 100%);"></div>
-    <!-- right scrim -->
-    <div class="absolute inset-y-0 right-0 w-24 pointer-events-none" style="background: linear-gradient(to left, #0F172A 0%, transparent 100%);"></div>
+  <div class="reveal overflow-x-auto shadow-[0_-30px_60px_-10px_rgba(124,58,247,0.4),0_30px_60px_-10px_rgba(124,58,247,0.4)]" style="height:500px;">
+    <img src="assets/images/index/dashboard.png" alt="Dashboard overview" class="h-full block" style="width:auto; min-width:900px;" />
   </div>
   <div class="text-center mt-12">
     <a href="{{ '/trial/' | relative_url }}" class="inline-block border border-brand-purple/50 hover:border-brand-purple text-brand-purple hover:text-white hover:bg-brand-purple/10 font-medium px-6 py-2.5 rounded-full text-sm transition-all">Start free trial →</a>
