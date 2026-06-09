@@ -295,6 +295,11 @@ title: Home
           </li>
         </ul>
 
+        <!-- Mobile-only: verified by Google inline (expandable is desktop-only) -->
+        <p class="md:hidden text-sm text-brand-teal mt-2 mb-6 border-l-2 border-brand-teal pl-3 leading-snug">
+          <strong>Verified by Google</strong> — Verascribe has completed Google's OAuth review. You'll see Google's standard permission screen, not an "unverified app" warning.
+        </p>
+
         <div class="hidden md:block">
         <details class="group glass-card rounded-xl p-5" style="border-left: 3px solid rgba(20, 184, 166, 0.7);">
           <summary class="flex justify-between items-center cursor-pointer font-semibold text-brand-teal text-base list-none">
@@ -454,7 +459,7 @@ title: Home
       />
     </div>
 
-    <div class="glass-card rounded-2xl px-8 py-6 max-w-2xl mx-auto mb-16 mt-16 border border-brand-teal/30">
+    <div class="glass-card rounded-2xl px-8 py-6 max-w-2xl mx-auto mb-8 mt-8 md:mb-16 md:mt-16 border border-brand-teal/30">
       <p class="text-lg font-semibold text-brand-teal">The audit trail doesn't work against you. It works for you.</p>
     </div>
 
@@ -592,7 +597,7 @@ title: Home
           <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Your own Google account</span></div>
         </div>
       </div>
-      <div class="glass-card rounded-2xl p-5">
+      <div class="hidden glass-card rounded-2xl p-5">
         <p class="font-semibold text-white mb-3">Attach evidence files (any type)</p>
         <div class="space-y-2 text-sm">
           <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Yes, but on their servers, capped by plan</span></div>
@@ -613,14 +618,14 @@ title: Home
           <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">No — there's no co-parent side at all</span></div>
         </div>
       </div>
-      <div class="glass-card rounded-2xl p-5">
+      <div class="hidden glass-card rounded-2xl p-5">
         <p class="font-semibold text-white mb-3">Audit trail</p>
         <div class="space-y-2 text-sm">
           <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Message timestamps only</span></div>
           <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Every change timestamped and tracked</span></div>
         </div>
       </div>
-      <div class="glass-card rounded-2xl p-5">
+      <div class="hidden glass-card rounded-2xl p-5">
         <p class="font-semibold text-white mb-3">One-time payment</p>
         <div class="space-y-2 text-sm">
           <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">✗ subscription</span></div>
