@@ -31,7 +31,7 @@ variant: b
      SECTION 1 — HERO
      Static, CTA above fold, scroll-reveal disabled per Axis.
      ============================================================ -->
-<section class="relative bg-charcoal pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden">
+<section class="relative bg-charcoal pt-16 md:pt-24 pb-20 md:pb-28 overflow-hidden">
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.1),transparent_60%)] -z-10"></div>
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
     <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-6">
@@ -215,8 +215,8 @@ variant: b
       </p>
     </div>
 
-    <!-- 4-step vertical list -->
-    <div class="space-y-16 reveal">
+    <!-- 4-step layout: 2x2 grid on desktop, single column on mobile -->
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-16 reveal">
 
       <!-- Step 1 -->
       <div>
@@ -629,7 +629,7 @@ variant: b
 <section class="py-24 md:py-32 bg-charcoal relative overflow-hidden border-t border-slate-700/50">
   <!-- Background image -->
   <div
-    class="absolute inset-0 bg-cover bg-center"
+    class="absolute inset-0 bg-cover bg-right md:bg-center"
     style="background-image: url('{{ '/assets/images/index/documenting-alone-late-1.png' | relative_url }}');"
   ></div>
   <!-- Legibility scrim: dark on the left where the copy sits, lighter on the right so the subject shows -->

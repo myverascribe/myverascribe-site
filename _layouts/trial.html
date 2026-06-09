@@ -121,8 +121,8 @@
     </script>
   </head>
   <body class="bg-charcoal text-off-white font-sans flex flex-col min-h-screen">
-    <!-- Stripped header: logo only, no nav. Absolute positioning so it sits over the hero. -->
-    <header class="absolute top-0 left-0 right-0 z-50 py-6">
+    <!-- Stripped header: logo only, no nav. Sticky so it stays in view (matches the homepage). -->
+    <header class="sticky top-0 z-50 py-4 bg-charcoal/90 backdrop-blur-md border-b border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
         <a href="{{ site.home_url }}" class="flex items-center cursor-pointer group">
           <span class="font-bold text-xl text-off-white tracking-tight">
