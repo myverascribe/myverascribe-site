@@ -134,8 +134,16 @@ title: Home
     </div>
   </div>
   <!-- Full-width dashboard screenshot, 500px tall, page edges crop sides -->
-  <div class="reveal w-full overflow-hidden" style="height:500px;">
-    <img src="assets/images/index/dashboard.png" alt="Dashboard overview" class="w-full h-full object-cover object-top block" />
+  <div class="reveal w-full relative" style="height:500px;">
+    <!-- top glow -->
+    <div class="absolute inset-x-0 top-0 h-24 z-10 pointer-events-none" style="background: linear-gradient(to bottom, #0F172A 0%, transparent 100%);"></div>
+    <!-- bottom glow -->
+    <div class="absolute inset-x-0 bottom-0 h-24 z-10 pointer-events-none" style="background: linear-gradient(to top, #0F172A 0%, transparent 100%);"></div>
+    <!-- purple top accent -->
+    <div class="absolute inset-x-0 top-0 h-32 z-10 pointer-events-none" style="background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(168,85,247,0.18) 0%, transparent 100%);"></div>
+    <!-- teal bottom accent -->
+    <div class="absolute inset-x-0 bottom-0 h-32 z-10 pointer-events-none" style="background: radial-gradient(ellipse 60% 100% at 50% 100%, rgba(20,184,166,0.15) 0%, transparent 100%);"></div>
+    <img src="assets/images/index/dashboard.png" alt="Dashboard overview" class="w-full h-full object-cover block" style="object-position: center 0%;" />
   </div>
   <div class="text-center mt-12">
     <a href="{{ '/trial/' | relative_url }}" class="inline-block border border-brand-purple/50 hover:border-brand-purple text-brand-purple hover:text-white hover:bg-brand-purple/10 font-medium px-6 py-2.5 rounded-full text-sm transition-all">Start free trial →</a>
