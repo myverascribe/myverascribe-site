@@ -17,9 +17,9 @@ title: Home
 
     <div
       id="hero-caption"
-      class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-charcoal/90 via-charcoal/50 to-transparent"
+      class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-charcoal via-charcoal/70 to-transparent"
     >
-      <div class="px-6 md:px-12 pb-10 pt-20">
+      <div class="px-6 md:px-12 pb-10 pt-40 md:pt-20">
         <div class="text-left">
           <div
             class="text-4xl md:text-5xl font-bold tracking-tight text-off-white"
@@ -37,6 +37,10 @@ title: Home
           >
             A co-parenting and custody records app for the parent doing the documentation alone.
           </div>
+          <!-- Mobile-only price cue + contrast on the first screen -->
+          <div class="md:hidden mt-4 text-base font-semibold text-brand-purple">
+            $24.99 once, not $200/year &middot; 7-day free trial
+          </div>
         </div>
       </div>
     </div>
@@ -44,19 +48,19 @@ title: Home
     <!-- Scrolling Overlay -->
     <div id="hero-overlay" class="hero-overlay opacity-0">
       <div class="max-w-7xl mx-auto px-4 text-center">
-        <p class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">Your Truth. Secured.</p>
+        <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">Your Truth. Secured.</p>
         <h1
-          class="text-5xl md:text-7xl font-bold tracking-tight mb-8 gradient-text"
+          class="text-4xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8 gradient-text"
         >
           Built for the parent for whom cooperation isn't on the table.
         </h1>
         <p
-          class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+          class="hidden md:block text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
         >
           The bigger co-parenting apps assume two parents working together. The Etsy spreadsheets assume you have the time. Verascribe Guardian is built differently — for the parent keeping the record alone, in their own Google account, on their own terms.
         </p>
         <p
-          class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed mt-6"
+          class="text-base md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed mt-2 md:mt-6"
         >
           $24.99 for one year of full access.<br />Then read-only, forever.<br />Your records stay in your Google account regardless.
         </p>
@@ -68,8 +72,11 @@ title: Home
           >
             Try Free for 7 Days
           </a>
+          <p class="text-sm md:text-base text-gray-400 -mt-2">
+            Not a subscription — no auto-billing, ever.
+          </p>
           <div
-            class="animate-bounce mt-8 cursor-pointer"
+            class="animate-bounce mt-4 cursor-pointer"
             onclick="
               document
                 .getElementById('why-this-exists')
@@ -84,8 +91,46 @@ title: Home
   </div>
 </section>
 
+<!-- Reviews — social proof up front, to frame how everything below is read -->
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="reveal text-center mb-16">
+      <h2 class="text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
+        What Parents Say
+      </h2>
+      <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-[1.1]">
+        Reviews from real Etsy buyers.
+      </h3>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 stagger-reveal">
+      <div class="reveal glass-card rounded-2xl p-8">
+        <div class="text-brand-teal text-lg tracking-widest mb-4" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 text-lg leading-relaxed mb-6">
+          "It converts my information into a visual graph for my attorney and family judge to see. The creators have actually added features I mentioned for high-conflict situations like my own."
+        </p>
+        <p class="text-gray-400 text-base">— Savannah · Verified Etsy review · Feb 2026</p>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-8">
+        <div class="text-brand-teal text-lg tracking-widest mb-4" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 text-lg leading-relaxed mb-6">
+          "Such a game changer for my documentation with a high-conflict co-parent. It's very simple to use."
+        </p>
+        <p class="text-gray-400 text-base">— DeAnna · Verified Etsy review · Feb 2026</p>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-8">
+        <div class="text-brand-teal text-lg tracking-widest mb-4" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 text-lg leading-relaxed mb-6">
+          "I ran into a software problem and they were quick to fix it for me! Works great and great customer service!"
+        </p>
+        <p class="text-gray-400 text-base">— Lindsey · Verified Etsy review · May 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Section 1: Why This Exists (Sinek WHY — manifesto + portrait, two-column) -->
-<section id="why-this-exists" class="py-32 md:py-40 bg-charcoal relative">
+<section id="why-this-exists" class="py-20 md:py-40 bg-charcoal relative border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div class="reveal">
@@ -95,11 +140,18 @@ title: Home
         <h3 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-12">
           The record should belong to the person keeping it.
         </h3>
-        <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-8">
-          Documentation is what you have when cooperation isn't available. The parent keeping the record alone shouldn't have to depend on a co-parent's participation, a vendor's goodwill, or a subscription that can lock them out of their own history.
-        </p>
-        <p class="text-xl md:text-2xl text-gray-300 leading-[1.5]">
-          So we built Verascribe Guardian so that outcome isn't a vendor's promise — it's the architecture. Your records live in your own Google account, not on a server we control.
+        <!-- Desktop copy -->
+        <div class="hidden md:block">
+          <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] mb-8">
+            Documentation is what you have when cooperation isn't available. The parent keeping the record alone shouldn't have to depend on a co-parent's participation, a vendor's goodwill, or a subscription that can lock them out of their own history.
+          </p>
+          <p class="text-xl md:text-2xl text-gray-300 leading-[1.5]">
+            So we built Verascribe Guardian so that outcome isn't a vendor's promise — it's the architecture. Your records live in your own Google account, not on a server we control.
+          </p>
+        </div>
+        <!-- Mobile copy (shorter) -->
+        <p class="md:hidden text-xl text-gray-300 leading-[1.5]">
+          Documentation is what you have when cooperation isn't available — and it shouldn't depend on a vendor's goodwill. So your records live in your own Google account, not on a server we control.
         </p>
       </div>
       <div class="reveal flex justify-center lg:justify-end">
@@ -116,10 +168,10 @@ title: Home
 </section>
 
 <!-- Section 2: Privacy & Architecture (The Shield) — moved up for Sinek HOW position -->
-<section class="py-32 bg-charcoal border-y border-slate-800/5">
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="grid lg:grid-cols-2 gap-20 items-start">
-      <div class="reveal self-start lg:sticky lg:top-28 flex justify-center lg:justify-start">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+      <div class="reveal order-last lg:order-first self-start lg:sticky lg:top-28 flex justify-center lg:justify-start">
         <div class="relative max-w-md rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(168,85,247,0.35)]">
           <img
             src="{{ '/assets/images/index/the-vault-1.png' | relative_url }}"
@@ -137,8 +189,11 @@ title: Home
         <h3 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
           Your data. Your Drive.<br />Your control.
         </h3>
-        <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+        <p class="hidden md:block text-lg text-gray-400 mb-6 leading-relaxed">
           Most apps in this category keep your records on the company's servers — a company you don't control, holding the most sensitive details of your family life. They can read it, lose it, or be subpoenaed. And if you tried to leave OurFamilyWizard or TalkingParents, you may not be able to get your data off their servers even if you ask.
+        </p>
+        <p class="md:hidden text-lg text-gray-400 mb-6 leading-relaxed">
+          Most apps keep your records on the company's servers — a company you don't control that can read it, lose it, or be subpoenaed.
         </p>
         <p class="text-lg text-gray-400 mb-6 leading-relaxed">
           Verascribe is built the opposite way: there's no <strong class="text-white">"co-parent side"</strong> — no portal for the other parent to log into, and no setting that could leak.
@@ -199,7 +254,7 @@ title: Home
 </section>
 
 <!-- Section 1: The Dashboard — Layout B (edge-bleed right) -->
-<section id="first-section" class="py-32 bg-charcoal relative overflow-hidden">
+<section id="first-section" class="py-20 md:py-32 bg-charcoal relative overflow-hidden border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid lg:grid-cols-[minmax(0,400px)_1fr] gap-12 lg:gap-16 items-center">
       <div class="reveal">
@@ -238,7 +293,7 @@ title: Home
 </section>
 
 <!-- Section 2: Smart Documentation — Layout A (rhythm break, lifted panel) -->
-<section class="py-32 bg-slate-900/40 border-y border-slate-800/40 relative">
+<section class="py-20 md:py-32 bg-slate-900/40 border-t border-slate-700/50 relative">
   <div class="max-w-7xl mx-auto px-4 reveal">
     <div class="flex items-start gap-5 mb-16">
       <div class="w-1 self-stretch bg-brand-teal rounded-full flex-shrink-0"></div>
@@ -267,7 +322,7 @@ title: Home
         The other apps give you a <strong class="text-white">generic notes field</strong> — and leave you typing freeform paragraphs into a cell, hoping you'll remember what mattered six months from now.
       </p>
 
-      <details class="group py-6 border-t border-slate-800">
+      <details class="group py-6 border-y border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
           See how Verascribe does it instead
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
@@ -278,7 +333,7 @@ title: Home
       </details>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-12 mt-20 text-left stagger-reveal">
+    <div class="grid md:grid-cols-3 gap-12 mt-12 text-left stagger-reveal">
       <div class="reveal">
         <h4 class="font-bold text-white mb-3 text-xl">Structured fields per category</h4>
         <p class="text-gray-400 text-lg">
@@ -302,7 +357,7 @@ title: Home
 </section>
 
 <!-- Section 3: Event Calendar — Layout B (edge-bleed left, rail on right) -->
-<section id="workspace" class="py-32 bg-charcoal relative overflow-hidden">
+<section id="workspace" class="py-20 md:py-32 bg-charcoal relative overflow-hidden border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid lg:grid-cols-[1fr_minmax(0,400px)] gap-12 lg:gap-16 items-center">
       <div class="reveal lg:-ml-[12vw] order-last lg:order-first">
@@ -346,7 +401,7 @@ title: Home
 </section>
 
 <!-- Section 4: Custody Calendar — Layout A (rhythm break, lifted panel) -->
-<section class="py-32 bg-slate-900/40 border-y border-slate-800/40 relative">
+<section class="py-20 md:py-32 bg-slate-900/40 border-t border-slate-700/50 relative">
   <div class="max-w-7xl mx-auto px-4 reveal">
     <div class="flex items-start gap-5 mb-16">
       <div class="w-1 self-stretch bg-brand-teal rounded-full flex-shrink-0"></div>
@@ -374,7 +429,7 @@ title: Home
         The other apps build their calendars as a shared platform both parents log into. <strong class="text-white">Verascribe doesn't.</strong> There's no co-parent side — no portal for the other parent, no setting that could leak.
       </p>
 
-      <details class="group py-6 border-t border-slate-800">
+      <details class="group py-6 border-y border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
           See what that changes
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
@@ -385,7 +440,7 @@ title: Home
       </details>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-12 mt-20 text-left stagger-reveal">
+    <div class="grid md:grid-cols-3 gap-12 mt-12 text-left stagger-reveal">
       <div class="reveal">
         <h4 class="font-bold text-white mb-3 text-xl">No co-parent side, by design</h4>
         <p class="text-gray-400 text-lg">
@@ -409,7 +464,7 @@ title: Home
 </section>
 
 <!-- Section 5: Finance Ledger — Layout B (edge-bleed right) -->
-<section class="py-32 bg-charcoal relative overflow-hidden">
+<section class="py-20 md:py-32 bg-charcoal relative overflow-hidden border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid lg:grid-cols-[minmax(0,400px)_1fr] gap-12 lg:gap-16 items-center">
       <div class="reveal">
@@ -449,7 +504,7 @@ title: Home
 </section>
 
 <!-- Section 6: Audit Trail — Proof of Keeping — Layout A (rhythm break, lifted panel) -->
-<section class="py-32 bg-slate-900/40 border-y border-slate-800/40 relative">
+<section class="py-20 md:py-32 bg-slate-900/40 border-t border-slate-700/50 relative">
   <div class="max-w-7xl mx-auto px-4 reveal">
     <div class="flex items-start gap-5 mb-16">
       <div class="w-1 self-stretch bg-brand-purple rounded-full flex-shrink-0"></div>
@@ -485,7 +540,7 @@ title: Home
         You can edit or delete any entry — it's your record. But <strong class="text-white">every change is logged automatically</strong>, with a timestamp and your user attribution, in an audit trail that lives alongside your data.
       </p>
 
-      <details class="group py-6 border-t border-slate-800">
+      <details class="group py-6 border-y border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
           Why that protects you
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
@@ -520,7 +575,7 @@ title: Home
 </section>
 
 <!-- Section 7: Reports & Evidence Export — Layout A (rhythm break, charcoal) -->
-<section class="py-32 bg-charcoal border-t border-slate-800/5 relative">
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50 relative">
   <div class="max-w-7xl mx-auto px-4 reveal">
     <div class="flex items-start gap-5 mb-16">
       <div class="w-1 self-stretch bg-brand-teal rounded-full flex-shrink-0"></div>
@@ -552,7 +607,7 @@ title: Home
         Every entry — categorized, timestamped, with its full audit trail — exports as a structured PDF in <strong class="text-white">under two minutes</strong>, filtered to exactly the slice your attorney asked for.
       </p>
 
-      <details class="group py-6 border-t border-slate-800">
+      <details class="group py-6 border-y border-slate-800">
         <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
           What you can filter and share
           <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
@@ -563,7 +618,7 @@ title: Home
       </details>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-12 mt-20 text-left stagger-reveal">
+    <div class="grid md:grid-cols-3 gap-12 mt-12 text-left stagger-reveal">
       <div class="reveal">
         <h4 class="font-bold text-white mb-3 text-xl">Filtered PDF in under two minutes</h4>
         <p class="text-gray-400 text-lg">
@@ -590,63 +645,136 @@ title: Home
   </div>
 </section>
 
-<!-- Section 7.5: Reviews (NEW) -->
-<section class="py-32 bg-charcoal border-t border-slate-800/5">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="reveal text-center mb-16">
-      <h2 class="text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
-        What Parents Say
-      </h2>
-      <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-[1.1]">
-        Reviews from real Etsy buyers.
-      </h3>
+<!-- Section 7.7: Evidence Locker (file uploads spotlight) -->
+<section class="py-20 md:py-32 bg-slate-900/40 border-t border-slate-700/50 relative">
+  <div class="max-w-7xl mx-auto px-4 reveal">
+    <div class="flex items-start gap-5 mb-12 md:mb-16">
+      <div class="w-1 self-stretch bg-brand-teal rounded-full flex-shrink-0"></div>
+      <div>
+        <h2 class="text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-2">
+          Evidence Locker
+        </h2>
+        <h3 class="text-4xl md:text-6xl font-bold mb-4 leading-[1.1]">
+          Attach the proof to the moment it happened.
+        </h3>
+        <p class="text-xl text-gray-400 max-w-3xl leading-[1.5]">
+          A screenshot, a photo, a confirmation email, a PDF, a voice memo — almost any file, up to 10&nbsp;MB, attached to the exact log entry it belongs to, and kept in your own Google Drive.
+        </p>
+      </div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8 stagger-reveal">
-      <div class="reveal glass-card rounded-2xl p-8">
-        <div class="text-brand-teal text-lg tracking-widest mb-4" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="text-gray-200 text-lg leading-relaxed mb-6">
-          "It converts my information into a visual graph for my attorney and family judge to see. The creators have actually added features I mentioned for high-conflict situations like my own."
+    <div class="grid md:grid-cols-3 gap-12 text-left stagger-reveal">
+      <div class="reveal">
+        <h4 class="font-bold text-white mb-3 text-xl">Any file, any entry</h4>
+        <p class="text-gray-400 text-lg">
+          Not just messages, and not just images — any file type on any log entry: an incident, an exchange, an expense, a health or school note. The other apps mostly limit attachments to messages, journals, and expenses.
         </p>
-        <p class="text-gray-400 text-base">— Savannah · Verified Etsy review · Feb 2026</p>
       </div>
-      <div class="reveal glass-card rounded-2xl p-8">
-        <div class="text-brand-teal text-lg tracking-widest mb-4" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="text-gray-200 text-lg leading-relaxed mb-6">
-          "Such a game changer for my documentation with a high-conflict co-parent. It's very simple to use."
+      <div class="reveal">
+        <h4 class="font-bold text-white mb-3 text-xl">It lives in your Google Drive</h4>
+        <p class="text-gray-400 text-lg">
+          Your files go into a Verascribe folder inside your own Google Drive — yours to open, share, and keep. The subscription apps store attachments on <strong class="text-white">their</strong> servers.
         </p>
-        <p class="text-gray-400 text-base">— DeAnna · Verified Etsy review · Feb 2026</p>
       </div>
-      <div class="reveal glass-card rounded-2xl p-8">
-        <div class="text-brand-teal text-lg tracking-widest mb-4" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="text-gray-200 text-lg leading-relaxed mb-6">
-          "I ran into a software problem and they were quick to fix it for me! Works great and great customer service!"
+      <div class="reveal">
+        <h4 class="font-bold text-white mb-3 text-xl">No storage tier to outgrow</h4>
+        <p class="text-gray-400 text-lg">
+          The subscription apps cap attachment storage by plan. Yours is whatever your Google Drive already holds — there's no upsell when you run out.
         </p>
-        <p class="text-gray-400 text-base">— Lindsey · Verified Etsy review · May 2026</p>
       </div>
     </div>
+
+    <p class="text-base text-gray-400 mt-10 max-w-3xl leading-relaxed">
+      A spreadsheet can't really do this: Google Sheets only drops a small image into a cell — no PDFs — so receipts and screenshots end up scattered across folders, or lost.
+    </p>
   </div>
 </section>
 
 <!-- Section 8: The 4-anchor Comparison Table (rewrite of "The Documentation Gap") -->
-<section class="py-32 bg-charcoal border-t border-slate-800/5">
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="reveal text-center mb-20">
+    <div class="reveal text-center mb-10 md:mb-20">
       <h2
         class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4"
       >
         Why Not a Spreadsheet?
       </h2>
-      <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-[1.1]">
+      <h3 class="hidden md:block text-4xl md:text-6xl font-bold mb-8 leading-[1.1]">
         Why "templates" — and even the big subscription apps — aren't enough.
       </h3>
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      <h3 class="md:hidden text-4xl font-bold mb-8 leading-[1.1]">
+        How we compare to the big subscription apps.
+      </h3>
+      <p class="hidden md:block text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
         Most parents start with a spreadsheet template. Some upgrade to a $200/year subscription app. Both have real problems. Verascribe Guardian is the third option.
+      </p>
+      <p class="md:hidden text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Cheaper than a spreadsheet template, and a fraction of the $200/year subscription apps. Here's how Verascribe stacks up against the closest paid option.
       </p>
     </div>
 
+    <!-- Mobile comparison (phones only): the subscription apps vs Verascribe — no horizontal scroll -->
+    <div class="md:hidden reveal space-y-4">
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">Price</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">$110–$300/yr</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">$24.99 once</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">5-year cost</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">$550–$1,500</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">$24.99 (or $124.95 if renewed yearly)</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">Where your records live</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Vendor's servers</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Your own Google account</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">Attach evidence files (any type)</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Yes, but on their servers, capped by plan</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Any file type, on any log entry — in your own Google Drive</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">If you leave or they shut down</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">2 grace logins, then locked out — deletion blocked by their terms*</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">In your Google account — yours to keep, export, or delete anytime</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">Can your co-parent see it?</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Yes — a shared platform you both log into</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">No — there's no co-parent side at all</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">Audit trail</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Message timestamps only</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Every change timestamped and tracked</span></div>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">One-time payment</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">✗ subscription</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">✓ pay once</span></div>
+        </div>
+      </div>
+    </div>
+
     <div
-      class="reveal glass-card rounded-3xl overflow-hidden border border-slate-800/10"
+      class="reveal hidden md:block glass-card rounded-3xl overflow-hidden border border-slate-800/10"
     >
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
@@ -717,6 +845,13 @@ title: Home
               <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Your own Google account</td>
             </tr>
             <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-6 font-semibold text-white">Attach evidence files (any type)</td>
+              <td class="p-6 text-gray-300 text-base">No — keep separate physical copies</td>
+              <td class="p-6 text-gray-300 text-base">Not really — images only, no PDFs in a cell</td>
+              <td class="p-6 text-gray-300 text-base">Yes, but on their servers, capped by plan tier</td>
+              <td class="p-6 text-gray-300 text-base font-semibold" style="border-left: 2px solid #14B8A6;">Any file type, on any log entry — in your own Google Drive</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-6 font-semibold text-white">If you leave, delete, or they shut down</td>
               <td class="p-6 text-gray-300 text-base">It's on your shelf</td>
               <td class="p-6 text-gray-300 text-base">The file stays yours</td>
@@ -763,7 +898,7 @@ title: Home
 </section>
 
 <!-- Section 12: The License Model (absorbs the old Records-Belong-to-You permanence beat) -->
-<section class="py-32 bg-charcoal border-b border-slate-800/5">
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="reveal text-center mb-16">
       <h2
@@ -778,11 +913,18 @@ title: Home
 
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
       <div class="reveal order-last lg:order-first">
-        <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
-          Verascribe Guardian is a <strong class="text-white">one-year license</strong> — not a subscription. Pay $24.99 once, and you have full access to every feature for a full year: log unlimited entries, generate unlimited PDF exports, upload unlimited evidence files, and receive every update we ship during that year.
-        </p>
-        <p class="text-xl text-gray-400 leading-[1.5]">
-          After your year is up, the app moves to <strong class="text-white">read-only mode</strong> — view, search, and export anytime, with no further payment. The only thing that pauses is adding new entries. Renew whenever you want: no auto-billing, no surprise charges, no lockout.
+        <!-- Desktop copy -->
+        <div class="hidden md:block">
+          <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
+            Verascribe Guardian is a <strong class="text-white">one-year license</strong> — not a subscription. Pay $24.99 once, and you have full access to every feature for a full year: log unlimited entries, generate unlimited PDF exports, upload unlimited evidence files, and receive every update we ship during that year.
+          </p>
+          <p class="text-xl text-gray-400 leading-[1.5]">
+            After your year is up, the app moves to <strong class="text-white">read-only mode</strong> — view, search, and export anytime, with no further payment. The only thing that pauses is adding new entries. Renew whenever you want: no auto-billing, no surprise charges, no lockout.
+          </p>
+        </div>
+        <!-- Mobile copy (shorter) -->
+        <p class="md:hidden text-xl text-gray-400 leading-[1.5]">
+          Pay <strong class="text-white">$24.99 once</strong> for a full year — unlimited logs, exports, and evidence files. After that it's <strong class="text-white">read-only forever</strong>: view, search, and export anytime, no further payment, no auto-billing.
         </p>
       </div>
       <div class="reveal flex justify-center lg:justify-end">
@@ -798,8 +940,8 @@ title: Home
 
     <!-- Timeline graphic -->
     <div class="reveal glass-card rounded-2xl p-8 max-w-3xl mx-auto">
-      <div class="flex items-stretch gap-0 text-base">
-        <div class="flex-1 border-r border-slate-700 pr-6">
+      <div class="flex flex-col md:flex-row items-stretch gap-0 text-base">
+        <div class="flex-1 border-b md:border-b-0 md:border-r border-slate-700 pb-6 md:pb-0 md:pr-6">
           <div class="text-brand-purple font-bold text-base mb-3">Year 1: Full access</div>
           <div class="text-gray-300 font-semibold text-base mb-2">$24.99 once</div>
           <ul class="text-gray-300 space-y-1 text-base">
@@ -809,7 +951,7 @@ title: Home
             <li>Every update we ship</li>
           </ul>
         </div>
-        <div class="flex-1 pl-6">
+        <div class="flex-1 pt-6 md:pt-0 md:pl-6">
           <div class="text-brand-teal font-bold text-base mb-3">Year 2+: Read-only forever</div>
           <div class="text-gray-300 font-semibold text-base mb-2">No payment needed</div>
           <ul class="text-gray-300 space-y-1 text-base">
@@ -839,7 +981,7 @@ title: Home
           <p class="text-xl text-gray-400 mb-8 leading-[1.5]">
             Your records live in your own Google account — your Sheets workbook and your Drive folder. When the license ends, they don't go anywhere: you can view, search, and export them forever, and <strong class="text-white">delete them whenever you want</strong>.
           </p>
-          <details class="group py-6 border-t border-slate-800">
+          <details class="group py-6 border-y border-slate-800">
             <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-white list-none">
               How the other apps trap your records
               <i data-lucide="chevron-down" class="w-5 h-5 text-gray-300 flex-shrink-0 transition-transform group-open:rotate-180"></i>
@@ -876,7 +1018,7 @@ title: Home
 </section>
 
 <!-- Section 13: FAQ (new section) -->
-<section class="py-32 bg-charcoal border-b border-slate-800/5">
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-4xl mx-auto px-4">
     <div class="reveal text-center mb-16">
       <h2
@@ -986,7 +1128,7 @@ title: Home
 </section>
 
 <!-- Section 14 (merged): Who You're Buying From — founders + support + feedback -->
-<section class="py-32 bg-charcoal border-b border-slate-800/5">
+<section class="py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-4xl mx-auto px-4">
     <div class="reveal text-center mb-16">
       <h2 class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
@@ -998,8 +1140,11 @@ title: Home
     </div>
 
     <div class="reveal max-w-3xl mx-auto mb-16">
-      <p class="text-xl text-gray-400 leading-[1.5]">
+      <p class="hidden md:block text-xl text-gray-400 leading-[1.5]">
         Verascribe Guardian is built by <strong class="text-white">Nem and Rylan Le</strong> at Bear &amp; Tree Studios — no venture capital, no growth team, no ticket system. Email <span class="text-white">support@myverascribe.com</span> and one of the two of us replies, usually within the hour. Suggest a feature and you're handing it to a two-person workshop that ships fast. And because the app runs on your own Google account, we don't need to hold your records to keep the lights on — which is exactly why we'll still be the ones answering in year three.
+      </p>
+      <p class="md:hidden text-xl text-gray-400 leading-[1.5]">
+        Built by <strong class="text-white">Nem and Rylan Le</strong> — two founders, no investors. Email <span class="text-white">support@myverascribe.com</span> and one of us replies, usually within the hour. We'll still be the ones answering in year three.
       </p>
     </div>
 
@@ -1026,8 +1171,8 @@ title: Home
   </div>
 </section>
 
-<!-- Section 16: From the Blog (NEW) -->
-<section class="py-32 bg-charcoal border-b border-slate-800/5">
+<!-- Section 16: From the Blog (NEW) — hidden on mobile to keep the phone scroll short -->
+<section class="hidden md:block py-20 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-4xl mx-auto px-4">
     <div class="reveal text-center mb-16">
       <h2
@@ -1083,7 +1228,7 @@ title: Home
 <!-- (w-screen) for a wide "wow" focal beat, wider than the standard    -->
 <!-- sections. Pair sparingly — one marquee per page at most.           -->
 <!--
-<section class="py-32 bg-charcoal relative overflow-hidden">
+<section class="py-20 md:py-32 bg-charcoal relative overflow-hidden border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4 text-center reveal mb-16">
     <h2 class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">Section Eyebrow</h2>
     <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-[1.1]">Headline goes here.</h3>
@@ -1095,7 +1240,7 @@ title: Home
     </div>
   </div>
   <div class="max-w-7xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-12 mt-20 text-left stagger-reveal">
+    <div class="grid md:grid-cols-3 gap-12 mt-12 text-left stagger-reveal">
       <div class="reveal"><h4 class="font-bold text-white mb-3 text-xl">Card one</h4><p class="text-gray-400 text-lg">Body.</p></div>
       <div class="reveal"><h4 class="font-bold text-white mb-3 text-xl">Card two</h4><p class="text-gray-400 text-lg">Body.</p></div>
       <div class="reveal"><h4 class="font-bold text-white mb-3 text-xl">Card three</h4><p class="text-gray-400 text-lg">Body.</p></div>
@@ -1106,7 +1251,7 @@ title: Home
 <!-- ================================================================= -->
 
 <!-- Final CTA: Apple-style Conversion (faded background image, text on the dark side) -->
-<section class="py-48 bg-charcoal text-off-white relative overflow-hidden">
+<section class="pt-32 pb-24 md:py-48 bg-charcoal text-off-white relative overflow-hidden border-t border-slate-700/50">
   <!-- Background image -->
   <div
     class="absolute inset-0 bg-cover bg-center"
@@ -1130,12 +1275,12 @@ title: Home
       >
         Start Free
       </div>
-      <h3 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1]">
+      <h3 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1]">
         Start organizing your records today.
       </h3>
       <div class="space-y-2 mb-8">
         <p class="text-2xl font-medium">Try it free for 7 days.</p>
-        <p class="text-gray-300">No credit card. No commitment.</p>
+        <p class="text-gray-300">No credit card, no commitment. Not a subscription — no auto-billing, ever.</p>
       </div>
 
       <div class="mb-12 max-w-md">
@@ -1156,3 +1301,17 @@ title: Home
     </div>
   </div>
 </section>
+
+<!-- Mobile sticky CTA bar (phones only) — keeps price + trial button always reachable -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-charcoal/95 backdrop-blur border-t border-slate-700/60 px-4 py-3 flex items-center justify-between gap-3">
+  <div class="leading-tight">
+    <p class="text-off-white font-bold text-sm">$24.99 once</p>
+    <p class="text-gray-400 text-xs">Free trial · no auto-billing</p>
+  </div>
+  <a
+    href="{{ '/trial/' | relative_url }}"
+    class="bg-brand-purple text-white px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap shadow-lg"
+  >
+    Start free
+  </a>
+</div>

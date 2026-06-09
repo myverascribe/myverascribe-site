@@ -237,11 +237,18 @@
 
           const heroUrlDesktop = heroImage.getAttribute("data-hero-url");
           const heroUrlMobile = heroImage.getAttribute("data-hero-url-mobile");
-          const isMobile = window.matchMedia("(max-width: 768px)").matches;
-          const heroUrl =
-            isMobile && heroUrlMobile ? heroUrlMobile : heroUrlDesktop;
-          if (heroUrl) {
-            heroImage.style.backgroundImage = `url('${heroUrl}')`;
+          const mobileMq = window.matchMedia("(max-width: 768px)");
+          function applyHeroImage() {
+            const url =
+              mobileMq.matches && heroUrlMobile ? heroUrlMobile : heroUrlDesktop;
+            if (url) heroImage.style.backgroundImage = `url('${url}')`;
+          }
+          applyHeroImage();
+          // Re-evaluate when crossing the mobile/desktop breakpoint (resize, device toggle, rotate)
+          if (mobileMq.addEventListener) {
+            mobileMq.addEventListener("change", applyHeroImage);
+          } else if (mobileMq.addListener) {
+            mobileMq.addListener(applyHeroImage);
           }
           let ticking = false;
 
@@ -292,7 +299,7 @@
       });
     </script>
   </head>
-  <body class="bg-charcoal text-off-white font-sans flex flex-col min-h-screen">
+  <body class="bg-charcoal text-off-white font-sans flex flex-col min-h-screen{% if page.url == '/' %} pb-24 md:pb-0{% endif %}">
     <!-- Navigation -->
     <nav
       class="sticky top-0 z-50 bg-charcoal/90 backdrop-blur-md border-b border-slate-800"
@@ -360,6 +367,9 @@
             </div>
             <p class="text-base text-gray-400">
               Your Truth. Secured.
+            </p>
+            <p class="text-sm text-gray-500 mt-3">
+              $24.99 once. Not a subscription — no auto-billing, ever.
             </p>
           </div>
           <div>

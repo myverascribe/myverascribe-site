@@ -60,7 +60,7 @@ variant: b
     </button>
 
     <p class="text-base text-gray-400 mt-6 max-w-xl mx-auto">
-      No payment. No credit card. Your records stay in your Google account when the trial ends, whether you buy or not.
+      No payment. No credit card. Your records stay in your Google account when the trial ends, whether you buy or not. Not a subscription — no auto-billing, ever.
     </p>
 
     <!-- Hero UI Spotlight asset (below CTA per Axis spec — scroll reward, not above-fold) -->
@@ -72,10 +72,45 @@ variant: b
 
 
 <!-- ============================================================
+     SECTION 1.5 — REVIEWS (social proof, right under the hero)
+     ============================================================ -->
+<section class="py-16 md:py-20 bg-charcoal border-t border-slate-700/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-10 reveal">
+      What parents say
+    </p>
+    <div class="grid md:grid-cols-3 gap-6 reveal">
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
+        <div class="text-brand-teal text-lg tracking-widest mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 leading-relaxed mb-5">
+          "It converts my information into a visual graph for my attorney and family judge to see. The creators have actually added features I mentioned for high-conflict situations like my own."
+        </p>
+        <p class="text-gray-400 text-sm">— Savannah · Verified Etsy review · Feb 2026</p>
+      </div>
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
+        <div class="text-brand-teal text-lg tracking-widest mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 leading-relaxed mb-5">
+          "Such a game changer for my documentation with a high-conflict co-parent. It's very simple to use."
+        </p>
+        <p class="text-gray-400 text-sm">— DeAnna · Verified Etsy review · Feb 2026</p>
+      </div>
+      <div class="glass-card rounded-2xl p-7 bg-white/5 border border-white/10">
+        <div class="text-brand-teal text-lg tracking-widest mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 leading-relaxed mb-5">
+          "I ran into a software problem and they were quick to fix it for me! Works great and great customer service!"
+        </p>
+        <p class="text-gray-400 text-sm">— Lindsey · Verified Etsy review · May 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      SECTION 2 — WHAT YOU GET FOR 7 DAYS
      6-card capability grid, 2 cols desktop, 1 col mobile.
      ============================================================ -->
-<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center reveal mb-16">
       <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
@@ -122,7 +157,7 @@ variant: b
         <i data-lucide="folder-lock" class="w-7 h-7 text-brand-teal mb-4"></i>
         <h3 class="text-xl font-bold text-off-white mb-3">Evidence locker</h3>
         <p class="text-lg text-gray-400 leading-[1.6]">
-          Keep photos, screenshots, and PDFs in a Verascribe folder inside your own Google Drive. Pull them into a report later, or just keep them on hand.
+          Attach almost any file type (up to 10MB) to any entry — photos, screenshots, PDFs, and more — kept in a Verascribe folder inside your own Google Drive. Pull them into a report later, or just keep them on hand.
         </p>
       </div>
 
@@ -156,7 +191,7 @@ variant: b
      SECTION 3 — THE FIRST FIVE MINUTES
      4-step diagram: horizontal lg+, vertical stack on smaller.
      ============================================================ -->
-<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center reveal mb-16">
       <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
@@ -242,7 +277,7 @@ variant: b
      SECTION 4 — WHAT YOU'RE GRANTING GOOGLE
      4-card permissions grid + implicit email callout + "what we don't access" bullet list.
      ============================================================ -->
-<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center reveal mb-16">
       <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
@@ -355,7 +390,7 @@ variant: b
      Variant B: Marketplace listing + badge
      ============================================================ -->
 {% if page.variant == 'a' %}
-<section id="unverified" class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40 scroll-mt-24">
+<section id="unverified" class="py-24 md:py-32 bg-charcoal border-t border-slate-700/50 scroll-mt-24">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center reveal mb-12">
       <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4">
@@ -432,7 +467,7 @@ variant: b
   </div>
 </section>
 {% else %}
-<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
     <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
       Verified by Google
@@ -463,8 +498,8 @@ variant: b
      SECTION 6 — AFTER THE SEVEN DAYS
      Type-Driven Mode B. License terms + Etsy CTA. DM Serif Display pull-quote.
      ============================================================ -->
-<section class="py-24 md:py-32 bg-charcoal border-t border-slate-800/40">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+<section class="py-24 md:py-32 bg-charcoal border-t border-slate-700/50">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
     <div class="text-center mb-12">
       <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
         What happens next
@@ -474,18 +509,32 @@ variant: b
       </h2>
     </div>
 
-    <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
-      <strong class="text-off-white">No auto-billing.</strong> We never asked for a card. The trial ends on day seven and nothing is charged.
-    </p>
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
+      <div class="reveal flex justify-center lg:justify-start">
+        <div class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(42,157,143,0.35)]">
+          <img
+            src="{{ '/assets/images/index/its-yours-to-keep-1.png' | relative_url }}"
+            alt="Your records, kept and yours"
+            class="w-full h-auto block"
+          />
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
+          <strong class="text-off-white">No auto-billing.</strong> We never asked for a card. The trial ends on day seven and nothing is charged.
+        </p>
 
-    <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
-      <strong class="text-off-white">Your records stay yours.</strong> The workbook you created, the entries you logged, the evidence you uploaded &mdash; all of it stays in your Google account, exactly where you left it. You can view it, search it, and export it any time, with no payment, for as long as you have a Google account. We have no claim on it. We cannot withhold it. It was never on our servers.
-    </p>
+        <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
+          <strong class="text-off-white">Your records stay yours.</strong> The workbook you created, the entries you logged, the evidence you uploaded &mdash; all of it stays in your Google account, exactly where you left it. You can view, search, and export it any time, with no payment. We have no claim on it, and it was never on our servers.
+        </p>
 
-    <p class="text-lg text-gray-400 mb-6 leading-[1.6]">
-      <strong class="text-off-white">To keep adding new entries past day seven</strong>, the next step is a one-year license &mdash; $24.99 once, on Etsy. That unlocks the full app for a full year. After your year is up, the app moves to read-only &mdash; your existing records stay in your Google account, viewable and exportable, for as long as you have a Google account.
-    </p>
+        <p class="text-lg text-gray-400 leading-[1.6]">
+          <strong class="text-off-white">To keep adding new entries past day seven</strong>, the next step is a one-year license &mdash; $24.99 once, on Etsy. After your year is up, the app moves to read-only &mdash; your existing records stay in your Google account, viewable and exportable.
+        </p>
+      </div>
+    </div>
 
+    <div class="max-w-3xl mx-auto">
     <!-- Pull-quote — the page's only DM Serif Display moment -->
     <div class="glass-card rounded-2xl px-8 py-7 my-12 bg-white/5 border border-white/10 text-center">
       <p class="text-2xl md:text-3xl font-serif-display text-off-white leading-[1.25]" style="font-family: 'DM Sans', sans-serif;">
@@ -511,6 +560,7 @@ variant: b
     <p class="text-sm text-gray-500 text-center italic">
       On-site checkout is in development. For now, Etsy is the route.
     </p>
+    </div>
   </div>
 </section>
 
@@ -519,7 +569,7 @@ variant: b
      SECTION 7 — WHAT YOU'LL NEED
      Type-Driven Mode B. System requirements.
      ============================================================ -->
-<section class="py-20 md:py-24 bg-charcoal border-t border-slate-800/40">
+<section class="py-20 md:py-24 bg-charcoal border-t border-slate-700/50">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
     <div class="text-center mb-12">
       <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-teal mb-4">
@@ -558,25 +608,51 @@ variant: b
 <!-- ============================================================
      SECTION 8 — FINAL CTA
      ============================================================ -->
-<section class="py-24 md:py-32 bg-charcoal text-center relative overflow-hidden border-t border-slate-800/40">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_60%)] -z-10"></div>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-    <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-10">
-      Start the trial.
-    </h2>
+<section class="py-24 md:py-32 bg-charcoal relative overflow-hidden border-t border-slate-700/50">
+  <!-- Background image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image: url('{{ '/assets/images/index/documenting-alone-late-1.png' | relative_url }}');"
+  ></div>
+  <!-- Legibility scrim: dark on the left where the copy sits, lighter on the right so the subject shows -->
+  <div
+    class="absolute inset-0"
+    style="background: linear-gradient(to right, rgba(15,23,42,0.96) 0%, rgba(15,23,42,0.88) 38%, rgba(15,23,42,0.55) 72%, rgba(15,23,42,0.3) 100%);"
+  ></div>
+  <!-- Brand glow -->
+  <div
+    class="absolute top-0 left-0 w-[800px] h-[800px] rounded-full"
+    style="background: radial-gradient(ellipse at center, rgba(168,85,247,0.15) 0%, transparent 70%); filter: blur(40px);"
+  ></div>
 
-    <button
-      type="button"
-      data-open-prep
-      class="inline-block cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-10 py-4 rounded-full font-semibold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl"
-      style="box-shadow: 0 0 40px rgba(168,85,247,0.4);"
-    >
-      Start free for 7 days
-    </button>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-xl text-left reveal">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-off-white mb-10">
+        Start the trial.
+      </h2>
 
-    <p class="text-lg text-gray-400 mt-8 max-w-2xl mx-auto leading-[1.6]">
-      Your records live in your own Google account &mdash; your Sheets workbook for logs, your Drive folder for evidence. We never see them, before, during, or after your trial.
-    </p>
+      <button
+        type="button"
+        data-open-prep
+        class="inline-block cursor-pointer bg-brand-purple text-white hover:bg-brand-purple/90 px-10 py-4 rounded-full font-semibold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl"
+        style="box-shadow: 0 0 40px rgba(168,85,247,0.4);"
+      >
+        Start free for 7 days
+      </button>
+
+      <p class="text-lg text-gray-300 mt-8 leading-[1.6]">
+        Your records live in your own Google account &mdash; your Sheets workbook for logs, your Drive folder for evidence. We never see them, before, during, or after your trial.
+      </p>
+      <p class="text-base text-gray-400 mt-4">
+        Not a subscription — no auto-billing, ever.
+      </p>
+
+      <div class="mt-10 max-w-md">
+        <div class="text-brand-teal text-base tracking-widest mb-2" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="text-gray-200 text-lg leading-relaxed italic">"Just what I needed. Simple and straightforward. Great way to document things."</p>
+        <p class="text-gray-400 text-base mt-2">— Charlyne, Verified Etsy review</p>
+      </div>
+    </div>
   </div>
 </section>
 
