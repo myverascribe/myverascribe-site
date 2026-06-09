@@ -63,6 +63,16 @@ variant: b
       No payment. No credit card. Your records stay in your Google account when the trial ends, whether you buy or not. Not a subscription — no auto-billing, ever.
     </p>
 
+    <!-- Mobile-only heads-up: the app runs on desktop/laptop -->
+    <div class="md:hidden mt-8 mx-auto max-w-md glass-card rounded-2xl p-5 border-l-4 border-l-brand-teal text-left">
+      <div class="flex items-start gap-3">
+        <i data-lucide="laptop" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+        <p class="text-base text-gray-300 leading-[1.5]">
+          <strong class="text-off-white">Heads up — the app runs on a laptop or desktop.</strong> On your phone right now? Bookmark this page and finish setting up on your computer in a few minutes.
+        </p>
+      </div>
+    </div>
+
     <!-- Hero UI Spotlight asset (below CTA per Axis spec — scroll reward, not above-fold) -->
     <div class="mt-20 max-w-4xl mx-auto">
       <img src="{{ '/assets/images/index/dashboard.png' | relative_url }}" alt="Verascribe Guardian dashboard" class="w-full rounded-2xl shadow-2xl" style="box-shadow: 0 0 120px -10px rgba(168,85,247,0.4);">
@@ -663,6 +673,21 @@ variant: b
     </div>
   </div>
 </section>
+
+<!-- Mobile sticky CTA bar (phones only) — keeps the trial action reachable, honest that it's a laptop app -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-charcoal/95 backdrop-blur border-t border-slate-700/60 px-4 py-3 flex items-center justify-between gap-3">
+  <div class="leading-tight">
+    <p class="text-off-white font-bold text-sm">7-day free trial</p>
+    <p class="text-gray-400 text-xs">Best on a laptop</p>
+  </div>
+  <button
+    type="button"
+    data-open-prep
+    class="bg-brand-purple text-white px-5 py-2.5 rounded-full font-semibold text-sm whitespace-nowrap shadow-lg"
+  >
+    Start free
+  </button>
+</div>
 
 
 <!-- ============================================================

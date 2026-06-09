@@ -299,7 +299,7 @@
       });
     </script>
   </head>
-  <body class="bg-charcoal text-off-white font-sans flex flex-col min-h-screen{% if page.url == '/' %} pb-24 md:pb-0{% endif %}">
+  <body class="bg-charcoal text-off-white font-sans flex flex-col min-h-screen{% if page.url == '/' or page.url == '/trial/' %} pb-24 md:pb-0{% endif %}">
     <!-- Navigation -->
     <nav
       class="sticky top-0 z-50 bg-charcoal/90 backdrop-blur-md border-b border-slate-800"
