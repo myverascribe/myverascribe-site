@@ -305,7 +305,7 @@ variant: b
         What you're granting Google<br />to let the app run.
       </h2>
       <p class="text-xl md:text-2xl text-gray-300 leading-[1.5] max-w-3xl mx-auto">
-        Verascribe is a Google Workspace app. When you sign in, Google asks you to approve <strong class="text-off-white">three specific permissions</strong>. Each one is checked individually &mdash; you see the full list and can review each before you grant.
+        Verascribe is a Google Workspace app. When you sign in, Google asks you to approve <strong class="text-off-white">three permissions</strong> — and, as part of standard sign-in, shares your email address. That's four things in all, each in plain English below, and you review every one before you grant it.
       </p>
     </div>
 
@@ -317,7 +317,7 @@ variant: b
         <i data-lucide="folder-open" class="w-8 h-8 text-brand-teal mb-4"></i>
         <h3 class="text-lg font-bold text-off-white mb-3">See, edit, create, and delete only the specific Google Drive files you use with this app</h3>
         <p class="text-base text-gray-400 leading-[1.6]">
-          This is the <code class="text-brand-teal text-sm">drive.file</code> scope. It lets the app create and manage the Google Sheets workbooks you use with Verascribe, plus the evidence attachments, reports, and backups it saves in Verascribe-named folders in your Drive. Nothing else in your Drive is visible to it.
+          The <code class="text-brand-teal text-sm">drive.file</code> scope. It can create and manage only the Verascribe workbooks, evidence files, and reports it saves in your Drive — nothing else in your Drive is visible to it.
         </p>
       </div>
 
@@ -326,7 +326,7 @@ variant: b
         <i data-lucide="globe" class="w-8 h-8 text-brand-teal mb-4"></i>
         <h3 class="text-lg font-bold text-off-white mb-3">Connect to an external service</h3>
         <p class="text-base text-gray-400 leading-[1.6]">
-          Used to call Google's Sheets and Drive APIs (to read and write your workbook), to validate your license, and to confirm the registry domain hasn't been tampered with. The full host list (six hosts total) is in the OAuth Disclosure.
+          Lets the app talk to Google's Sheets and Drive APIs and validate your license. The full host list is in the OAuth Disclosure.
         </p>
       </div>
 
@@ -335,7 +335,7 @@ variant: b
         <i data-lucide="mail" class="w-8 h-8 text-brand-teal mb-4"></i>
         <h3 class="text-lg font-bold text-off-white mb-3">Send email as you</h3>
         <p class="text-base text-gray-400 leading-[1.6]">
-          Used only when you submit a "Contact Us" support request from inside the app. The message is sent from your own Gmail to a fixed Verascribe support address — you cannot choose another recipient. The app never reads your inbox, your drafts, or any other message.
+          Only used when you send a "Contact Us" message from inside the app — to a fixed Verascribe support address you can't change. The app never reads your inbox or any other message.
         </p>
       </div>
 
@@ -346,9 +346,9 @@ variant: b
       <div class="flex items-start gap-4">
         <i data-lucide="user" class="w-6 h-6 text-brand-teal flex-shrink-0 mt-1"></i>
         <div>
-          <h3 class="text-lg font-bold text-off-white mb-2">Implicit permission (not a checkbox)</h3>
+          <h3 class="text-lg font-bold text-off-white mb-2">Plus: your email address (shared at sign-in)</h3>
           <p class="text-base text-gray-400 leading-[1.6]">
-            When you sign in with Google, the app also sees your <strong class="text-off-white">Google email address</strong> (the address only &mdash; never your inbox or messages). This is part of Google's standard sign-in. The app uses it to register your trial, validate your license, and reach you for support.
+            Signing in with Google also shares your <strong class="text-off-white">email address</strong> (the address only &mdash; never your inbox or messages). It's part of Google's standard sign-in, used to register your trial, validate your license, and reach you for support.
           </p>
         </div>
       </div>
@@ -606,7 +606,7 @@ variant: b
       </li>
       <li>
         <p class="text-lg text-gray-400 leading-[1.6]">
-          <strong class="text-off-white">Workspace or school accounts may not work.</strong> Google Workspace administrators and school IT often block third-party apps by default. If you sign in with a work or school account and see an error like "admin has not allowed access," you have two options: ask your admin to approve Verascribe Guardian for your account, or sign out and use a personal Google account. We recommend the personal-account route &mdash; it's faster, and it keeps your custody records in your personal Google account, separate from anything your employer or school can see.
+          <strong class="text-off-white">Work or school accounts are often blocked.</strong> Admins frequently block third-party apps, so use a personal <code class="text-brand-teal text-base">@gmail.com</code> — it's faster, and it keeps your records separate from anything your employer or school can see.
         </p>
       </li>
       <li>
@@ -737,7 +737,7 @@ variant: b
         <div>
           <p class="text-off-white font-semibold">Use the right Google account</p>
           <p class="text-base text-gray-400 leading-[1.5]">
-            Your records are tied to the account you sign in with. If you're signed into more than one Google account, <strong class="text-gray-300">sign out of the others first</strong> &mdash; or open this in a private/incognito window &mdash; so the right account is used. Google doesn't always ask which one. You won't be able to move your workbook to a different account later.
+            Your records are tied to the account you sign in with. If you're signed into more than one Google account, <strong class="text-gray-300">sign out of the others first</strong> &mdash; or open this in a private/incognito window &mdash; so the right account is used. Google doesn't always ask which one — so pick the account you'll want to keep these records in.
           </p>
         </div>
       </li>
