@@ -39,7 +39,7 @@ title: Home
           </div>
           <!-- Price cue + contrast on the first screen (both desktop and mobile) -->
           <div class="mt-4 text-base md:text-lg font-semibold text-brand-teal">
-            $24.99 once, not $200/year &middot; 7-day free trial
+            $24.99 for one year &middot; then read-only, forever &middot; 7-day free trial
           </div>
           <!-- Phone heads-up (mobile only): flag the laptop/desktop requirement upfront, not in the FAQ -->
           <p class="md:hidden mt-3 text-sm text-gray-300 border-l-2 border-l-brand-teal pl-3 leading-snug">
@@ -336,7 +336,7 @@ title: Home
 
     <!-- Visual: Category-Driven Logging -->
     <div
-      class="hidden md:block relative max-w-7xl mx-auto rounded-t-xl bg-slate-900 border-x border-t border-slate-800/10 overflow-hidden shadow-[0_-20px_50px_-10px_rgba(42,157,143,0.3)]"
+      class="relative max-w-7xl mx-auto rounded-t-xl bg-slate-900 border-x border-t border-slate-800/10 overflow-hidden shadow-[0_-20px_50px_-10px_rgba(42,157,143,0.3)]"
     >
       <img src="assets/images/index/summary-report.png" alt="Summary Report" class="w-full h-auto block" />
     </div>
@@ -422,7 +422,7 @@ title: Home
           </li>
         </ul>
       </div>
-      <div class="reveal lg:-mr-[12vw] hidden md:block">
+      <div class="reveal lg:-mr-[12vw]">
         <div class="relative rounded-xl bg-slate-900 border border-slate-800/10 overflow-hidden shadow-[0_20px_60px_-10px_rgba(124,58,237,0.35)]">
           <img src="assets/images/index/finance-ledger.png" alt="Finance Ledger" class="w-full h-auto block" />
         </div>
@@ -460,7 +460,7 @@ title: Home
     </div>
 
     <div class="glass-card rounded-2xl px-8 py-6 max-w-2xl mx-auto mb-8 mt-8 md:mb-16 md:mt-16 border border-brand-teal/30">
-      <p class="text-lg font-semibold text-brand-teal">The audit trail doesn't work against you. It works for you.</p>
+      <p class="text-lg font-semibold text-brand-teal text-center">The audit trail doesn't work against you. It works for you.</p>
     </div>
 
     <div class="max-w-3xl mx-auto mb-16 text-left">
@@ -580,7 +580,7 @@ title: Home
         <p class="font-semibold text-white mb-3">Price</p>
         <div class="space-y-2 text-sm">
           <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">$110–$300/yr</span></div>
-          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">$24.99 once</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">$24.99/year</span></div>
         </div>
       </div>
       <div class="glass-card rounded-2xl p-5">
@@ -597,7 +597,7 @@ title: Home
           <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Your own Google account</span></div>
         </div>
       </div>
-      <div class="hidden glass-card rounded-2xl p-5">
+      <div class="glass-card rounded-2xl p-5">
         <p class="font-semibold text-white mb-3">Attach evidence files (any type)</p>
         <div class="space-y-2 text-sm">
           <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">Yes, but on their servers, capped by plan</span></div>
@@ -625,11 +625,11 @@ title: Home
           <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">Every change timestamped and tracked</span></div>
         </div>
       </div>
-      <div class="hidden glass-card rounded-2xl p-5">
-        <p class="font-semibold text-white mb-3">One-time payment</p>
+      <div class="glass-card rounded-2xl p-5">
+        <p class="font-semibold text-white mb-3">Auto-billing</p>
         <div class="space-y-2 text-sm">
-          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">✗ subscription</span></div>
-          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">✓ pay once</span></div>
+          <div class="flex justify-between gap-3"><span class="text-gray-400">Subscription apps</span><span class="text-gray-300 text-right">✗ yes — renews automatically</span></div>
+          <div class="flex justify-between gap-3"><span class="text-brand-teal font-semibold">Verascribe</span><span class="text-brand-teal font-semibold text-right">✓ never — you choose to renew</span></div>
         </div>
       </div>
     </div>
@@ -755,6 +755,14 @@ title: Home
     <p class="text-xs text-gray-400 mt-6 max-w-4xl mx-auto leading-relaxed">
       * OFW requires mutual consent from all connected parties to delete shared records (ToS, verified May 2026). TalkingParents accounts and records "cannot be deleted or removed, regardless of account status, suspension, termination, or non-payment" (ToS §16, verified May 2026).
     </p>
+
+    <!-- Mid-page CTA -->
+    <div class="reveal text-center mt-16">
+      <a href="{{ '/trial/' | relative_url }}" class="inline-block bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all shadow-lg hover:shadow-brand-purple/30 hover:shadow-xl">
+        Start Your Free Trial
+      </a>
+      <p class="text-gray-400 text-sm mt-3">7 days free · $24.99/year after · no auto-billing</p>
+    </div>
   </div>
 </section>
 
@@ -995,7 +1003,7 @@ title: Home
       <h2
         class="text-base font-semibold uppercase tracking-[0.2em] text-brand-purple mb-4"
       >
-        Reading from Our Editorial
+        From the Blog
       </h2>
       <h3 class="text-4xl md:text-5xl font-bold mb-8">
         Documentation strategy for parents who keep records.
@@ -1127,8 +1135,8 @@ title: Home
 <!-- Mobile sticky CTA bar (phones only) — keeps price + trial button always reachable -->
 <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-charcoal/95 backdrop-blur border-t border-slate-700/60 px-4 py-3 flex items-center justify-between gap-3">
   <div class="leading-tight">
-    <p class="text-off-white font-bold text-sm">$24.99 once</p>
-    <p class="text-gray-400 text-xs">Free trial · no auto-billing</p>
+    <p class="text-off-white font-bold text-sm">$24.99/year · no auto-billing</p>
+    <p class="text-gray-400 text-xs">Free trial · then read-only, forever</p>
   </div>
   <a
     href="{{ '/trial/' | relative_url }}"
