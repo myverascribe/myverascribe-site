@@ -15,8 +15,8 @@ keywords:
 - gaslighting co-parent how to prove
 - documenting gaslighting in custody case
 - DARVO co-parenting
-image: /assets/images/blog/pillar-page-gaslight-extinguisher/hero.jpg
-og_image: /assets/images/blog/pillar-page-gaslight-extinguisher/og.jpg
+# image: /assets/images/blog/pillar-page-gaslight-extinguisher/hero.jpg
+# og_image: /assets/images/blog/pillar-page-gaslight-extinguisher/og.jpg
 canonical: https://myverascribe.com/blog/pillar-page-gaslight-extinguisher/
 canonical_url: https://myverascribe.com/blog/pillar-page-gaslight-extinguisher/
 lens: both
