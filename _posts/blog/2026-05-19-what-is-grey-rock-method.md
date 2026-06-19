@@ -2,7 +2,7 @@
 layout: blog-post
 title: 'Grey Rock Method: What It Is and When to Use It'
 description: The grey rock method means staying neutral with a co-parent who feeds on your reaction. Learn what it is, where it fits, and its courtroom risk.
-date: 2026-06-19
+date: 2026-05-19
 category: blog
 slug: what-is-grey-rock-method
 pillar: grey-rock-parallel-parenting
@@ -27,7 +27,7 @@ hook_mode: silent-win
 schema_type: Article
 disclaimer: mental_health
 disclaimer_level: mental_health
-date_published: 2026-06-19
+date_published: 2026-05-19
 author: Verascribe Editorial
 post_type: definitional
 og_title: 'Grey Rock Method: What It Is and When to Use It'

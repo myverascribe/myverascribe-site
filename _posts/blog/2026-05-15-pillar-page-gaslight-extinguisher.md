@@ -2,7 +2,7 @@
 layout: blog-post
 title: 'Co-Parent Gaslighting Documentation: The Receipt'
 description: '''Keep records'' is the advice in every article and the gap in every record. The contemporaneous-capture mechanic that turns gaslighting into evidence.'
-date: 2026-06-19
+date: 2026-05-15
 category: blog
 slug: pillar-page-gaslight-extinguisher
 pillar: gaslight-extinguisher
@@ -24,7 +24,7 @@ hook_mode: gaslight-extinguisher
 schema_type: Article
 disclaimer: both
 disclaimer_level: both
-date_published: 2026-06-19
+date_published: 2026-05-15
 author: Verascribe Editorial
 og_title: 'Documenting Co-Parent Gaslighting: The Receipt That Wins'
 og_description: '''Keep records'' is the advice in every article and the gap in every record. The contemporaneous-capture mechanic that turns gaslighting into evidence — and your memory into a defensible record.'

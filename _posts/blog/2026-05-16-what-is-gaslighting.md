@@ -2,7 +2,7 @@
 layout: blog-post
 title: What Is Gaslighting? The Pattern and the Move That Ends It
 description: Gaslighting is a tactic that makes you doubt your own memory. The co-parenting pattern, why it wears you down, and the documentation move that closes the loop.
-date: 2026-06-19
+date: 2026-05-16
 category: blog
 slug: what-is-gaslighting
 pillar: gaslight-extinguisher
@@ -27,7 +27,7 @@ hook_mode: gaslight-extinguisher
 schema_type: Article
 disclaimer: both
 disclaimer_level: both
-date_published: 2026-06-19
+date_published: 2026-05-16
 author: Verascribe Editorial
 og_title: What Is Gaslighting? The Co-Parenting Pattern and the Documentation Move That Ends It
 og_description: You aren't crazy. You're just undocumented. Gaslighting — named by Robin Stern in The Gaslight Effect — is the slow erosion of your confidence in your own memory. Contemporaneous, neutral, timestamped records convert denied incidents into documented facts and move the argument to a different floor.

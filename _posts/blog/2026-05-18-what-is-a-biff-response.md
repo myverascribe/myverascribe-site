@@ -2,7 +2,7 @@
 layout: blog-post
 title: What Is a BIFF Response? Reply Without the Fight
 description: A BIFF response is a brief, informative, friendly, firm reply to a hostile co-parent message. Learn the four rules and how it protects your record.
-date: 2026-06-19
+date: 2026-05-18
 category: blog
 slug: what-is-a-biff-response
 pillar: grey-rock-parallel-parenting
@@ -27,7 +27,7 @@ hook_mode: silent-win
 schema_type: Article
 disclaimer: mental_health
 disclaimer_level: mental_health
-date_published: 2026-06-19
+date_published: 2026-05-18
 author: Verascribe Editorial
 post_type: definitional
 og_title: What Is a BIFF Response? The Four-Rule Reply That Closes the Topic

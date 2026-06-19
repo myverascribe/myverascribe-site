@@ -2,7 +2,7 @@
 layout: blog-post
 title: What Is DARVO? The Pattern Inside a Co-Parent Reply
 description: Deny. Attack. Reverse Victim and Offender. Named by Jennifer Freyd in 1997, DARVO is the three-move sequence inside the reply that disoriented you. Name it privately. Don't name it in writing.
-date: 2026-06-19
+date: 2026-05-17
 category: blog
 slug: what-is-darvo
 pillar: gaslight-extinguisher
@@ -27,7 +27,7 @@ hook_mode: gaslight-extinguisher
 schema_type: Article
 disclaimer: both
 disclaimer_level: both
-date_published: 2026-06-19
+date_published: 2026-05-17
 author: Verascribe Editorial
 og_title: What Is DARVO? The Three Moves Inside the Reply That Disoriented You
 og_description: DARVO — Deny, Attack, Reverse Victim and Offender — was named by Dr. Jennifer Freyd in 1997. Once you see the three moves, the message stops being a maze and starts being a map. The recognition discipline, and where the word does and doesn't belong.
