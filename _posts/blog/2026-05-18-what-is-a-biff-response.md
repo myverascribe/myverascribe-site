@@ -18,8 +18,8 @@ keywords:
 - biff response co-parenting
 - brief informative friendly firm
 - biff vs jade
-image: /assets/images/blog/what-is-a-biff-response/hero.png
-og_image: /assets/images/blog/what-is-a-biff-response/hero.png
+image: /assets/images/blog/what-is-a-biff-response/hero.jpg
+og_image: /assets/images/blog/what-is-a-biff-response/hero.jpg
 canonical: https://myverascribe.com/blog/what-is-a-biff-response/
 canonical_url: https://myverascribe.com/blog/what-is-a-biff-response/
 lens: reflective

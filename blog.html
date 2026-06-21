@@ -6,7 +6,7 @@ permalink: /blog/
 ---
 
 {% assign blog_posts = site.posts | where: "category", "blog" | sort: "date" | reverse %}
-{% assign per_page = 10 %}
+{% assign per_page = 12 %}
 {% assign total = blog_posts.size %}
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">

@@ -18,8 +18,8 @@ keywords:
 - darvo example
 - darvo deny attack reverse
 - darvo gaslighting difference
-image: /assets/images/blog/what-is-darvo/hero.png
-og_image: /assets/images/blog/what-is-darvo/hero.png
+image: /assets/images/blog/what-is-darvo/hero.jpg
+og_image: /assets/images/blog/what-is-darvo/hero.jpg
 canonical: https://myverascribe.com/blog/what-is-darvo/
 canonical_url: https://myverascribe.com/blog/what-is-darvo/
 lens: both

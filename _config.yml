@@ -63,6 +63,10 @@ cta:
 # → HTML tag → copy only the content="..." value and paste it below.
 # google_site_verification: "PASTE_CONTENT_VALUE_HERE"
 
+# --- Pagination ---
+paginate: 12
+paginate_path: "/blog/page/:num/"
+
 # --- Plugins ---
 # Note: GitHub Pages whitelists these three plugins. The `github-pages` gem
 # already bundles them; declaring them here ensures Jekyll loads them locally.
@@ -70,6 +74,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
 
 # --- Permalinks ---
 # Release notes (existing) keep Jekyll's default permalink so existing URLs are not broken.

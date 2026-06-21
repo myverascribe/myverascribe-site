@@ -10,7 +10,7 @@ tags:
   - court-preparation
   - high-conflict-co-parenting
   - evidence
-image: /assets/images/blog/five-things-every-custody-log-needs/hero.png
+image: /assets/images/blog/five-things-every-custody-log-needs/hero.jpg
 og_image: /assets/images/blog/five-things-every-custody-log-needs/og.jpg
 canonical: https://myverascribe.com/blog/five-things-every-custody-log-needs/
 lens: legal

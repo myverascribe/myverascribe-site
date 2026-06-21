@@ -18,8 +18,8 @@ keywords:
 - grey rock co-parenting
 - grey rock high conflict
 - grey rock vs no contact
-image: /assets/images/blog/what-is-grey-rock-method/hero.png
-og_image: /assets/images/blog/what-is-grey-rock-method/hero.png
+image: /assets/images/blog/what-is-grey-rock-method/hero.jpg
+og_image: /assets/images/blog/what-is-grey-rock-method/hero.jpg
 canonical: https://myverascribe.com/blog/what-is-grey-rock-method/
 canonical_url: https://myverascribe.com/blog/what-is-grey-rock-method/
 lens: reflective

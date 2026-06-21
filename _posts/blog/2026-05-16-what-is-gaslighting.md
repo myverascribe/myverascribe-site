@@ -18,8 +18,8 @@ keywords:
 - gaslighting examples co-parent
 - how to document gaslighting
 - gaslighting custody evidence
-image: /assets/images/blog/what-is-gaslighting/hero.png
-og_image: /assets/images/blog/what-is-gaslighting/hero.png
+image: /assets/images/blog/what-is-gaslighting/hero.jpg
+og_image: /assets/images/blog/what-is-gaslighting/hero.jpg
 canonical: https://myverascribe.com/blog/what-is-gaslighting/
 canonical_url: https://myverascribe.com/blog/what-is-gaslighting/
 lens: reflective
