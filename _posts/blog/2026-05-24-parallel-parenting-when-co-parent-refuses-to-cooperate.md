@@ -34,29 +34,6 @@ og_description: "When your co-parent refuses to cooperate, parallel parenting is
 og_type: article
 og_url: https://myverascribe.com/blog/parallel-parenting-when-co-parent-refuses-to-cooperate/
 ---
----
-layout: blog-post
-title: "Parallel Parenting When Your Co-Parent Won't Cooperate"
-description: "When your co-parent refuses to cooperate, parallel parenting is the move. Here's how to run two independent households and log every refusal."
-date: 2026-06-13
-category: blog
-slug: parallel-parenting-when-co-parent-refuses-to-cooperate
-tags:
-  - parallel-parenting
-  - high-conflict-co-parenting
-  - uncooperative-co-parent
-  - grey-rock-parallel-parenting
-image: /assets/images/blog/parallel-parenting-when-co-parent-refuses-to-cooperate/hero.jpg
-og_image: /assets/images/blog/parallel-parenting-when-co-parent-refuses-to-cooperate/og.jpg
-canonical: https://myverascribe.com/blog/parallel-parenting-when-co-parent-refuses-to-cooperate/
-lens: reflective
-hook_mode: silent-win
-schema_type: Article
-disclaimer: mental_health
-author: "Verascribe Editorial"
-pillar: grey-rock-parallel-parenting
-post_type: cluster
----
 
 You've stopped expecting a yes. Every schedule change turns into a negotiation that goes nowhere. Every reasonable request meets a wall, and somewhere in the last few months you started to realize the cooperation you keep reaching for is never arriving. That's not a failure on your side. It's information.
 
